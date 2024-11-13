@@ -1,0 +1,11 @@
+{% include 'global/partials/head.html' %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    {% include 'users/partials/messages.html' %}
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
