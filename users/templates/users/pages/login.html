@@ -9,7 +9,7 @@
         <p class="login-description">Faça login para poder consultar os dados administrativos</p>
     </div>
     <div class="form-container">
-        <form action="{% url 'users:login_create' %}" method="POST" class="login-form">
+        <form action="{% url 'users:login_submit' %}" method="POST" class="login-form">
             {% csrf_token %}
 
             <div class="form-content">
@@ -28,7 +28,7 @@
         
             <div class="form-actions">
                 <div class="container-reset-password">
-                    <a href="{% url 'users:reset-password-view' %}">Esqueceu a senha?</a>
+                    <a href="{% url 'users:password_reset' %}">Esqueceu a senha?</a>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="submit-btn">Entrar</button>

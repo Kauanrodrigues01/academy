@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.http import Http404, HttpResponse
+from django.http import Http404
 from .forms import LoginForm, PasswordResetRequestForm, PasswordResetForm
 from users.models import User
 from django.urls import reverse
@@ -13,59 +13,7 @@ from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.contrib.sites.shortcuts import get_current_site
 from utils.users.utils import send_email
 
-def reset_password_view(request):
-    if request.user.is_authenticated:
-        return redirect('users:home')
-    
-    form_data = request.session.get('reset_password_form_data', {})
-    form = PasswordResetRequestForm(form_data)
 
-    context = {
-        'form': form
-    }
-
-    return render(request, 'users/pages/reset_password_view.html', context)
-
-def send_request_reset_password(request):
-    if request.method != 'POST':
-        raise Http404()
-    
-    form = PasswordResetRequestForm(request.POST)
-
-    # Salva os dados do formulário na sessão
-    request.session['reset_password_form_data'] = request.POST
-
-    if form.is_valid():
-        email = form.cleaned_data['email']
-        try:
-            user = User.objects.get(email=email)
-
-            uidb64 = urlsafe_base64_encode(smart_bytes(user.id))
-            token = PasswordResetTokenGenerator().make_token(user)
-            current_site = get_current_site(request).domain
-            relative_link = reverse('users:reset-confirm-view', kwargs={'uidb64': uidb64, 'token': token})
-            absurl = f'http://{current_site}{relative_link}'
-            
-            full_name = user.full_name or ' '
-            first_name = full_name.split(' ')[0]
-            email_body = f'Olá, {first_name}.\n Redefina sua senha usando o link abaixo: \n {absurl}'
-            
-            send_email(
-                subject='Reset da senha',
-                message=email_body,
-                to_email=user.email
-            )
-            messages.success(request, "Se o e-mail existir, um link para redefinir sua senha foi enviado.")
-            return redirect('users:login')  # Redireciona para a página de login
-
-        except User.DoesNotExist:
-            form.add_error('email', 'Este e-mail não está cadastrado.')
-
-    else:
-        messages.error(request, "Por favor, corrija os erros abaixo.")
-
-    return redirect('users:reset-password-view') 
- 
     
 def login_view(request):
     if request.user.is_authenticated:
@@ -79,7 +27,7 @@ def login_view(request):
     }
     return render(request, 'users/pages/login.html', context)
 
-def login_create(request):
+def login_submit(request):
     if not request.POST:
         raise Http404()
 
@@ -105,18 +53,80 @@ def login_create(request):
 
         else:
             messages.error(request, "CPF ou senha inválidos.")
-            return redirect('users:login')
+            return redirect('users:login_view')
     else:
         messages.error(request, "Por favor, corrija os erros abaixo.")
-        return redirect('users:login')
+        return redirect('users:login_view')
 
 def logout_view(request):
     logout(request)
     messages.success(request, "Logout bem-sucedido!")
-    return redirect('users:login')
+    return redirect('users:login_view')
 
+
+
+def password_reset(request):
+    """Carrega o formulário de redefinição de senha, com o campo de e-mail."""
+    if request.user.is_authenticated:
+        return redirect('users:home')
+    
+    form_data = request.session.get('reset_password_form_data', {})
+    form = PasswordResetRequestForm(form_data)
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'users/pages/password_reset_email_form.html', context)
+
+def password_reset_send(request):
+    """ Recebe o formulario de redefinição com o email para redefinição de senha e envia um e-mail com o link para redefinir a senha."""
+    if request.method != 'POST':
+        raise Http404()
+    
+    form = PasswordResetRequestForm(request.POST)
+
+    # Salva os dados do formulário na sessão
+    request.session['reset_password_form_data'] = request.POST
+
+    if form.is_valid():
+        email = form.cleaned_data['email']
+        try:
+            user = User.objects.get(email=email)
+
+            uidb64 = urlsafe_base64_encode(smart_bytes(user.id))
+            token = PasswordResetTokenGenerator().make_token(user)
+            current_site = get_current_site(request).domain
+            relative_link = reverse('users:password_reset_confirm', kwargs={'uidb64': uidb64, 'token': token})
+            absurl = f'http://{current_site}{relative_link}'
+            
+            full_name = user.full_name or ' '
+            first_name = full_name.split(' ')[0]
+            email_body = f'Olá, {first_name}.\n Redefina sua senha usando o link abaixo: \n {absurl}'
+            
+            send_email(
+                subject='Reset da senha',
+                message=email_body,
+                to_email=user.email
+            )
+            messages.success(request, "Se o e-mail existir, um link para redefinir sua senha foi enviado.")
+            return redirect('users:login_view') 
+
+        except User.DoesNotExist:
+            form.add_error('email', 'Este e-mail não está cadastrado.')
+
+    else:
+        messages.error(request, "Por favor, corrija os erros abaixo.")
+
+    return redirect('users:password_reset') 
  
-def reset_confirm_view(request, uidb64, token):
+ 
+ 
+def password_reset_confirm(request, uidb64, token):
+    """Carrega o formulário de redefinição de senha, com os campos de nova senha e confirmação de senha."""
+    if request.user.is_authenticated:
+        return redirect('users:home')
+    
     request.session['reset_password_data'] = {
         'uidb64': uidb64,
         'token': token
@@ -129,17 +139,18 @@ def reset_confirm_view(request, uidb64, token):
         'form': form
     }
     
-    return render(request, 'users/pages/reset_confirm_password.html', context)
+    return render(request, 'users/pages/password_reset_confirm_form.html', context)
 
-def reset_confirm_set(request):
+def password_reset_complete(request):
+    """Recebe o formulário de redefinição de senha e redefini a senha do usuário."""
     if request.method != 'POST':
-        return redirect('users:reset-password-view') 
+        return redirect('users:password_reset') 
     
     reset_password_data = request.session.get('reset_password_data')
     
     if not reset_password_data:
         messages.error(request, 'O link de redefinição expirou ou não foi encontrado.')
-        return redirect('users:reset-password-view')
+        return redirect('users:password_reset')
     
     uidb64 = reset_password_data['uidb64']
     token = reset_password_data['token']
@@ -150,7 +161,7 @@ def reset_confirm_set(request):
     except (User.DoesNotExist, ValueError, TypeError):
         del request.session['reset_password_data']
         messages.error(request, 'Link inválido.')
-        return redirect('users:reset-password-view')
+        return redirect('users:password_reset')
     
     request.session['form_password_reset_data'] = request.POST
     
@@ -165,17 +176,16 @@ def reset_confirm_set(request):
             
             del request.session['reset_password_data']
             messages.success(request, 'Senha redefinida com sucesso!')
-            return redirect('users:login')
+            return redirect('users:login_view')
         else:
             messages.error(request, 'Por favor, corrija os erros abaixo.')
-            url = reverse('users:reset-confirm-view', kwargs={'uidb64': uidb64, 'token': token})
+            url = reverse('users:password_reset_confirm', kwargs={'uidb64': uidb64, 'token': token})
             return redirect(url)
     else:
         del request.session['reset_password_data']
         messages.error(request, 'Link expirado ou inválido. Faça a solicitação novamente.')
-        return redirect('users:reset-password-view')
+        return redirect('users:password_reset')
         
-    
 
 @login_required
 def home(request):
