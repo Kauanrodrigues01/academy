@@ -1,0 +1,21 @@
+<div class="student-card">
+    <div class="student-header">
+        <h3>{{ member.full_name }}</h3>
+        <p class="student-id">#{{ member.id }}</p>
+    </div>
+    <div class="student-info">
+        <p><strong>Email:</strong> {{ member.email }}</p>
+        <p><strong>Telefone:</strong> {{ member.phone }}</p>
+        <p><strong>Status:</strong> <span class="status {% if member.is_active %}active{% else %}inactive{% endif %}">
+            {% if member.is_active %}
+                Ativo
+            {% else %}
+                Inativo
+            {% endif %}
+        </span></p>
+    </div>
+    <div class="student-actions">
+        <a href="" class="btn btn-secondary">Editar</a>
+        <a href="" class="btn btn-danger">Excluir</a>
+    </div>
+</div>

@@ -1,23 +1,26 @@
 from django.db import models
 from django.utils import timezone
-from users.models import User
 
 
 class Member(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='member_profile')
+    email = models.EmailField(unique=True)
+    full_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
     start_date = models.DateField(default=timezone.now)
     is_active = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)   
+    updated_at = models.DateTimeField(auto_now=True)
+
 
     def __str__(self):
-        return f"{self.full_name} ({self.user.cpf})"
+        return f"{self.full_name} ({self.email})"
     
 
 class Payment(models.Model):
     member = models.ForeignKey(Member, on_delete=models.CASCADE, related_name='payments')
     amount = models.DecimalField(max_digits=8, decimal_places=2)
     payment_date = models.DateField(default=timezone.now)
-    is_paid = models.BooleanField(default=True)
+    is_paid = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-payment_date']

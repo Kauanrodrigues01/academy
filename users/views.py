@@ -16,7 +16,7 @@ from utils.users.utils import send_email
     
 def login_view(request):
     if request.user.is_authenticated:
-        return redirect('users:home')
+        return redirect('admin_painel:home')
     
     login_form_data = request.session.get('login_form_data', {})
     form = LoginForm(login_form_data)
@@ -31,7 +31,7 @@ def login_submit(request):
         raise Http404()
 
     if request.user.is_authenticated:
-        return redirect('users:home')
+        return redirect('admin_painel:home')
 
     POST = request.POST
     request.session['login_form_data'] = POST 
@@ -48,7 +48,7 @@ def login_submit(request):
             login(request, user) 
             messages.success(request, "Login bem-sucedido!")
 
-            return redirect('users:home') 
+            return redirect('admin_painel:home') 
 
         else:
             messages.error(request, "CPF ou senha inválidos.")
@@ -67,7 +67,7 @@ def logout_view(request):
 def password_reset(request):
     """Carrega o formulário de redefinição de senha, com o campo de e-mail."""
     if request.user.is_authenticated:
-        return redirect('users:home')
+        return redirect('admin_painel:home')
     
     form_data = request.session.get('reset_password_form_data', {})
     form = PasswordResetRequestForm(form_data)
@@ -124,7 +124,7 @@ def password_reset_send(request):
 def password_reset_confirm(request, uidb64, token):
     """Carrega o formulário de redefinição de senha, com os campos de nova senha e confirmação de senha."""
     if request.user.is_authenticated:
-        return redirect('users:home')
+        return redirect('admin_painel:home')
     
     request.session['reset_password_data'] = {
         'uidb64': uidb64,

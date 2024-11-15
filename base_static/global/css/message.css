@@ -18,6 +18,13 @@
   max-width: 90%;
   min-width: 50%;
   margin: 0 auto;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.message.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .message-error {

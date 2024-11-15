@@ -4,7 +4,7 @@
   --color-primary-hover: #2086c2;
   --color-primary-dark: #13141f;
   --color-primary-dark-hover: #212336;
-  --color-primary-light: #b2dcf4;
+  --color-primary-light: #d4ecfa;
   --color-primary-light-hover: #bdd8e7;
 
   --color-white: #fff;
@@ -37,22 +37,6 @@
   --color-gray-7: #4b4b4b;
   --color-gray-8: #323232;
   --color-gray-9: #191919;
-
-  /* Novas cores para botões */
-  --color-add: #218838;
-  --color-add-hover: #28a745;
-
-  --color-edit: #0056b3;
-  --color-edit-hover: #0268d4;
-
-  --color-danger: #c82333;
-  --color-danger-hover: #dc3545;
-
-  --color-success: #28a745;
-  --color-success-hover: #218838;
-
-  --color-cancel: #6c757d;
-
 
   /* Fontes */
   --font-primary: "Inter", sans-serif;

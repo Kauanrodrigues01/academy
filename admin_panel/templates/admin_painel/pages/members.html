@@ -1,0 +1,59 @@
+{% extends 'global/pages/base_painel_adm.html' %}
+
+{% block title %}Página de Alunos{% endblock title %}
+
+{% block content %}
+<main class="students-panel container">
+    <h1 class="title-page-alunos">Gestão de Alunos</h1>
+    
+    <!-- Botão para adicionar novo aluno -->
+    <div class="add-student-button">
+        <button class="btn btn-add-student" id="add-student-btn">Adicionar Aluno</button>
+    </div>
+
+    <!-- Lista de alunos -->
+    <section class="students-list">
+        <h2 class="center">Alunos Cadastrados</h2>
+        <div class="students-cards">
+            {% for member in members %}
+                {% include "admin_painel/partials/member.html" %}
+            {% endfor %}
+            <!-- Replique este bloco para mais alunos -->
+        </div>
+    </section>
+    
+
+    <!-- Formulário Modal para adicionar aluno -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <h3>Adicionar Aluno</h3>
+            <form id="add-student-form" method="POST" action="{% url 'members:add_member' %}">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                    <div class="form-group">
+                        <!-- Renderiza o label do campo -->
+                        {{ field.label_tag }}
+                        <!-- Renderiza o input do campo -->
+                        {{ field }}
+                        <!-- Exibe erros do campo -->
+                        {% if field.errors %}
+                            <ul class="error-list">
+                                {% for error in field.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+    
+                <div class="modal-buttons">
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                    <button type="button" class="btn btn-cancel" id="modal-close-btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</main>
+{% endblock content %}

@@ -12,16 +12,15 @@
 
   <div class="menu-content">
     <nav class="menu-nav">
-      {% comment %} <a href="">Home</a> {% endcomment %}
 
       {% if user.is_authenticated %}
         <span class="menu-link-container">
           <img src="{% static 'global/img/home-icon.png' %}" alt="Icone da Home">
-          <a href="">PAINEL DO ADMINISTRADOR</a>
+          <a href="{% url 'admin_painel:home' %}">PAINEL DO ADMINISTRADOR</a>
         </span>
         <span class="menu-link-container">
           <img src="{% static 'global/img/alunos-icon.png' %}" alt="Icone de Alunos">
-          <a href="">ALUNOS</a>
+          <a href="{% url 'admin_painel:members' %}">ALUNOS</a>
         </span>
         <span class="menu-link-container">
           <img src="{% static 'global/img/financeiro-icon.png' %}" alt="Icone de Financeiro">

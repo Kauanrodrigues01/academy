@@ -1,0 +1,401 @@
+@import url('/static/global/css/variables.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-primary);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+} */
+
+/* Contêiner principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-gutter-large);
+}
+
+.center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilos do painel */
+.admin-panel {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.admin-panel h1 {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 2rem;
+}
+
+/* Cartões de informações */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--color-primary-light);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+
+.card .count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Atividades recentes */
+.recent-activities {
+  margin-top: 3rem;
+  background-color: var(--color-gray-0);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.recent-activities h2 {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+
+.recent-activities ul {
+  list-style-type: none;
+}
+
+.recent-activities li {
+  background-color: var(--color-white);
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: var(--color-gray-7);
+}
+
+.recent-activities li:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  transition: all 0.3s ease;
+}
+
+
+/* Painel com informações dos alunos */
+.students-panel {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.title-page-alunos {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 2rem;
+}
+
+/* Botão de adicionar aluno */
+.add-student-button {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilos gerais para os botões */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid transparent;  /* Borda base transparente */
+}
+
+.btn-add-student{
+  background-color: var(--color-add);
+  color: var(--color-white); 
+  border-color: var(--color-add);
+}
+
+.btn-add-student:hover {
+  background-color: var(--color-add-hover);
+  border-color: var(--color-add-hover);
+}
+
+/* Botão Primário */
+.btn-primary {
+  background-color: var(--color-primary);  
+  color: var(--color-white);  
+  border-color: var(--color-primary);  
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);  
+  border-color: var(--color-primary-hover);  
+}
+
+/* Botão Secundário */
+.btn-secondary {
+  background-color: var(--color-edit);  
+  color: var(--color-white); 
+  border-color: var(--color-edit); 
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-edit-hover); 
+  border-color: var(--color-edit-hover);
+}
+
+/* Botão de Perigo */
+.btn-danger {
+  background-color: var(--color-danger); 
+  color: var(--color-white);  
+  border-color: var(--color-danger);
+}
+
+.btn-danger:hover {
+  background-color: var(--color-danger-hover);  /* Cor de fundo no hover */
+  border-color: var(--color-danger-hover);  /* Ajuste da borda para o hover */
+}
+
+/* Botão de Cancelamento */
+.btn-cancel {
+  background-color: var(--color-gray-1);  /* Cor de fundo */
+  color: var(--color-dark-text);  /* Cor do texto */
+  border: 2px solid var(--color-gray-3);  /* Borda visível cinza */
+}
+
+.btn-cancel:hover {
+  background-color: var(--color-gray-2);  /* Cor de fundo no hover */
+  border-color: var(--color-gray-4);  /* Ajuste da borda para o hover */
+}
+
+
+/* Título centralizado */
+.students-list{
+  width: 100%;
+  max-width: 1200px; /* ou outro valor adequado */
+  margin: 0 auto;
+}
+
+.students-list h2.center {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 2rem;
+}
+
+/* Grade responsiva */
+.students-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Cartão de aluno */
+.student-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cabeçalho do cartão */
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.student-header h3 {
+  font-size: 1.5rem;
+  font-family: var(--font-headings);
+  color: var(--color-primary-dark);
+}
+
+.student-header .student-id {
+  font-size: 0.9rem;
+  color: var(--color-gray-3);
+  font-weight: bold;
+}
+
+/* Informações do aluno */
+.student-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: var(--color-dark-text);
+}
+
+.student-info strong {
+  font-weight: bold;
+}
+
+/* Botões de ações */
+.student-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.student-actions .btn {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+/* Status */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.status.active {
+  background-color: var(--color-success);
+  color: #fff;
+}
+
+.status.inactive {
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-container h3 {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.modal-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.modal-container input,
+.modal-container select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-gray-2);
+  border-radius: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel {
+    padding: 1rem;
+  }
+
+  .students-cards {
+    grid-template-columns: 1fr;
+  }
+}

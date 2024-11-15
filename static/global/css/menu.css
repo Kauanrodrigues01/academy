@@ -1,3 +1,4 @@
+@import url('variables.css');
 
 /* MENU */
 .hidden-text {
@@ -9,7 +10,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 260px;
+  width: 300px;
   min-height: 100vh;
   overflow-y: auto;
   background: var(--color-black);
@@ -22,7 +23,7 @@
 }
 
 .menu-hidden {
-  left: -255px;
+  left: -295px;
 }
 
 .button-show-menu {
@@ -63,11 +64,28 @@
 .menu-nav {
   display: flex;
   flex-flow: column wrap;
-  font-family: var(--font-headings);
+  align-items: start;
+  justify-content: start;
+  font-family: var(--font-primary);
   font-size: 2rem;
 }
 
-.menu-nav a {
+.menu-link-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.menu-link-container img {
+  width: 20px;
+}
+
+.menu-link-container a{
   width: 100%;
   padding: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: 600;
 }
