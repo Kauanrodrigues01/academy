@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'members',
     'admin_panel',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -111,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Fortaleza'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -157,3 +158,19 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'testandoemail1100@gmail.com'
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada
 DEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Endereço do Redis
+CELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON
+CELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'  # Backend para armazenar resultados
+CELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)
+
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    'update-members-status-every-midnight': {
+        'task': 'members.tasks.update_members_activity_status',
+        'schedule': crontab(minute=0, hour=1),  # Executar à meia-noite todos os dias
+    },
+}

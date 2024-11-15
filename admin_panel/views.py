@@ -17,7 +17,7 @@ def home(request):
     context = {
         'count_members_actives': Member.objects.filter(is_active=True).count(),
         'count_members_inactives': Member.objects.filter(is_active=False).count(),
-        'count_new_members_in_month': Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count()
+        'count_new_members_in_month': Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count(),
     }
     return render(request, 'admin_painel/pages/home.html', context)
 
