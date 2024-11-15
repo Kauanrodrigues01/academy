@@ -1,5 +1,4 @@
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import Http404
@@ -186,7 +185,3 @@ def password_reset_complete(request):
         messages.error(request, 'Link expirado ou inválido. Faça a solicitação novamente.')
         return redirect('users:password_reset')
         
-
-@login_required
-def home(request):
-    return render(request, 'users/pages/home.html')
