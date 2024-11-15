@@ -1,11 +1,13 @@
 from django import forms
 from .models import Member
+from django.utils import timezone
+from .models import Member
 import re
 
 class MemberForm(forms.ModelForm):
     class Meta:
         model = Member
-        fields = ['full_name', 'email', 'phone', 'is_active']
+        fields = ['full_name', 'email', 'phone', 'is_active', 'payment_date']
         widgets = {
             'full_name': forms.TextInput(attrs={
                 'id': 'student-name',
@@ -26,13 +28,20 @@ class MemberForm(forms.ModelForm):
             'is_active': forms.Select(attrs={
                 'id': 'student-status',
                 'class': 'form-control',
-            }, choices=[(True, 'Ativo'), (False, 'Inativo')]),
+            }, choices=[(True, 'Ativo')]),
+            'payment_date': forms.DateInput(attrs={
+                'id': 'payment-date',
+                'class': 'form-control',
+                'type': 'date',
+                'required': True
+            }),
         }
         labels = {
             'full_name': 'Nome Completo',
             'email': 'E-mail',
             'phone': 'Telefone',
-            'is_active': 'Status'
+            'is_active': 'Status',
+            'payment_date': 'Data de Pagamento'
         }
 
     def clean_full_name(self):
@@ -58,6 +67,13 @@ class MemberForm(forms.ModelForm):
     def clean_is_active(self):
         is_active = self.cleaned_data['is_active']
         return is_active
+
+    def clean_payment_date(self):
+        payment_date = self.cleaned_data['payment_date']
+        # Aqui você pode adicionar validações para a data, se necessário
+        if payment_date > timezone.now().date():
+            raise forms.ValidationError("A data de pagamento não pode ser no futuro.")
+        return payment_date
 
 
 class MemberEditForm(forms.ModelForm):
@@ -114,3 +130,4 @@ class MemberEditForm(forms.ModelForm):
     def clean_is_active(self):
         is_active = self.cleaned_data['is_active']
         return is_active
+    

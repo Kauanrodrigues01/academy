@@ -152,7 +152,7 @@ h6 {
 
 .title-page-alunos {
   font-family: var(--font-primary);
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--color-primary-dark);
   margin-bottom: 2rem;
 }
@@ -174,6 +174,8 @@ h6 {
   display: inline-block;
   text-align: center;
   border: 2px solid transparent;  /* Borda base transparente */
+  text-decoration: none;
+  margin: 0;
 }
 
 .btn-add-student{
@@ -245,7 +247,7 @@ h6 {
 
 .students-list h2.center {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--color-primary-dark);
   margin-bottom: 2rem;
 }
@@ -284,7 +286,7 @@ h6 {
 
 .student-header h3 {
   font-size: 1.5rem;
-  font-family: var(--font-headings);
+  font-family: var(--font-);
   color: var(--color-primary-dark);
 }
 
@@ -384,6 +386,91 @@ h6 {
   justify-content: flex-end;
   gap: 1rem;
 }
+
+/* Form edit member */
+.container-form-edit-member {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do formulário */
+.container-form-edit-member h1 {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Estilização das labels */
+.container-form-edit-member label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Estilização dos inputs e selects */
+.container-form-edit-member input,
+.container-form-edit-member select,
+.container-form-edit-member textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-gray-2);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Erros do formulário */
+.error-list {
+  color: var(--color-error);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.error-list li {
+  margin: 0;
+}
+
+
+/* Fiance page */
+.payment-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.payment-card .payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.payment-card .payment-info p {
+  margin: 5px 0;
+}
+
+.payment-card .status.pago {
+  color: green;
+}
+
+.payment-card .status.atrasado {
+  color: red;
+}
+
+.payment-card .status.pendente {
+  color: orange;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {

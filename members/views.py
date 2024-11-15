@@ -7,6 +7,7 @@ from django.shortcuts import render, get_object_or_404
 
 @login_required
 def add_member(request):
+    request.session['form_data_add_member'] = request.POST
     if request.method == 'POST':
         form = MemberForm(request.POST)
         if form.is_valid():

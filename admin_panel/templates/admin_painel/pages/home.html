@@ -9,12 +9,12 @@
         <div class="dashboard-cards">
             <div class="card">
                 <h3>Alunos Ativos</h3>
-                <p class="count">245</p>
+                <p class="count">{{ count_members_actives }}</p>
                 <a href="#" class="card-link">Ver detalhes</a>
             </div>
             <div class="card">
-                <h3>Alunos Inadimplentes</h3>
-                <p class="count">15</p>
+                <h3>Alunos Inativos</h3>
+                <p class="count">{{ count_members_inactives }}</p>
                 <a href="#" class="card-link">Ver detalhes</a>
             </div>
             <div class="card">
@@ -24,7 +24,7 @@
             </div>
             <div class="card">
                 <h3>Novos Alunos</h3>
-                <p class="count">30</p>
+                <p class="count">{{ count_new_members_in_month }}</p>
                 <a href="#" class="card-link">Ver detalhes</a>
             </div>
         </div>
