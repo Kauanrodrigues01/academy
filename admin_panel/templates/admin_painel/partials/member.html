@@ -15,7 +15,7 @@
         </span></p>
     </div>
     <div class="student-actions">
-        <a href="" class="btn btn-secondary">Editar</a>
-        <a href="" class="btn btn-danger">Excluir</a>
+        <a href="{% url 'admin_painel:edit_member_view' member.id %}" class="btn btn-secondary">Editar</a>
+        <a href="{% url 'members:delete_member' member.id %}" class="btn btn-danger">Excluir</a>
     </div>
 </div>

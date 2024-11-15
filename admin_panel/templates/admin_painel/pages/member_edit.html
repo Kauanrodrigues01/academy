@@ -1,0 +1,30 @@
+{% extends 'global/pages/base_painel_adm.html' %}
+
+{% block title %}Editar Membro{% endblock %}
+
+{% block content %}
+<main class="container">
+    <h1>Editar Membro: {{ member.full_name }}</h1>
+    <form method="POST" action="{% url 'members:edit_member_update' member.id %}">
+        {% csrf_token %}
+        
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                
+                <!-- Exibe os erros de validação do campo -->
+                {% if field.errors %}
+                    <ul class="error-list">
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    </form>
+</main>
+{% endblock %}
