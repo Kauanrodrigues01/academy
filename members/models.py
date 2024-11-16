@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from django.db.models import Sum, Min, Max, Count
+from django.core.exceptions import ValidationError
+from datetime import datetime
 
 class Member(models.Model):
     email = models.EmailField(unique=True)
@@ -46,7 +48,7 @@ class Payment(models.Model):
             return f'Pagamento sem membro associado | {self.payment_date} | {self.amount}'
     
     @classmethod
-    def total_paid_in_the_month(cls):
+    def get_current_month_profit(cls):
         """Calcula o total de pagamento rebido em um mês"""
         current_month = timezone.now().month
         current_year = timezone.now().year
@@ -60,6 +62,38 @@ class Payment(models.Model):
         payments = payments.aggregate(total_in_the_month=Sum('amount'))
         
         return payments['total_in_the_month'] or 0.00
+    
+    @classmethod
+    def get_monthly_profit(cls, month=1):
+        """Calcula o total de pagamento recebido em um mês"""
+        if not (1 <= month <= 12):
+            raise ValidationError("Month must be between 1 and 12.")
+        
+        # Cria um objeto datetime com o primeiro dia do mês
+        current_year = timezone.now().year
+        month_start_date = datetime(current_year, month, 1)
+        
+        # Usa o mês obtido para filtrar os pagamentos
+        payments = Payment.objects.filter(
+            payment_date__year=current_year,
+            payment_date__month=month_start_date.month  # Usando o mês como atributo
+        )
+        
+        payments = payments.aggregate(total_in_the_month=Sum('amount'))
+        
+        return payments['total_in_the_month'] or 0.00
+    
+    @classmethod
+    def get_current_year_profit(cls):
+        current_year = timezone.now().year
+        
+        payments = Payment.objects.filter(
+            payment_date__year=current_year
+        )
+        
+        payments = payments.aggregate(total_in_the_year=Sum('amount'))
+        
+        return payments['total_in_the_year'] or 0.00
     
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

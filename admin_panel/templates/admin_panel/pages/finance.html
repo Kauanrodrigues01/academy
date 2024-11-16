@@ -1,0 +1,55 @@
+{% extends 'global/pages/base_painel_adm.html' %}
+
+{% block title %}Finanças - Painel Administrativo{% endblock title %}
+
+{% block content %}
+<main class="container center">
+    <div class="finance-panel">
+        <h1>Finanças</h1>
+        
+        <!-- Cartões de Resumo -->
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Lucro Total do Ano</h3>
+                <p class="count">R$ {{ current_year_profit }}</p>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
+            </div>
+            <div class="card">
+                <h3>Lucro do Mês atual</h3>
+                <p class="count">R$ {{ current_month_profit }}</p>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
+            </div>
+            <div class="card">
+                <h3>Mês com Maior Lucro</h3>
+                <p class="count">{{ month_with_highest_profit }}</p>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
+            </div>
+        </div>
+
+        <!-- Lucro por Mês e Transações Recentes -->
+        <div class="finance-sections">
+            <!-- Lucro por Mês -->
+            <div class="monthly-profit">
+                <h2>Lucro por Mês</h2>
+                <ul>
+                    {% for month, profit in months_profit.items %}
+                        <li>{{ month }} | R$ {{ profit }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Transações Recentes -->
+            <div class="transaction-list">
+                <h2>Pagamentos Recentes</h2>
+                <ul>
+                    {% for payment in recents_payments %}
+                        <li> {{ payment }} </li>
+                    {% endfor %}
+                </ul>
+            </div>        
+        </div>
+            
+    </div>
+</main>
+
+{% endblock content %}

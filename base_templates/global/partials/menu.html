@@ -16,15 +16,15 @@
       {% if user.is_authenticated %}
         <span class="menu-link-container">
           <img src="{% static 'global/img/home-icon.png' %}" alt="Icone da Home">
-          <a href="{% url 'admin_painel:home' %}">PAINEL DO ADMINISTRADOR</a>
+          <a href="{% url 'admin_panel:home' %}">PAINEL DO ADMINISTRADOR</a>
         </span>
         <span class="menu-link-container">
           <img src="{% static 'global/img/alunos-icon.png' %}" alt="Icone de Alunos">
-          <a href="{% url 'admin_painel:members' %}">MEMBROS</a>
+          <a href="{% url 'admin_panel:members' %}">MEMBROS</a>
         </span>
         <span class="menu-link-container">
           <img src="{% static 'global/img/financeiro-icon.png' %}" alt="Icone de Financeiro">
-          <a href="">FINANCEIRO</a>
+          <a href="{% url 'admin_panel:finance' %}">FINANCEIRO</a>
         </span>
         <span class="menu-link-container">
           <img src="{% static 'global/img/logout-icon.png' %}" alt="Icone de Logout">
