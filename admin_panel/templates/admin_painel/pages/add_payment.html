@@ -1,19 +1,18 @@
 {% extends 'global/pages/base_painel_adm.html' %}
 
-{% block title %}Editar Aluno{% endblock %}
+{% block title %}Adicionar Pagamento{% endblock %}
 
 {% block content %}
-<main class="container-form-edit-member">
-    <h1>Editar Aluno: {{ member.full_name }}</h1>
-    <form method="POST" action="{% url 'members:edit_member_update' member.id %}" class="form">
+<main class="container-form-payment">
+    <h1>Adicionar Pagamento para: {{ member.full_name }}</h1>
+    <form method="POST" action="{% url 'members:add_payment' member.id %}" class="form">
         {% csrf_token %}
         
         {% for field in form %}
             <div class="form-group">
-                {{ field.label_tag }}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                 {{ field }}
                 
-                <!-- Exibe os erros de validação do campo -->
                 {% if field.errors %}
                     <ul class="error-list">
                         {% for error in field.errors %}
@@ -24,8 +23,10 @@
             </div>
         {% endfor %}
         
-        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-        <a href="{% url 'admin_painel:members' %}" class="btn btn-danger">Cancelar</a>
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="{% url 'admin_painel:members' %}" class="btn btn-danger">Cancelar</a>
+        </div>
     </form>
 </main>
 {% endblock %}

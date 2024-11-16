@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from members.forms import MemberForm
-from members.models import Member
+from members.forms import MemberPaymentForm, PaymentForm, MemberEditForm
+from .models import ActivityLog
+from members.models import Member, Payment
 from django.shortcuts import get_object_or_404
-from members.forms import MemberEditForm
 from django.utils.timezone import now
 
 # Create your views here.
@@ -14,10 +14,16 @@ def home(request):
     current_year = now().year
     
     
+    count_new_members_in_month = Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count()
+    value_total_month = Payment.total_paid_in_the_month()
+    recent_activities = ActivityLog.objects.all().order_by('-id')[:20]
+    
     context = {
         'count_members_actives': Member.objects.filter(is_active=True).count(),
         'count_members_inactives': Member.objects.filter(is_active=False).count(),
-        'count_new_members_in_month': Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count(),
+        'count_new_members_in_month': count_new_members_in_month,
+        'value_total_month': value_total_month,
+        'recent_activities': recent_activities
     }
     return render(request, 'admin_painel/pages/home.html', context)
 
@@ -26,10 +32,10 @@ def members(request):
     form_data_add_member = request.session.get('form_data_add_member')
     
     if form_data_add_member:
-        form = MemberForm(form_data_add_member)
+        form = MemberPaymentForm(form_data_add_member)
         request.session['form_data_add_member'] = None
     else:
-        form = MemberForm()
+        form = MemberPaymentForm()
         
     context = {
         'form': form,
@@ -51,3 +57,20 @@ def edit_member_view(request, id):
 
     return render(request, 'admin_painel/pages/member_edit.html', {'form': form, 'member': member})
 
+
+@login_required
+def add_payment_view(request, id):
+    member = get_object_or_404(Member, id=id)
+    form_data_add_payment = request.session.get('form_data_add_payment')
+    
+    if form_data_add_payment:
+        form = PaymentForm(form_data_add_payment)
+    else:
+        form = PaymentForm()
+    
+    context = {
+        'form': form,
+        'member': member
+    }
+    
+    return render(request, 'admin_painel/pages/add_payment.html', context)

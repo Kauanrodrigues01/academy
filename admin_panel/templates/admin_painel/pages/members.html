@@ -8,7 +8,7 @@
     
     <!-- Botão para adicionar novo aluno -->
     <div class="add-student-button">
-        <button class="btn btn-add-student" id="add-student-btn">Adicionar Aluno</button>
+        <button class="btn btn-add" id="add-student-btn">Adicionar Aluno</button>
     </div>
 
     <section class="students-list">
@@ -24,7 +24,7 @@
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-container">
             <h3>Adicionar Aluno</h3>
-            <form id="add-student-form" method="POST" action="{% url 'members:add_member' %}">
+            <form id="add-student-form" method="POST" action="{% url 'members:add_member' %}" class="form">
                 {% csrf_token %}
                 
                 {% for field in form %}

@@ -113,7 +113,7 @@ h6 {
 }
 
 .recent-activities h2 {
-  font-family: var(--font-headings);
+  font-family: var(--font-primary);
   font-size: 1.8rem;
   color: var(--color-primary-dark);
   margin-bottom: 1rem;
@@ -176,15 +176,16 @@ h6 {
   border: 2px solid transparent;  /* Borda base transparente */
   text-decoration: none;
   margin: 0;
+  white-space: nowrap;
 }
 
-.btn-add-student{
+.btn-add{
   background-color: var(--color-add);
   color: var(--color-white); 
   border-color: var(--color-add);
 }
 
-.btn-add-student:hover {
+.btn-add:hover {
   background-color: var(--color-add-hover);
   border-color: var(--color-add-hover);
 }
@@ -361,24 +362,7 @@ h6 {
 }
 
 .modal-container h3 {
-  font-size: 1.8rem;
-  color: var(--color-primary-dark);
-  margin-bottom: 1.5rem;
-}
-
-.modal-container label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.modal-container input,
-.modal-container select {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--color-gray-2);
-  border-radius: 5px;
+  margin-bottom: 2rem;
 }
 
 .modal-buttons {
@@ -405,23 +389,44 @@ h6 {
   text-align: center;
 }
 
-/* Estilização das labels */
-.container-form-edit-member label {
+
+/* Estilo do formulário de pagamento */
+.container-form-payment {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-form-payment h1 {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Estlização global formulario */
+.form h3 {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.form label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-/* Estilização dos inputs e selects */
-.container-form-edit-member input,
-.container-form-edit-member select,
-.container-form-edit-member textarea {
+.form input,
+.form select {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid var(--color-gray-2);
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 /* Erros do formulário */
@@ -437,40 +442,6 @@ h6 {
 .error-list li {
   margin: 0;
 }
-
-
-/* Fiance page */
-.payment-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-}
-
-.payment-card .payment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.payment-card .payment-info p {
-  margin: 5px 0;
-}
-
-.payment-card .status.pago {
-  color: green;
-}
-
-.payment-card .status.atrasado {
-  color: red;
-}
-
-.payment-card .status.pendente {
-  color: orange;
-}
-
 
 /* Responsividade */
 @media (max-width: 768px) {

@@ -1,5 +1,6 @@
 from django import forms
 from utils.users.utils import verify_email, is_valid_cpf
+from .models import User
 import re
 
 class LoginForm(forms.Form):
@@ -34,6 +35,10 @@ class PasswordResetRequestForm(forms.Form):
         email = self.cleaned_data.get('email')
         if not verify_email(email):
             raise forms.ValidationError('O e-mail fornecido não é válido.')
+        
+        if not User.objects.filter(email=email).exists():
+            raise forms.ValidationError('Este e-mail não está registrado. Verifique novamente.'
+)
         return email
     
 

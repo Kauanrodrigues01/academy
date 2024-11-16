@@ -171,6 +171,6 @@ from celery.schedules import crontab
 CELERY_BEAT_SCHEDULE = {
     'update-members-status-every-midnight': {
         'task': 'members.tasks.update_members_activity_status',
-        'schedule': crontab(minute=0, hour=1),  # Executar à meia-noite todos os dias
+        'schedule': crontab(minute=2, hour=0, ), 
     },
 }

@@ -10,31 +10,35 @@
             <div class="card">
                 <h3>Alunos Ativos</h3>
                 <p class="count">{{ count_members_actives }}</p>
-                <a href="#" class="card-link">Ver detalhes</a>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
             </div>
             <div class="card">
-                <h3>Alunos Inativos</h3>
+                <h3>Alunos Pendentes</h3>
                 <p class="count">{{ count_members_inactives }}</p>
-                <a href="#" class="card-link">Ver detalhes</a>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
             </div>
             <div class="card">
                 <h3>Receita do Mês</h3>
-                <p class="count">R$ 5,120</p>
-                <a href="#" class="card-link">Ver detalhes</a>
+                <p class="count">R$ {{ value_total_month }}</p>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
             </div>
             <div class="card">
                 <h3>Novos Alunos</h3>
                 <p class="count">{{ count_new_members_in_month }}</p>
-                <a href="#" class="card-link">Ver detalhes</a>
+                {% comment %} <a href="#" class="card-link">Ver detalhes</a> {% endcomment %}
             </div>
         </div>
         <div class="recent-activities">
             <h2>Atividades Recentes</h2>
             <ul>
-                <li>Aluno João da Silva renovou a matrícula.</li>
-                <li>Pagamento de Maria Souza registrado.</li>
-                <li>Novos alunos inscritos para o mês de novembro.</li>
-                <li>Reunião agendada com o instrutor Roberto.</li>
+                {% if recent_activities %}
+                    {% for active in recent_activities %}
+                    <li>{{ active.description }} | {{ active.created_at|date:"d/m/y H:i" }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>Não há atividades recentes.</li>
+                {% endif %}
+                
             </ul>
         </div>
     </div>
