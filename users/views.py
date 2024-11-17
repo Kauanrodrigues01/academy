@@ -54,7 +54,7 @@ def login_submit(request):
             messages.error(request, "CPF ou senha inválidos.")
             return redirect('users:login_view')
     else:
-        messages.error(request, "Por favor, corrija os erros abaixo.")
+        messages.error(request, "CPF ou senha inválidos.")
         return redirect('users:login_view')
 
 def logout_view(request):
@@ -130,6 +130,19 @@ def password_reset_confirm(request, uidb64, token):
         'uidb64': uidb64,
         'token': token
     }
+    
+    try:
+        user_id = smart_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(id=user_id)
+    except (User.DoesNotExist, ValueError, TypeError):
+        del request.session['reset_password_data']
+        messages.error(request, 'Link inválido.')
+        return redirect('users:password_reset')
+    
+    if not PasswordResetTokenGenerator().check_token(user, token):
+        del request.session['reset_password_data']
+        messages.error(request, 'Link expirado ou inválido. Faça a solicitação novamente.')
+        return redirect('users:password_reset')
     
     form_password_reset_data = request.session.get('form_password_reset_data')
     form = PasswordResetForm(form_password_reset_data)

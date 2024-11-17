@@ -1,21 +1,9 @@
-from django.test import TestCase
 from django.core.exceptions import ValidationError
 from utils import is_valid_cpf
 from users.models import User
-from faker import Faker
+from users.tests.base.test_base import TestBase
 
-class UserModelTests(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        cls.faker = Faker('pt_BR')
-        cls.valid_cpf = cls.faker.cpf().replace('.', '').replace('-', '')  # Removendo pontos e hífens para CPF sem formatação
-        cls.invalid_cpf = '12345678901'  # CPF inválido sem formatação
-        cls.user_data = {
-            'cpf': cls.valid_cpf,
-            'email': cls.faker.email(),
-            'full_name': cls.faker.name(),
-            'password': cls.faker.password(),
-        }
+class UserModelTests(TestBase):
 
     def test_create_user_with_valid_data(self):
         """Testa a criação de um usuário com dados válidos."""

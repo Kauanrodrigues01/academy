@@ -16,7 +16,7 @@ class LoginForm(forms.Form):
         cpf = self.cleaned_data.get('cpf', '')
 
         if not cpf.isdigit() or len(cpf) != 11:
-            raise forms.ValidationError('O CPF deve conter exatamente 11 dígitos numéricos.')
+            raise forms.ValidationError('O CPF fornecido é inválido.')
 
         if not is_valid_cpf(cpf):
             raise forms.ValidationError('O CPF fornecido é inválido.')
