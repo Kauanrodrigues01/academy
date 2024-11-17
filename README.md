@@ -74,11 +74,21 @@ Para rodar o servidor local do Django, use o comando:
 python manage.py runserver
 ```
 
+#### Redis Container
+
+O Celery usa o Redis como o broker de mensagens. Portanto, é necessário ter um container Redis rodando para o Celery funcionar corretamente.
+
+Caso você esteja utilizando Docker, você pode rodar um container Redis com o seguinte comando:
+
+```bash
+docker run --name redis -p 6379:6379 -d redis
+```
+
 #### Rodar a Celery
 
 O Celery é responsável por rodar tarefas assíncronas em segundo plano, e o Celery Beat gerencia a execução periódica dessas tarefas.
 
-Primeiro, em um **terminal separado**, rode o worker do Celery:
+Em um **terminal separado**, certifique-se de que esteja com o ambiente virtual(venv) ativo. Execute:
 
 ```bash
 celery -A project worker --loglevel=info --pool=solo
@@ -86,10 +96,9 @@ celery -A project worker --loglevel=info --pool=solo
 
 #### Rodar a Celery Beat
 
-**Em outro terminal separado**, rode o beat do Celery:
+**Em outro terminal separado**, certifique-se de que esteja com o ambiente virtual(venv) ativo. Execute:
 
 ```bash
 celery -A project beat --loglevel=info
-
 ```
 
