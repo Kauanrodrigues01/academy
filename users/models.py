@@ -1,9 +1,10 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.core.exceptions import ValidationError
+from utils import is_valid_cpf
 
 class UserManager(BaseUserManager):
-    def create_user(self, cpf, email, full_name=None, password=None, **extra_fields):
+    def create_user(self, cpf=None, email=None, full_name=None, password=None, **extra_fields):
         if not cpf:
             raise ValueError("O CPF é obrigatório.")
         if not email:
@@ -21,11 +22,11 @@ class UserManager(BaseUserManager):
         return self.create_user(cpf, email, password=password, **extra_fields)
 
 class User(AbstractBaseUser, PermissionsMixin):
-    cpf = models.CharField(_('CPF'), max_length=11, unique=True)
-    email = models.EmailField(_('email address'), unique=True)
-    full_name = models.CharField(_('full name'), max_length=255, blank=True, null=True)
-    is_active = models.BooleanField(_('active'), default=True)
-    is_staff = models.BooleanField(_('staff status'), default=False)
+    cpf = models.CharField("CPF", max_length=11, unique=True)
+    email = models.EmailField("Email", unique=True)
+    full_name = models.CharField("Nome completo", max_length=255, blank=True, null=True)
+    is_active = models.BooleanField("Ativo", default=True)
+    is_staff = models.BooleanField("Membro da equipe", default=False)
 
     USERNAME_FIELD = 'cpf'
     REQUIRED_FIELDS = ['email']
@@ -34,3 +35,9 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return f"{self.full_name or 'User'} ({self.cpf})"
+    
+    def clean(self):
+        if not is_valid_cpf(self.cpf):
+            raise ValidationError({'cpf': 'CPF inválido.'})
+            
+        return super().clean()
