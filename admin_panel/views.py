@@ -99,7 +99,7 @@ def finance(request):
         
     month_with_highest_profit = max(months_profit, key=lambda month: months_profit[month])
     
-    recents_payments = Payment.objects.order_by('-id')[:12]
+    recents_payments = Payment.objects.order_by('-payment_date')[:12]
     
     
     context = {
@@ -109,8 +109,6 @@ def finance(request):
         'month_with_highest_profit': month_with_highest_profit,
         'recents_payments': recents_payments
     }
-    
-    
     
     
     return render(request, 'admin_panel/pages/finance.html', context)
