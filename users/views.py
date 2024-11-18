@@ -27,11 +27,12 @@ def login_view(request):
     return render(request, 'users/pages/login.html', context)
 
 def login_submit(request):
-    if not request.POST:
-        raise Http404()
-
     if request.user.is_authenticated:
         return redirect('admin_panel:home')
+    
+    if not request.POST:
+        return redirect('users:login_view')
+
 
     POST = request.POST
     request.session['login_form_data'] = POST 
@@ -81,7 +82,7 @@ def password_reset(request):
 def password_reset_send(request):
     """ Recebe o formulario de redefinição com o email para redefinição de senha e envia um e-mail com o link para redefinir a senha."""
     if request.method != 'POST':
-        raise Http404()
+        return redirect('users:password_reset')
     
     form = PasswordResetRequestForm(request.POST)
 
@@ -112,6 +113,7 @@ def password_reset_send(request):
             return redirect('users:login_view') 
 
         except User.DoesNotExist:
+            # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
             form.add_error('email', 'Este e-mail não está cadastrado.')
 
     else:
@@ -124,6 +126,7 @@ def password_reset_send(request):
 def password_reset_confirm(request, uidb64, token):
     """Carrega o formulário de redefinição de senha, com os campos de nova senha e confirmação de senha."""
     if request.user.is_authenticated:
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
         return redirect('admin_panel:home')
     
     request.session['reset_password_data'] = {
@@ -135,6 +138,7 @@ def password_reset_confirm(request, uidb64, token):
         user_id = smart_str(urlsafe_base64_decode(uidb64))
         user = User.objects.get(id=user_id)
     except (User.DoesNotExist, ValueError, TypeError):
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
         del request.session['reset_password_data']
         messages.error(request, 'Link inválido.')
         return redirect('users:password_reset')
@@ -156,11 +160,13 @@ def password_reset_confirm(request, uidb64, token):
 def password_reset_complete(request):
     """Recebe o formulário de redefinição de senha e redefini a senha do usuário."""
     if request.method != 'POST':
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
         return redirect('users:password_reset') 
     
     reset_password_data = request.session.get('reset_password_data')
     
     if not reset_password_data:
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
         messages.error(request, 'O link de redefinição expirou ou não foi encontrado.')
         return redirect('users:password_reset')
     
@@ -171,6 +177,7 @@ def password_reset_complete(request):
         user_id = smart_str(urlsafe_base64_decode(uidb64))
         user = User.objects.get(id=user_id)
     except (User.DoesNotExist, ValueError, TypeError):
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
         del request.session['reset_password_data']
         messages.error(request, 'Link inválido.')
         return redirect('users:password_reset')
@@ -194,6 +201,7 @@ def password_reset_complete(request):
             url = reverse('users:password_reset_confirm', kwargs={'uidb64': uidb64, 'token': token})
             return redirect(url)
     else:
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
         del request.session['reset_password_data']
         messages.error(request, 'Link expirado ou inválido. Faça a solicitação novamente.')
         return redirect('users:password_reset')
