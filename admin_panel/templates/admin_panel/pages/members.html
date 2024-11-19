@@ -3,6 +3,7 @@
 {% block title %}Página de Alunos{% endblock title %}
 
 {% block content %}
+{% load static %}
 <main class="students-panel container">
     <h1 class="title-page-alunos">Gestão de Alunos</h1>
     
@@ -13,11 +14,56 @@
 
     <section class="students-list">
         <h2 class="center">Alunos Cadastrados: </h2>
+
+        <form action="{% url 'admin_panel:members' %}" method="GET" class="form-search-member">
+            <input type="search" name="q" class="input-search" value="{{ search_query }}">
+            <button class="button-search" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <div class="filter-toggle">
+            <button class="btn btn-filter-toggle">
+                <i class="fas fa-filter"></i> Filtros
+            </button>
+        </div>
+    
+        <div class="filter-section" id="filter-section">
+            <h3>Filtros</h3>
+            <form action="{% url 'admin_panel:members' %}" method="GET" class="form-filters">
+                <div class="filter-item">
+                    <label for="status-filter">Status:</label>
+                    <select name="status" id="status-filter" class="filter-select">
+                        <option value="">Todos</option>
+                        <option value="active" {% if request.GET.status == 'active' %}selected{% endif %}>Ativo</option>
+                        <option value="inactive" {% if request.GET.status == 'pendente' %}selected{% endif %}>Pendente</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="date-filter">Data do último pagamento:</label>
+                    <input type="date" name="last_payment" id="date-filter" class="filter-select" value="{{ request.GET.last_payment }}">
+                </div>
+                <div class="filter-item">
+                    <button class="btn btn-filter" type="submit">
+                        <i class="fas fa-filter"></i> Aplicar Filtros
+                    </button>
+                    <a href="{% url 'admin_panel:members' %}" class="btn btn-danger">
+                        Desativar filtros
+                    </a>
+                </div>
+            </form>
+        </div>
+
         <div class="students-cards">
             {% for member in members %}
                 {% include "admin_panel/partials/member.html" %}
+            {% empty %}
+                <p class="center">Nenhum aluno encontrado.</p>
             {% endfor %}
         </div>
+
+        {% include 'admin_panel/partials/pagination.html' %}
+
     </section>
     
 
@@ -53,4 +99,15 @@
     </div>
     
 </main>
+<script>
+    const filterToggleButton = document.querySelector('.btn-filter-toggle');
+    const filterSection = document.getElementById('filter-section');
+
+    filterToggleButton.addEventListener('click', () => {
+        filterSection.classList.toggle('visible');
+    });
+</script>
+
+
+
 {% endblock content %}

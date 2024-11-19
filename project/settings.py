@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'members',
     'admin_panel',
     'django_celery_beat',
+    'debug_toolbar',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -112,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Sao_Paulo'
+TIME_ZONE = 'America/Fortaleza'
 
 USE_I18N = True
 
@@ -173,4 +176,16 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'members.tasks.update_members_activity_status',
         'schedule': crontab(minute=2, hour=0, ), 
     },
+}
+
+
+# CONFIG OF DEBUG TOOLBAR
+
+INTERNAL_IPS = [
+    '127.0.0.1',  # IP do localhost
+]
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG,  # Ativa apenas quando DEBUG=True
+    'INTERCEPT_REDIRECTS': False,  # Não intercepta redirecionamentos
 }

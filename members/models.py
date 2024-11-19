@@ -43,9 +43,9 @@ class Payment(models.Model):
     
     def __str__(self):
         if self.member:
-            return f'{self.member.full_name} | {self.payment_date} | {self.amount}'
+            return f'{self.member.full_name} | {self.payment_date} | R$ {self.amount}'
         else:
-            return f'Pagamento sem membro associado | {self.payment_date} | {self.amount}'
+            return f'Pagamento sem aluno associado | {self.payment_date} | R$ {self.amount}'
     
     @classmethod
     def get_current_month_profit(cls):
