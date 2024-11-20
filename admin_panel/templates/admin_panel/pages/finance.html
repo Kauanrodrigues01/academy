@@ -49,8 +49,13 @@
         </div>
 
         <div class="download-report">
-            <a href="{% url 'admin_panel:generate_pdf_report' %}" class="btn btn-primary">
-                <i class="fas fa-download"></i> Baixar Relatório
+            <h2>Download de Relatórios</h2>
+            <br>
+            <a href="{% url 'admin_panel:generate_pdf_general_report' %}" class="btn btn-primary">
+                <i class="fas fa-download"></i> Baixar Relatório geral
+            </a>
+            <a href="{% url 'admin_panel:generate_pdf_report_of_current_day' %}" class="btn btn-primary">
+                <i class="fas fa-download"></i> Baixar Relatório do dia atual
             </a>
         </div>
             

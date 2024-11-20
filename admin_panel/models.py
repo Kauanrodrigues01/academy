@@ -3,6 +3,7 @@ from members.models import Member
 from django.utils.timezone import localdate
 from members.models import Member, Payment
 from django.db.models import Sum
+from datetime import date as date_instance
 
 class ActivityLog(models.Model):
     EVENT_TYPES = [
@@ -28,6 +29,7 @@ class DailyReport(models.Model):
     pending_students = models.PositiveIntegerField(default=0)
     new_students = models.PositiveIntegerField(default=0)
     daily_profit = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    payments = models.ManyToManyField(Payment)
     
 
     def __str__(self):
@@ -40,6 +42,10 @@ class DailyReport(models.Model):
     
     @classmethod
     def create_report(cls, date=None):
+        if not isinstance(date, date_instance):
+            raise ValueError('A data do relatório tem que ser uma instância de date()')
+        if date and date > localdate():
+            raise ValueError('A data do relatório não pode ser no futuro')
         if date is None:
             date = localdate()
             
@@ -51,6 +57,7 @@ class DailyReport(models.Model):
         report.daily_profit = Payment.objects.filter(payment_date=date).aggregate(
             daily_profit=Sum('amount')
         )['daily_profit'] or 0.0
+        report.payments.set(Payment.objects.filter(payment_date=date))
         
         report.save()
         return report

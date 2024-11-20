@@ -155,7 +155,7 @@ from xhtml2pdf import pisa
 from django.http import HttpResponse
 
 @login_required
-def generate_pdf_report(request):
+def generate_pdf_general_report(request):
     active_members = Member.objects.filter(is_active=True).count()
     inactive_members =Member.objects.filter(is_active=False).count()
     total_revenue = Payment.objects.aggregate(total=Sum('amount'))['total'] or 0.00
@@ -169,11 +169,38 @@ def generate_pdf_report(request):
         'payments': payments
     }
     
-    html_string = render_to_string('reports/gym_report.html', context)
+    html_string = render_to_string('reports/gym_general_report.html', context)
     
     
     response = HttpResponse(content_type='application/pdf')
     file_name = f"gym_report_{localdate().strftime('%Y-%m-%d')}"
+    response['Content-Disposition'] = f'attachment; filename={file_name}.pdf'
+    
+    pisa_status = pisa.CreatePDF(html_string, dest=response)
+    
+    if pisa_status.err:
+        return HttpResponse('Erro ao gerar o PDF', status=500)
+    
+    
+    return response
+
+from admin_panel.models import DailyReport
+
+def generate_pdf_report_of_current_day(request):
+    current_day_report = DailyReport.create_report()
+    
+    context = {
+        'date': localtime().strftime('%Y-%m-%d %H:%M'),
+        'active_members': current_day_report.active_students,
+        'inactive_members': current_day_report.pending_students,
+        'total_revenue': current_day_report.daily_profit,
+        'payments': None
+    }
+    
+    html_string = render_to_string('reports/gym_current_day_report.html', context)
+    
+    response = HttpResponse(content_type='application/pdf')
+    file_name = f"gym_current_day_report_{localdate().strftime('%Y-%m-%d')}"
     response['Content-Disposition'] = f'attachment; filename={file_name}.pdf'
     
     pisa_status = pisa.CreatePDF(html_string, dest=response)
