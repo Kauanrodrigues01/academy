@@ -1,5 +1,6 @@
 from django.db import models
-from django.utils import timezone
+from datetime import timedelta
+from django.utils.timezone import localdate
 from django.db.models import Sum, Min, Max, Count
 from django.core.exceptions import ValidationError
 from datetime import datetime
@@ -8,7 +9,7 @@ class Member(models.Model):
     email = models.EmailField(unique=True)
     full_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
-    start_date = models.DateField(default=timezone.now)
+    start_date = models.DateField(default=localdate)
     is_active = models.BooleanField(default=False)  # Atualizado dinamicamente
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -26,9 +27,9 @@ class Member(models.Model):
 
     def update_activity_status(self):
         """Atualiza o status de atividade do membro com base na última data de pagamento."""
-        now = timezone.now().date()
+        now = localdate()
 
-        if self.last_payment_date and self.last_payment_date < now - timezone.timedelta(days=30):
+        if self.last_payment_date and self.last_payment_date < now - timedelta(days=30):
             self.is_active = False
         else:
             self.is_active = True
@@ -38,7 +39,7 @@ class Member(models.Model):
 
 class Payment(models.Model):
     member = models.ForeignKey(Member, on_delete=models.SET_NULL, null=True, related_name='payments')
-    payment_date = models.DateField(default=timezone.now)
+    payment_date = models.DateField(default=localdate)
     amount = models.DecimalField(max_digits=5, decimal_places=2, default=100.00)
     
     def __str__(self):
@@ -50,8 +51,8 @@ class Payment(models.Model):
     @classmethod
     def get_current_month_profit(cls):
         """Calcula o total de pagamento rebido em um mês"""
-        current_month = timezone.now().month
-        current_year = timezone.now().year
+        current_month = localdate().month
+        current_year = localdate().year
         
         payments = Payment.objects.filter(
             payment_date__month=current_month,
@@ -70,7 +71,7 @@ class Payment(models.Model):
             raise ValidationError("Month must be between 1 and 12.")
         
         # Cria um objeto datetime com o primeiro dia do mês
-        current_year = timezone.now().year
+        current_year = localdate().year
         month_start_date = datetime(current_year, month, 1)
         
         # Usa o mês obtido para filtrar os pagamentos
@@ -85,7 +86,7 @@ class Payment(models.Model):
     
     @classmethod
     def get_current_year_profit(cls):
-        current_year = timezone.now().year
+        current_year = localdate().year
         
         payments = Payment.objects.filter(
             payment_date__year=current_year

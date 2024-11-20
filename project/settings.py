@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'admin_panel',
     'django_celery_beat',
     'debug_toolbar',
-    'django_extensions'
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -115,11 +115,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Fortaleza'
-
-USE_I18N = True
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_TZ = True
+
+USE_I18N = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -176,6 +176,10 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'members.tasks.update_members_activity_status',
         'schedule': crontab(minute=2, hour=0, ), 
     },
+    'save-daily-report': {
+        'task': 'admin_panel.tasks.save_daily_report',
+        'schedule': crontab(minute=0, hour=23, )
+    }
 }
 
 

@@ -4,7 +4,7 @@ from members.forms import MemberPaymentForm, PaymentForm, MemberEditForm
 from .models import ActivityLog
 from members.models import Member, Payment
 from django.shortcuts import get_object_or_404
-from django.utils.timezone import now
+from django.utils.timezone import localdate, localtime
 from django.db.models import Q, Max
 from django.utils.dateparse import parse_date
 from utils import make_pagination
@@ -12,8 +12,8 @@ from utils import make_pagination
 # Create your views here.
 @login_required
 def home(request):
-    current_month = now().month
-    current_year = now().year
+    current_month = localdate().month
+    current_year = localdate().year
     
     
     count_new_members_in_month = Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count()
@@ -150,7 +150,6 @@ def finance(request):
 
 
 from django.db.models import Sum
-from django.utils import timezone
 from django.template.loader import render_to_string
 from xhtml2pdf import pisa
 from django.http import HttpResponse
@@ -163,7 +162,7 @@ def generate_pdf_report(request):
     payments = Payment.objects.select_related('member').all()
     
     context = {
-        'date': timezone.now().strftime('%Y-%m-%d'),
+        'date': localtime().strftime('%Y-%m-%d %H:%M'),
         'active_members': active_members,
         'inactive_members': inactive_members,
         'total_revenue': total_revenue,
@@ -174,8 +173,7 @@ def generate_pdf_report(request):
     
     
     response = HttpResponse(content_type='application/pdf')
-    print(timezone.now())
-    file_name = f"gym_report_{timezone.now().strftime('%Y-%m-%d')}"
+    file_name = f"gym_report_{localdate().strftime('%Y-%m-%d')}"
     response['Content-Disposition'] = f'attachment; filename={file_name}.pdf'
     
     pisa_status = pisa.CreatePDF(html_string, dest=response)

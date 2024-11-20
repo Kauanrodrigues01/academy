@@ -1,5 +1,8 @@
 from django.db import models
 from members.models import Member
+from django.utils.timezone import localdate
+from members.models import Member, Payment
+from django.db.models import Sum
 
 class ActivityLog(models.Model):
     EVENT_TYPES = [
@@ -26,6 +29,7 @@ class DailyReport(models.Model):
     new_students = models.PositiveIntegerField(default=0)
     daily_profit = models.DecimalField(max_digits=6, decimal_places=2, default=0)
     
+
     def __str__(self):
         return f"Daily Report for {self.date}"
     
@@ -34,3 +38,19 @@ class DailyReport(models.Model):
             models.Index(fields=['date']),
         ]
     
+    @classmethod
+    def create_report(cls, date=None):
+        if date is None:
+            date = localdate()
+            
+        report, created = cls.objects.get_or_create(date=date)
+        
+        report.active_students = Member.objects.filter(is_active=True).count()
+        report.pending_students = Member.objects.filter(is_active=False).count()
+        report.new_students = Member.objects.filter(created_at__date=date).count()
+        report.daily_profit = Payment.objects.filter(payment_date=date).aggregate(
+            daily_profit=Sum('amount')
+        )['daily_profit'] or 0.0
+        
+        report.save()
+        return report
