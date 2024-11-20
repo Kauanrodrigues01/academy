@@ -33,5 +33,5 @@ def log_payment_activity(sender, instance, created, **kwargs):
         ActivityLog.objects.create(
             member=instance.member,
             event_type='payment',
-            description=f"Aluno {instance.member.full_name} realizou um pagamento de R$ {instance.amount}."
+            description=f"{f'Aluno {instance.member.full_name}' if instance.member else 'Pagamento sem aluno associado |'} realizou um pagamento de R$ {instance.amount}."
         )

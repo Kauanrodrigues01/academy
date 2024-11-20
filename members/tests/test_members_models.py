@@ -45,7 +45,7 @@ class MemberModelTestCase(TestBase):
         Payment.objects.create(member=self.member, payment_date=localdate() - delta_days)
         self.member.update_activity_status()
         self.assertEqual(self.member.is_active, expected_status)
-
+        
 
 class PaymentModelTestCase(TestBase):
 
@@ -56,18 +56,26 @@ class PaymentModelTestCase(TestBase):
         self.assertEqual(payment.amount, 150.00)
         self.assertEqual(payment.payment_date, localdate())
 
-    def test_payment_save_updates_member_status(self):
-        """Testa se o método save do pagamento atualiza o status do membro."""
-        self.assertFalse(self.member.is_active)
-        payment = Payment.objects.create(member=self.member, amount=100.00, payment_date=localdate())
-        self.member.refresh_from_db()
-        self.assertTrue(self.member.is_active)
+    @parameterized.expand([
+        (localdate(), True),  # Recent payment, member must be active
+        (localdate() - timedelta(days=31), False),  # Payment older than 30 days, member must be inactive
+    ])
+    def test_payment_save_updates_member_status(self, payment_date, expected_status):
+        """Testa se o método save do pagamento atualiza o status do membro de acordo com a data do pagamento."""
+        member = Member.objects.create(email="teste@teste.com", full_name="Teste", phone="5585966667888", is_active=False)
+        payment = Payment.objects.create(member=member, amount=100.00, payment_date=payment_date)
         
-        payment.delete()
-        self.assertTrue(self.member.is_active)
-        payment = Payment.objects.create(member=self.member, amount=100.00, payment_date=localdate() - timedelta(days=31))
-        self.assertFalse(self.member.is_active)
+        member.refresh_from_db()
+        self.assertEqual(member.is_active, expected_status)
 
+        payment.delete()
+
+    def test_payment_without_member(self):
+        """Testa a criação de um pagamento sem membro associado."""
+        payment = Payment.objects.create(amount=100.00, payment_date=localdate())
+        self.assertEqual(Payment.objects.all().count(), 1)
+        self.assertTrue(Payment.objects.filter(id=payment.id))
+    
     def test_payment_str(self):
         """Testa o método __str__ do modelo Payment."""
         payment = Payment.objects.create(member=self.member, amount=100.00)

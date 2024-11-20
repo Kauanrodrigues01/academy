@@ -4,10 +4,11 @@ from django.utils.timezone import localdate
 from django.db.models import Sum, Min, Max, Count
 from django.core.exceptions import ValidationError
 from datetime import datetime
+from django.core.validators import MinLengthValidator
 
 class Member(models.Model):
     email = models.EmailField(unique=True)
-    full_name = models.CharField(max_length=50)
+    full_name = models.CharField(max_length=50, validators=[MinLengthValidator(3)])
     phone = models.CharField(max_length=15)
     start_date = models.DateField(default=localdate)
     is_active = models.BooleanField(default=False)  # Atualizado dinamicamente

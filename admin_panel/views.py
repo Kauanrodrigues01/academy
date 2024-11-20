@@ -255,14 +255,17 @@ def generate_pdf_general_report(request):
 from admin_panel.models import DailyReport
 
 def generate_pdf_report_of_current_day(request):
-    current_day_report = DailyReport.create_report()
+    report = DailyReport.objects.filter(date=localdate()).first()
     
+    if not report:
+        report = DailyReport.create_report()
+        
     context = {
         'date': localtime().strftime('%Y-%m-%d %H:%M'),
-        'active_members': current_day_report.active_students,
-        'inactive_members': current_day_report.pending_students,
-        'total_revenue': current_day_report.daily_profit,
-        'payments': None
+        'active_members': report.active_students,
+        'inactive_members': report.pending_students,
+        'total_revenue': report.daily_profit,
+        'payments': report.payments
     }
     
     html_string = render_to_string('reports/gym_current_day_report.html', context)

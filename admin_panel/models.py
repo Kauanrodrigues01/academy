@@ -42,7 +42,7 @@ class DailyReport(models.Model):
     
     @classmethod
     def create_report(cls, date=None):
-        if not isinstance(date, date_instance):
+        if date and not isinstance(date, date_instance):
             raise ValueError('A data do relatório tem que ser uma instância de date()')
         if date and date > localdate():
             raise ValueError('A data do relatório não pode ser no futuro')

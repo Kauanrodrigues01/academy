@@ -1,7 +1,9 @@
 from django import forms
 from .models import Member, Payment
 from .models import Member
+from django.utils.timezone import localdate
 import re
+from django.core.exceptions import ValidationError
 
 class MemberPaymentForm(forms.Form):
     email = forms.EmailField(
@@ -17,6 +19,7 @@ class MemberPaymentForm(forms.Form):
     )
     full_name = forms.CharField(
         max_length=50,
+        min_length=3,
         label='Nome Completo',
         widget=forms.TextInput(
             attrs={
@@ -25,7 +28,12 @@ class MemberPaymentForm(forms.Form):
                 'required': True,
                 'placeholder': 'Nome do aluno'
             }
-        )
+        ),
+        error_messages = {
+            'required': 'O nome completo é obrigatório.',
+            'min_length': 'O nome completo deve ter pelo menos 3 caracteres.',
+            'max_length': 'O nome completo deve ter menos de 50 caracteres.',
+        }
     )
     phone = forms.CharField(
         max_length=15,
@@ -68,25 +76,26 @@ class MemberPaymentForm(forms.Form):
         })
     )
     
-    def clean_full_name(self):
-        full_name = self.cleaned_data.get('full_name')
-        if not full_name:
-            raise forms.ValidationError("O nome completo é obrigatório.")
-        if len(full_name) < 3:
-            raise forms.ValidationError("O nome completo deve ter pelo menos 3 caracteres.")
-        return full_name
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
         if Member.objects.filter(email=email).exists():
-            raise forms.ValidationError("Este e-mail já está cadastrado.")
+            raise forms.ValidationError('Este e-mail já está cadastrado.')
         return email
 
     def clean_phone(self):
         phone = self.cleaned_data.get('phone')
         if not re.match(r'^\d{10,15}$', phone):
-            raise forms.ValidationError("O telefone deve conter apenas números e ter entre 10 e 15 dígitos.")
+            raise forms.ValidationError('O telefone deve conter apenas números e ter entre 10 e 15 dígitos.')
         return phone
+    
+    def clean_payment_date(self):
+        payment_date = self.cleaned_data.get('payment_date')
+
+        if payment_date > localdate():
+            raise forms.ValidationError('A data de pagamento não pode ser no futuro.')
+
+        return payment_date
     
     def save(self):
         # Criar um novo membro
@@ -114,7 +123,7 @@ class MemberEditForm(forms.ModelForm):
             'full_name': forms.TextInput(attrs={
                 'id': 'student-name',
                 'class': 'form-control',
-                'required': True
+                'required': True,
             }),
             'email': forms.EmailInput(attrs={
                 'id': 'student-email',
@@ -138,25 +147,24 @@ class MemberEditForm(forms.ModelForm):
             'phone': 'Telefone',
             'is_active': 'Status'
         }
-
-    def clean_full_name(self):
-        full_name = self.cleaned_data['full_name']
-        if not full_name:
-            raise forms.ValidationError("O nome completo é obrigatório.")
-        if len(full_name) < 3:
-            raise forms.ValidationError("O nome completo deve ter pelo menos 3 caracteres.")
-        return full_name
+        error_messages = {
+            'full_name': {
+                'required': 'O nome completo é obrigatório.',
+                'min_length': 'O nome completo deve ter pelo menos 3 caracteres.',
+                'max_length': 'O nome completo deve ter menos de 50 caracteres.'
+            }
+        }
 
     def clean_email(self):
         email = self.cleaned_data['email']
         if Member.objects.exclude(id=self.instance.id).filter(email=email).exists():
-            raise forms.ValidationError("Já existe um membro com este e-mail.")
+            raise forms.ValidationError('Já existe um aluno com este e-mail.')
         return email
 
     def clean_phone(self):
         phone = self.cleaned_data['phone']
         if not re.match(r'^\d{10,15}$', phone):
-            raise forms.ValidationError("O telefone deve conter apenas números e ter entre 10 e 15 dígitos.")
+            raise forms.ValidationError('O telefone deve conter apenas números e ter entre 10 e 15 dígitos.')
         return phone
 
     def clean_is_active(self):
@@ -192,9 +200,17 @@ class PaymentForm(forms.ModelForm):
             'amount': 'Valor'
         }
         
+    def clean_payment_date(self):
+        payment_date = self.cleaned_data.get('payment_date')
+
+        if payment_date > localdate():
+            raise forms.ValidationError('A data de pagamento não pode ser no futuro.')
+
+        return payment_date
+        
     def save(self, commit=True, member=None):
-        if member is None:
-            raise ValueError("É necessário fornecer um membro ao salvar o pagamento.")
+        if not member:
+            raise ValidationError('É necessário fornecer um membro ao salvar o pagamento.')
         
         payment = super().save(commit=False)
         payment.member = member
