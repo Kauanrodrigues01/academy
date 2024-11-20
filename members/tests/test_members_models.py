@@ -5,8 +5,7 @@ from parameterized import parameterized
 from members.models import Member, Payment
 from django.core.exceptions import ValidationError
 
-class MemberModelTestCase(TestCase):
-
+class TestBase(TestCase):
     @classmethod
     def setUpTestData(cls):
         """Configuração inicial dos testes."""
@@ -15,6 +14,8 @@ class MemberModelTestCase(TestCase):
             full_name="Test User",
             phone="123456789"
         )
+
+class MemberModelTestCase(TestBase):
 
     def test_member_creation(self):
         """Testa a criação de um membro."""
@@ -46,16 +47,7 @@ class MemberModelTestCase(TestCase):
         self.assertEqual(self.member.is_active, expected_status)
 
 
-class PaymentModelTestCase(TestCase):
-
-    @classmethod
-    def setUpTestData(cls):
-        """Configuração inicial dos testes."""
-        cls.member = Member.objects.create(
-            email="test@example.com",
-            full_name="Test User",
-            phone="123456789"
-        )
+class PaymentModelTestCase(TestBase):
 
     def test_payment_creation(self):
         """Testa a criação de um pagamento."""
