@@ -5,7 +5,7 @@
 {% block content %}
 <main class="container-form-payment">
     <h1>Adicionar Pagamento para: {{ member.full_name }}</h1>
-    <form method="POST" action="{% url 'members:add_payment' member.id %}" class="form">
+    <form method="POST" action="{% url 'admin_panel:add_payment' member.id %}" class="form">
         {% csrf_token %}
         
         {% for field in form %}

@@ -70,7 +70,7 @@
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-container">
             <h3>Adicionar Aluno</h3>
-            <form id="add-student-form" method="POST" action="{% url 'members:add_member' %}" class="form">
+            <form id="add-student-form" method="POST" action="{% url 'admin_panel:add_member' %}" class="form">
                 {% csrf_token %}
                 
                 {% for field in form %}

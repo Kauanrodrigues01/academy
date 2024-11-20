@@ -6,7 +6,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('admin_panel.urls')),
     path('users/', include('users.urls')),
-    path('members/', include('members.urls')),
+    # path('members/', include('members.urls')),
 ]
 
 if settings.DEBUG:  # Somente em modo de desenvolvimento

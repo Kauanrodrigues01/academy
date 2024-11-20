@@ -17,7 +17,7 @@
     </div>
     <div class="student-actions">
         <a href="{% url 'admin_panel:edit_member_view' member.id %}" class="btn btn-secondary">Editar</a>
-        <a href="{% url 'members:delete_member' member.id %}" class="btn btn-danger">Excluir</a>
+        <a href="{% url 'admin_panel:delete_member' member.id %}" class="btn btn-danger">Excluir</a>
 
         {% if member.is_active is False %}
         <a href="{% url 'admin_panel:add_payment_view' member.id %}" class="btn btn-add">Registrar pagamento</a>

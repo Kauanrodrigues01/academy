@@ -5,7 +5,7 @@
 {% block content %}
 <main class="container-form-edit-member">
     <h1>Editar Aluno: {{ member.full_name }}</h1>
-    <form method="POST" action="{% url 'members:edit_member_update' member.id %}" class="form">
+    <form method="POST" action="{% url 'admin_panel:edit_member_update' member.id %}" class="form">
         {% csrf_token %}
         
         {% for field in form %}
