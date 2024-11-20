@@ -50,7 +50,7 @@ class Payment(models.Model):
     
     @classmethod
     def get_current_month_profit(cls):
-        """Calcula o total de pagamento rebido em um mês"""
+        """Calcula o total de pagamento rebido no mês atual"""
         current_month = localdate().month
         current_year = localdate().year
         
@@ -101,8 +101,3 @@ class Payment(models.Model):
 
         if self.member:
             self.member.update_activity_status()
-
-    
-    
-    
-    

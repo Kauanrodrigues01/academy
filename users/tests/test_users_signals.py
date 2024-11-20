@@ -1,14 +1,12 @@
 from django.test import TestCase
 from django.apps import apps
 from django.db.models.signals import post_migrate
-from unittest.mock import patch
 from decouple import config
 from users.models import User
 from users.signals import create_superuser
 
 class CreateSuperuserSignalTest(TestCase):
 
-    @patch('decouple.config')
     def test_create_superuser_signal(self):
         """
         Testa se o superusuário é criado corretamente pelo signal `create_superuser`

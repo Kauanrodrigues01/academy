@@ -189,7 +189,17 @@ INTERNAL_IPS = [
     '127.0.0.1',  # IP do localhost
 ]
 
+import sys
+
+# Verifica se o pytest está sendo executado
+import pytest
+
+TESTING = 'pytest' in sys.modules
+
 DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG,  # Ativa apenas quando DEBUG=True
-    'INTERCEPT_REDIRECTS': False,  # Não intercepta redirecionamentos
+    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG and not TESTING,  # Ativa somente quando DEBUG=True e não em testes
+    'INTERCEPT_REDIRECTS': False,
+    'DISABLE_PANELS': {'debug_toolbar.panels.redirects.RedirectsPanel'},
+    'RESULTS_CACHE_SIZE': 50,
+    'ENABLE_STACKTRACES': True,
 }
