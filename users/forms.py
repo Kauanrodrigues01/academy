@@ -37,8 +37,7 @@ class PasswordResetRequestForm(forms.Form):
             raise forms.ValidationError('O e-mail fornecido não é válido.')
         
         if not User.objects.filter(email=email).exists():
-            raise forms.ValidationError('Este e-mail não está registrado. Verifique novamente.'
-)
+            raise forms.ValidationError('Este e-mail não está registrado. Verifique novamente.')
         return email
     
 

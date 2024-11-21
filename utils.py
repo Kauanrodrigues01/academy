@@ -25,6 +25,7 @@ def is_valid_cpf(cpf):
     sum_1 = sum(cpf[i] * (10 - i) for i in range(9))
     digit_1 = (sum_1 * 10 % 11) % 10
     if digit_1 != cpf[9]:
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TESTEI ESSA POSSIBILIDADE
         return False
 
     sum_2 = sum(cpf[i] * (11 - i) for i in range(10))
@@ -56,6 +57,7 @@ def make_pagination_range(
         stop_range += start_range_offset
 
     if stop_range >= total_pages:
+        # COVERAGE ESTÁ DIZENDO QUE NÃO TESTEI ESSA POSSIBILIDADE
         start_range = start_range - abs(total_pages - stop_range)
 
     pagination = page_range[start_range:stop_range]

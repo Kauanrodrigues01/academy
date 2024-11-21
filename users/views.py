@@ -1,10 +1,10 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.http import Http404
 from .forms import LoginForm, PasswordResetRequestForm, PasswordResetForm
 from users.models import User
 from django.urls import reverse
+from django.shortcuts import get_object_or_404
 
 from django.utils.encoding import smart_bytes, smart_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -91,31 +91,25 @@ def password_reset_send(request):
 
     if form.is_valid():
         email = form.cleaned_data['email']
-        try:
-            user = User.objects.get(email=email)
+        user = get_object_or_404(User, email=email)
 
-            uidb64 = urlsafe_base64_encode(smart_bytes(user.id))
-            token = PasswordResetTokenGenerator().make_token(user)
-            current_site = get_current_site(request).domain
-            relative_link = reverse('users:password_reset_confirm', kwargs={'uidb64': uidb64, 'token': token})
-            absurl = f'http://{current_site}{relative_link}'
-            
-            full_name = user.full_name or ' '
-            first_name = full_name.split(' ')[0]
-            email_body = f'Olá, {first_name}.\n Redefina sua senha usando o link abaixo: \n {absurl}'
-            
-            send_email(
-                subject='Reset da senha',
-                message=email_body,
-                to_email=user.email
-            )
-            messages.success(request, "Se o e-mail existir, um link para redefinir sua senha foi enviado.")
-            return redirect('users:login_view') 
-
-        except User.DoesNotExist:
-            # COVERAGE ESTÁ DIZENDO QUE NÃO TENTEI ESSA POSSIBILIDADE
-            form.add_error('email', 'Este e-mail não está cadastrado.')
-
+        uidb64 = urlsafe_base64_encode(smart_bytes(user.id))
+        token = PasswordResetTokenGenerator().make_token(user)
+        current_site = get_current_site(request).domain
+        relative_link = reverse('users:password_reset_confirm', kwargs={'uidb64': uidb64, 'token': token})
+        absurl = f'http://{current_site}{relative_link}'
+        
+        full_name = user.full_name or ' '
+        first_name = full_name.split(' ')[0]
+        email_body = f'Olá, {first_name}.\n Redefina sua senha usando o link abaixo: \n {absurl}'
+        
+        send_email(
+            subject='Reset da senha',
+            message=email_body,
+            to_email=user.email
+        )
+        messages.success(request, "Se o e-mail existir, um link para redefinir sua senha foi enviado.")
+        return redirect('users:login_view') 
     else:
         messages.error(request, "Por favor, corrija os erros abaixo.")
 
