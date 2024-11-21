@@ -50,13 +50,16 @@ class PasswordResetRequestFormTests(TestBase):
         form_data = {'email': self.email}
         form = PasswordResetRequestForm(data=form_data)
         self.assertTrue(form.is_valid())
-
-    def test_invalid_email_format(self):
-        """Testa se o formulário rejeita um e-mail inválido"""
+        
+    def test_invalid_email(self):
+        """Testa se o formulário rejeita e-mails inválidos com a mensagem de erro correta."""
         form_data = {'email': 'invalid-email'}
         form = PasswordResetRequestForm(data=form_data)
+        
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors['email'], ['Informe um endereço de email válido.'])
+        
+        # Verifica se a mensagem de erro está correta
+        self.assertEqual(form.errors['email'], ['O e-mail fornecido não é válido.'])
 
     def test_email_not_registered(self):
         """Testa se o formulário rejeita e-mail não registrado"""

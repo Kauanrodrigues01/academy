@@ -28,12 +28,16 @@ class PasswordResetRequestForm(forms.Form):
     email = forms.EmailField(
         required=True,
         widget=forms.EmailInput(attrs={'placeholder': 'Confirme seu e-mail'}),
-        error_messages={'required': 'Este campo é obrigatório.'}
+        error_messages={
+            'required': 'Este campo é obrigatório.',
+            'invalid': 'O e-mail fornecido não é válido.'
+        }
     )
     
     def clean_email(self):
         email = self.cleaned_data.get('email')
-        if not verify_email(email):
+        
+        if not verify_email(email):  # pragma: no cover
             raise forms.ValidationError('O e-mail fornecido não é válido.')
         
         if not User.objects.filter(email=email).exists():

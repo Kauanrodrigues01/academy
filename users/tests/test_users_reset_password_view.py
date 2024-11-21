@@ -96,6 +96,65 @@ class PasswordResetViewTests(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(str(messages[0]), 'Link expirado ou inválido. Faça a solicitação novamente.')
 
+    def test_password_reset_complete_redirect_if_not_post(self):
+        """Testa se redireciona para password reset se a requisição não for POST"""
+        response = self.client.get(self.password_reset_complete_url)
+        self.assertRedirects(response, self.password_reset_url)
+
+    def test_password_reset_complete_with_missing_session_data(self):
+        response = self.client.get(self.password_reset_confirm_url)
+
+        # Limpa o cookie de sessão diretamente
+        self.client.cookies['sessionid'] = ''  # Limpa o cookie de sessão
+
+        response = self.client.post(self.password_reset_complete_url, {
+            'password': 'NewPassword123',
+            'password_confirm': 'NewPassword123'
+        })
+
+        self.assertRedirects(response, self.password_reset_url)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(str(messages[0]), 'O link de redefinição expirou ou não foi encontrado.')
+
+    def test_password_reset_with_invalid_uidb64_session_data(self):
+        response = self.client.get(self.password_reset_confirm_url)
+        
+        request = response.wsgi_request
+        request.session['reset_password_data'] = {
+            'uidb64': urlsafe_base64_encode(smart_bytes('invalid-uidb64')),
+            'token': PasswordResetTokenGenerator().make_token(self.user)
+        }
+        request.session.save() 
+
+        response = self.client.post(self.password_reset_complete_url, {
+            'password': 'NewPassword123',
+            'password_confirm': 'NewPassword123',
+        })
+
+        self.assertRedirects(response, self.password_reset_url)
+
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(str(messages[0]), 'Link inválido.')
+
+    def test_password_reset_with_invalid_token_session_data(self):
+        response = self.client.get(self.password_reset_confirm_url)
+        
+        request = response.wsgi_request
+        request.session['reset_password_data'] = {
+            'uidb64': urlsafe_base64_encode(smart_bytes(self.user.id)),
+            'token': 'invalid_token'
+        }
+        request.session.save() 
+
+        response = self.client.post(self.password_reset_complete_url, {
+            'password': 'NewPassword123',
+            'password_confirm': 'NewPassword123',
+        })
+
+        self.assertRedirects(response, self.password_reset_url)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(str(messages[0]), 'Link expirado ou inválido. Faça a solicitação novamente.')
+    
     def test_password_reset_complete_valid(self):
         """Testa se a redefinição de senha é realizada com sucesso"""
         response = self.client.get(self.password_reset_confirm_url)

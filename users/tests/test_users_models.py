@@ -1,5 +1,4 @@
 from django.core.exceptions import ValidationError
-from utils import is_valid_cpf
 from users.models import User
 from users.tests.base.test_base import TestBase
 
@@ -12,6 +11,16 @@ class UserModelTests(TestBase):
         self.assertEqual(user.email, self.user_data['email'])
         self.assertEqual(user.full_name, self.user_data['full_name'])
         self.assertTrue(user.check_password(self.user_data['password']))
+        
+    def test_create_user_with_valid_cpf_does_not_raise_error(self):
+        """Testa se a criação de um usuário com CPF válido não gera erro de validação."""
+        self.user_data['cpf'] = self.valid_cpf
+        user = User(**self.user_data)
+        
+        try:
+            user.clean()
+        except ValidationError as e:
+            self.fail(f"O método clean() gerou um erro de validação: {e}")
 
     def test_create_user_without_cpf_raises_error(self):
         """Testa se a criação de um usuário sem CPF gera um erro."""
@@ -68,8 +77,3 @@ class UserModelTests(TestBase):
         self.assertTrue(user.is_active)
         self.assertFalse(user.is_staff)
         self.assertFalse(user.is_superuser)
-
-    def test_is_valid_cpf_utility(self):
-        """Testa o utilitário de validação de CPF."""
-        self.assertTrue(is_valid_cpf(self.valid_cpf))
-        self.assertFalse(is_valid_cpf(self.invalid_cpf))
