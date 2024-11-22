@@ -4,6 +4,7 @@ from django.utils.timezone import localdate
 from members.models import Member, Payment
 from django.db.models import Sum
 from datetime import date as date_instance
+from django.utils.timezone import localtime
 
 class ActivityLog(models.Model):
     EVENT_TYPES = [
@@ -17,7 +18,7 @@ class ActivityLog(models.Model):
     member = models.ForeignKey(Member, on_delete=models.SET_NULL, null=True, blank=True)
     event_type = models.CharField(max_length=20, choices=EVENT_TYPES)
     description = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(default=localtime, editable=False)
 
     def __str__(self):
         return f"{self.get_event_type_display()} - {self.description}"

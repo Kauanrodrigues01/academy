@@ -4,14 +4,6 @@ from users.tests.base.test_base import TestBase
 
 class LoginViewTests(TestBase):
     
-    @classmethod
-    def setUpTestData(cls):
-        """Configura dados estáticos compartilhados para os testes."""
-        super().setUpTestData()
-        cls.login_view_url = reverse('users:login_view')
-        cls.login_submit_url = reverse('users:login_submit')
-        cls.admin_home_url = reverse('admin_panel:home')
-    
     def test_login_view_get(self):
         """Testa se o formulário de login é exibido corretamente."""
         response = self.client.get(self.login_view_url)

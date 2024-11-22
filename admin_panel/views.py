@@ -18,14 +18,14 @@ def home(request):
     
     
     count_new_members_in_month = Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count()
-    value_total_month = Payment.get_current_month_profit()
+    profit_total_month = Payment.get_current_month_profit()
     recent_activities = ActivityLog.objects.all().order_by('-id').select_related('member')[:20]
     
     context = {
         'count_members_actives': Member.objects.filter(is_active=True).count(),
         'count_members_inactives': Member.objects.filter(is_active=False).count(),
         'count_new_members_in_month': count_new_members_in_month,
-        'value_total_month': value_total_month,
+        'profit_total_month': profit_total_month,
         'recent_activities': recent_activities
     }
     return render(request, 'admin_panel/pages/home.html', context)
@@ -180,6 +180,9 @@ def add_payment(request, id):
         return redirect('admin_panel:add_payment_view', id=id)
 
 
+import plotly.express as px
+import pandas as pd
+
 @login_required
 def finance(request):
     current_year_profit = Payment.get_current_year_profit()
@@ -199,6 +202,12 @@ def finance(request):
         'Novembro': Payment.get_monthly_profit(11),
         'Dezembro': Payment.get_monthly_profit(12),
     }
+    
+    df = pd.DataFrame(list(months_profit.items()), columns=['Month', 'Profit'])
+    
+    fig = px.bar(df, x='Month', y='Profit', title="Lucro Mensal", labels={'Month': 'Mês', 'Profit': 'Lucro'})
+    
+    graph_html = fig.to_html(full_html=False)
         
     month_with_highest_profit = max(months_profit, key=lambda month: months_profit[month])
     
@@ -210,7 +219,8 @@ def finance(request):
         'current_month_profit': current_month_profit,
         'months_profit': months_profit,
         'month_with_highest_profit': month_with_highest_profit,
-        'recents_payments': recents_payments
+        'recents_payments': recents_payments,
+        'graph_html': graph_html
     }
     
     

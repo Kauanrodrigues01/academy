@@ -18,15 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-headings);
-} */
-
 /* Contêiner principal */
 .container {
   display: flex;
@@ -761,6 +752,83 @@ h6 {
 .transaction-list li span {
   font-weight: bold;
   color: var(--color-primary-dark);
+}
+
+/* Estilização do grafico */
+.graph-container {
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graph-container h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: var(--color-primary-dark);
+}
+
+.graph-container .plotly-graph {
+  width: 100%;
+  height: 700px;  /* Ajuste a altura conforme necessário */
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.graph-container .plotly-graph iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+.download-report {
+  text-align: center;
+  padding: var(--spacing-gutter-medium);
+  background-color: var(--color-gray-0);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Estilo do título */
+.download-report h2 {
+  font-size: 24px;
+  font-family: var(--font-primary);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-gutter-medium);
+}
+
+/* Estilo dos botões de download */
+.download-report .btn-download {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  margin: 10px 5px;
+  font-size: 16px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: var(--font-primary);
+}
+
+/* Estilização download relatório */
+.download-report .btn-download:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.download-report .btn-download i {
+  margin-right: 8px;
+}
+
+/* Efeito ao pressionar o botão */
+.download-report .btn-download:active {
+  background-color: var(--color-primary-dark);
 }
 
 /* Responsividade */

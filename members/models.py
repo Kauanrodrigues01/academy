@@ -11,7 +11,7 @@ class Member(models.Model):
     full_name = models.CharField(max_length=50, validators=[MinLengthValidator(3)])
     phone = models.CharField(max_length=15)
     start_date = models.DateField(default=localdate)
-    is_active = models.BooleanField(default=False)  # Atualizado dinamicamente
+    is_active = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

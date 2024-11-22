@@ -48,16 +48,23 @@
             </div>        
         </div>
 
+        <div class="graph-container">
+            <h3>Gráfico de Lucros Mensais</h3>
+            <!-- Renderiza o gráfico -->
+            {{ graph_html|safe }}
+        </div>
+        
+
         <div class="download-report">
             <h2>Download de Relatórios</h2>
             <br>
-            <a href="{% url 'admin_panel:generate_pdf_general_report' %}" class="btn btn-primary">
+            <a href="{% url 'admin_panel:generate_pdf_general_report' %}" class="btn btn-download">
                 <i class="fas fa-download"></i> Baixar Relatório geral
             </a>
-            <a href="{% url 'admin_panel:generate_pdf_report_of_current_day' %}" class="btn btn-primary">
+            <a href="{% url 'admin_panel:generate_pdf_report_of_current_day' %}" class="btn btn-download">
                 <i class="fas fa-download"></i> Baixar Relatório do dia atual
             </a>
-        </div>
+        </div>        
             
     </div>
 </main>
