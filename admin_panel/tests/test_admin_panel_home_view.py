@@ -101,7 +101,6 @@ class TestHomeView(TestBaseHomeView):
         recent_activities = response.context['recent_activities']
         for activity in recent_activities:
             self.assertIn(activity.description, content)
-            print(localtime(activity.created_at).strftime("%d/%m/%y %H:%M"))
             self.assertIn(localtime(activity.created_at).strftime("%d/%m/%y %H:%M"), content)
         
     def test_renders_no_recent_activities_message(self):
