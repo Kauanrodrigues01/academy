@@ -8,19 +8,20 @@ from faker import Faker
 
 
 class TestMembersView(TestCase):
-    def setUp(self):
-        self.faker = Faker('pt_BR')
+    @classmethod
+    def setUpTestData(cls):
+        cls.faker = Faker('pt_BR')
         
-        self.password = self.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
+        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
         
-        self.user = User.objects.create_user(
-            cpf=self.faker.cpf().replace('.', '').replace('-', ''),
-            email=self.faker.email(),
-            password=self.password
+        cls.user = User.objects.create_user(
+            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),
+            email=cls.faker.email(),
+            password=cls.password
         )
         
         # Criar alguns membros para os testes
-        self.member1 = Member.objects.create(
+        cls.member1 = Member.objects.create(
             full_name='John Doe',
             email='john@example.com',
             phone='123456789',
@@ -28,7 +29,7 @@ class TestMembersView(TestCase):
             start_date=localdate() - timedelta(days=30)
         )
         
-        self.member2 = Member.objects.create(
+        cls.member2 = Member.objects.create(
             full_name='Jane Smith',
             email='jane@example.com',
             phone='987654321',
@@ -37,26 +38,26 @@ class TestMembersView(TestCase):
         )
 
         # Criar pagamentos para os membros
-        self.payment_member1 = Payment.objects.create(member=self.member1, payment_date=localdate() - timedelta(days=10), amount=100)
-        self.payment_member2 = Payment.objects.create(member=self.member2, payment_date=localdate() - timedelta(days=40), amount=100)
+        cls.payment_member1 = Payment.objects.create(member=cls.member1, payment_date=localdate() - timedelta(days=10), amount=100)
+        cls.payment_member2 = Payment.objects.create(member=cls.member2, payment_date=localdate() - timedelta(days=40), amount=100)
 
-        self.members_url = reverse('admin_panel:members')
-        self.login_url = reverse('users:login_view')
+        cls.members_url = reverse('admin_panel:members')
+        cls.login_url = reverse('users:login_view')
 
     def test_authenticated_user_can_access_page(self):
-        # Testar se o usuário autenticado pode acessar a página
+        """Test if authenticated user can access the members page."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.members_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'admin_panel/pages/members.html')
     
     def test_unauthenticated_user_redirected(self):
-        # Testar se o usuário não autenticado é redirecionado para a página de login
+        """Test if unauthenticated user is redirected to login."""
         response = self.client.get(self.members_url)
         self.assertTrue(response.url.startswith(self.login_url))
 
     def test_search_filter(self):
-        # Testar a funcionalidade de filtro de busca
+        """Test search functionality for filtering members."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.members_url, {'q': 'John'})
         content = response.content.decode('utf-8')
@@ -66,10 +67,10 @@ class TestMembersView(TestCase):
         self.assertNotIn(self.member2.full_name, content)
 
     def test_status_filter(self):
-        # Testar a filtragem por status (ativos/inativos)
+        """Test filtering members by active/inactive status."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         
-        # Testar membros ativos
+        # Test active members
         response = self.client.get(self.members_url, {'status': 'active'})
         content = response.content.decode('utf-8')
         
@@ -77,7 +78,7 @@ class TestMembersView(TestCase):
         self.assertIn(self.member1.full_name, content)
         self.assertNotIn(self.member2.full_name, content)
         
-        # Testar membros inativos
+        # Test inactive members
         response = self.client.get(self.members_url, {'status': 'inactive'})
         content = response.content.decode('utf-8')
         
@@ -86,7 +87,7 @@ class TestMembersView(TestCase):
         self.assertNotIn(self.member1.full_name, content)
 
     def test_payment_date_filter(self):
-        # Testar o filtro por data de pagamento
+        """Test filtering members by payment date."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.members_url, {'last_payment': self.payment_member1.payment_date})
         content = response.content.decode('utf-8')
@@ -96,10 +97,10 @@ class TestMembersView(TestCase):
         self.assertNotIn(self.member2.full_name, content)
 
     def test_pagination(self):
-        # Testar a paginação
+        """Test pagination with a large number of members."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         
-        # Criar mais membros para testar a paginação
+        # Create more members to test pagination
         for i in range(20, 31):
             Member.objects.create(
                 full_name=f'Member {i}',
@@ -111,16 +112,15 @@ class TestMembersView(TestCase):
         
         response = self.client.get(self.members_url)
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, '1')  # Verificar se a página 1 aparece
-        self.assertContains(response, '2')  # Verificar se a página 2 aparece
+        self.assertContains(response, '1')  # Check if page 1 is displayed
+        self.assertContains(response, '2')  # Check if page 2 is displayed
         
-        # Verificar membros na página 1
+        # Check members on page 1
         for i in range(20, 31):
             self.assertContains(response, f'Member {i}')
         
-
     def test_context_data(self):
-        # Testar o contexto da view
+        """Test context data returned by the view."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.members_url)
         self.assertEqual(response.status_code, 200)
@@ -130,17 +130,17 @@ class TestMembersView(TestCase):
         self.assertIn('form', response.context)
 
     def test_no_members_found(self):
-        # Testar quando nenhum membro é encontrado
+        """Test view behavior when no members are found."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.members_url, {'q': 'Nonexistent Name'})
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Nenhum aluno encontrado.')
 
     def test_edge_case_with_few_members(self):
-        # Testar com poucos membros (menos que 10)
+        """Test behavior when there are few members (less than one page)."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         
-        # Criar 5 membros
+        # Create 5 members
         for i in range(1, 6):
             Member.objects.create(
                 full_name=f'Member {i}',
@@ -153,16 +153,16 @@ class TestMembersView(TestCase):
         response = self.client.get(self.members_url)
         self.assertEqual(response.status_code, 200)
         
-        # Verificar que todos os membros estão na página, sem necessidade de paginação
+        # Verify all members are on the page, no pagination needed
         for i in range(1, 6):
             self.assertContains(response, f'Member {i}')
         
-        # Verificar que não há links para páginas adicionais
+        # Verify no links for additional pages
         self.assertNotContains(response, 'Next')
         self.assertNotContains(response, 'Previous')
 
     def test_no_results_for_filter(self):
-        # Testar quando um filtro não retorna resultados
+        """Test behavior when a filter returns no results."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         self.member1.delete()
         
@@ -171,10 +171,9 @@ class TestMembersView(TestCase):
         self.assertContains(response, 'Nenhum aluno encontrado.')
         
     def test_form_add_member(self):
-        # Testar se o formulário de adicionar membro está funcionando
+        """Test if the member addition form is displayed."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         
-        # Testando a view com o formulário
         response = self.client.get(self.members_url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'form')

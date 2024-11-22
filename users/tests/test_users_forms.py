@@ -8,35 +8,35 @@ from users.tests.base.test_base import TestBase
 class LoginFormTests(TestBase):
 
     def test_valid_form(self):
-        """Testa se o formulário é válido quando o CPF e a senha são corretos"""
+        """Tests if the form is valid when the CPF and password are correct"""
         faker = Faker('pt_BR')
         form_data = {'cpf': self.valid_cpf, 'password': self.password}
         form = LoginForm(data=form_data)
         self.assertTrue(form.is_valid())
 
     def test_invalid_cpf_format(self):
-        """Testa se o CPF está no formato correto"""
+        """Tests if the CPF is in the correct format"""
         form_data = {'cpf': self.invalid_cpf, 'password': self.password}
         form = LoginForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['cpf'], ['O CPF fornecido é inválido.'])
 
     def test_invalid_cpf_digits(self):
-        """Testa se o CPF possui 11 dígitos"""
+        """Tests if the CPF has 11 digits"""
         form_data = {'cpf': '1234567890A', 'password': 'ValidPassword123'}
         form = LoginForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['cpf'], ['O CPF fornecido é inválido.'])
 
     def test_invalid_cpf_check(self):
-        """Testa se o CPF é válido segundo a função is_valid_cpf"""
+        """Tests if the CPF is valid according to the is_valid_cpf function"""
         form_data = {'cpf': '12345678900', 'password': 'ValidPassword123'}
         form = LoginForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['cpf'], ['O CPF fornecido é inválido.'])
 
     def test_missing_password(self):
-        """Testa se o campo senha é obrigatório"""
+        """Tests if the password field is required"""
         form_data = {'cpf': '12345678901'}
         form = LoginForm(data=form_data)
         self.assertFalse(form.is_valid())
@@ -46,30 +46,30 @@ class LoginFormTests(TestBase):
 class PasswordResetRequestFormTests(TestBase):
 
     def test_valid_email(self):
-        """Testa se o formulário aceita um e-mail válido"""
+        """Tests if the form accepts a valid email"""
         form_data = {'email': self.email}
         form = PasswordResetRequestForm(data=form_data)
         self.assertTrue(form.is_valid())
         
     def test_invalid_email(self):
-        """Testa se o formulário rejeita e-mails inválidos com a mensagem de erro correta."""
+        """Tests if the form rejects invalid emails with the correct error message."""
         form_data = {'email': 'invalid-email'}
         form = PasswordResetRequestForm(data=form_data)
         
         self.assertFalse(form.is_valid())
         
-        # Verifica se a mensagem de erro está correta
+        # Verifies if the error message is correct
         self.assertEqual(form.errors['email'], ['O e-mail fornecido não é válido.'])
 
     def test_email_not_registered(self):
-        """Testa se o formulário rejeita e-mail não registrado"""
+        """Tests if the form rejects an email that is not registered"""
         form_data = {'email': 'nonexistent@example.com'}
         form = PasswordResetRequestForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['email'], ['Este e-mail não está registrado. Verifique novamente.'])
 
     def test_missing_email(self):
-        """Testa se o campo de e-mail é obrigatório"""
+        """Tests if the email field is required"""
         form_data = {}
         form = PasswordResetRequestForm(data=form_data)
         self.assertFalse(form.is_valid())
@@ -79,42 +79,41 @@ class PasswordResetRequestFormTests(TestBase):
 class PasswordResetFormTests(TestCase):
 
     def test_valid_password(self):
-        """Testa se o formulário aceita uma senha válida"""
+        """Tests if the form accepts a valid password"""
         form_data = {'password': 'NewPassword123', 'password_confirm': 'NewPassword123'}
         form = PasswordResetForm(data=form_data)
         self.assertTrue(form.is_valid())
 
     def test_passwords_do_not_match(self):
-        """Testa se o formulário rejeita senhas que não coincidem"""
+        """Tests if the form rejects passwords that do not match"""
         form_data = {'password': 'NewPassword123', 'password_confirm': 'DifferentPassword123'}
         form = PasswordResetForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['password_confirm'], ['As senhas não coincidem.'])
 
     def test_short_password(self):
-        """Testa se o formulário rejeita senhas com menos de 6 caracteres"""
+        """Tests if the form rejects passwords shorter than 6 characters"""
         form_data = {'password': 'Abcd1', 'password_confirm': 'Abcd1'}
         form = PasswordResetForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['password'], ['A senha deve ter pelo menos 6 caracteres.'])
 
     def test_missing_uppercase(self):
-        """Testa se o formulário rejeita senhas sem letras maiúsculas"""
+        """Tests if the form rejects passwords without uppercase letters"""
         form_data = {'password': 'password123', 'password_confirm': 'password123'}
         form = PasswordResetForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['password'], ['A senha deve conter pelo menos uma letra maiúscula.'])
 
     def test_missing_number(self):
-        """Testa se o formulário rejeita senhas sem números"""
+        """Tests if the form rejects passwords without numbers"""
         form_data = {'password': 'Password!', 'password_confirm': 'Password!'}
         form = PasswordResetForm(data=form_data)
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['password'], ['A senha deve conter pelo menos um número.'])
 
     def test_valid_password_special_characters(self):
-        """Testa se o formulário aceita senhas com caracteres especiais"""
+        """Tests if the form accepts passwords with special characters"""
         form_data = {'password': '@#$%ValidPassword123!', 'password_confirm': '@#$%ValidPassword123!'}
         form = PasswordResetForm(data=form_data)
         self.assertTrue(form.is_valid())
-
