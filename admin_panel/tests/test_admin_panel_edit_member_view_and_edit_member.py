@@ -40,6 +40,11 @@ class EditMemberViewAndEditMemberTests(TestCase):
             "phone": "",
             "is_active": False,
         }
+        
+    def test_edit_member_view_requires_authentication(self):
+        """Ensures authentication is required to access the "Edit Member View" view."""
+        response = self.client.get(self.edit_member_view_url)
+        self.assertTrue(response.url.startswith(reverse('users:login_view')))
     
     def test_edit_member_view_renders_correct_template(self):
         """Testa se a página de edição renderiza o template correto."""
@@ -89,7 +94,11 @@ class EditMemberViewAndEditMemberTests(TestCase):
         self.assertEqual(form.data['phone'], session_data['phone'])
         self.assertTrue(form.data['is_active'])
 
-
+    def test_edit_member_view_requires_authentication(self):
+        """Ensures authentication is required to access the "Edit Member" view."""
+        response = self.client.post(self.edit_member_url, data=self.valid_data)
+        self.assertTrue(response.url.startswith(reverse('users:login_view')))
+        
     def test_edit_member_successful_post(self):
         """Testa se a edição de membro funciona com dados válidos."""
         self.client.login(cpf=self.user.cpf, password=self.password)
