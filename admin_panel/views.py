@@ -84,11 +84,10 @@ def members(request):
 def edit_member_view(request, id):
     member = get_object_or_404(Member, id=id)
 
-    form_data_edit_member = request.session.get('form_data_edit_member')
+    form_data_edit_member = request.session.pop('form_data_edit_member', None)  # Use pop para remover depois de usar
     
     if form_data_edit_member:
         form = MemberEditForm(form_data_edit_member, instance=member)
-        request.session['form_data_edit_member'] = None 
     else:
         form = MemberEditForm(instance=member)
 
@@ -155,7 +154,9 @@ def edit_member(request, id):
             member.full_name = full_name
             member.is_active = is_active
             member.save()
+            
             messages.success(request, 'Membro atualizado com sucesso!')
+            request.session.pop('form_data_edit_member', None)
             return redirect('admin_panel:members')
         else:
             messages.error(request, 'Erro ao atualizar o membro. Verifique os dados e tente novamente.')
