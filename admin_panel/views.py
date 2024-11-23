@@ -130,7 +130,7 @@ def add_member(request):
 
 @login_required
 def delete_member(request, id):
-    member = Member.objects.get(id=id)
+    member = get_object_or_404(Member, id=id)
     member.delete()
     messages.success(request, 'Membro deletado com sucesso!')
     return redirect('admin_panel:members')
