@@ -62,7 +62,7 @@ def members(request):
     
     if form_data_add_member:
         form = MemberPaymentForm(form_data_add_member)
-        request.session['form_data_add_member'] = None
+        request.session.pop('form_data_add_member', None)
     else:
         form = MemberPaymentForm()
         
@@ -114,17 +114,19 @@ def add_payment_view(request, id):
 
 @login_required
 def add_member(request):
-    request.session['form_data_add_member'] = request.POST
     if request.method == 'POST':
         form = MemberPaymentForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Membro adicionado com sucesso!')
+            if 'form_data_add_member' in request.session: # pragma: no cover
+                del request.session['form_data_add_member']
             return redirect('admin_panel:members')
         else:
+            request.session['form_data_add_member'] = request.POST
+            request.session.modified = True
             messages.error(request, 'Erro ao adicionar o membro. Verifique os dados e tente novamente.')
             return redirect('admin_panel:members')
-    
     return redirect('admin_panel:members')
 
 @login_required
