@@ -30,6 +30,11 @@ class AddMemberViewTests(TestCase):
         }
         cls.members_url = reverse('admin_panel:members')
         cls.add_member_url = reverse('admin_panel:add_member')
+        
+    def test_add_member_requires_authentication(self):
+        """Ensures authentication is required to access the "Add Member" view."""
+        response = self.client.post(self.add_member_url, data=self.form_data)
+        self.assertTrue(response.url.startswith(reverse('users:login_view')))
 
     def test_add_member_success(self):
         """Tests whether a member is added successfully when the data is valid."""
@@ -37,12 +42,10 @@ class AddMemberViewTests(TestCase):
         
         response = self.client.post(self.add_member_url, data=self.form_data)
 
-        # Verifica o redirecionamento e a criação do membro
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, self.members_url)
         self.assertTrue(Member.objects.filter(email=self.form_data['email']).exists())
 
-        # Verifica a mensagem de sucesso
         messages = list(get_messages(response.wsgi_request))
         self.assertIn('Membro adicionado com sucesso!', [msg.message for msg in messages])
 
@@ -53,11 +56,9 @@ class AddMemberViewTests(TestCase):
         self.form_data['email'] = 'invalid-email'
         response = self.client.post(self.add_member_url, data=self.form_data)
 
-        # Verifica o redirecionamento e a não criação do membro
         self.assertRedirects(response, self.members_url)
         self.assertFalse(Member.objects.filter(full_name='Test Member').exists())
 
-        # Verifica a mensagem de erro
         messages = list(get_messages(response.wsgi_request))
         self.assertIn('Erro ao adicionar o membro. Verifique os dados e tente novamente.', [msg.message for msg in messages])
 
@@ -66,7 +67,6 @@ class AddMemberViewTests(TestCase):
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.add_member_url)
 
-        # Verifica o redirecionamento
         self.assertRedirects(response, self.members_url)
 
     def test_session_data_removed_on_success(self):
@@ -87,4 +87,3 @@ class AddMemberViewTests(TestCase):
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.add_member_url)
         self.assertRedirects(response, self.members_url)
-
