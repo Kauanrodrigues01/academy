@@ -160,7 +160,10 @@ def edit_member(request, id):
             return redirect('admin_panel:members')
         else:
             messages.error(request, 'Erro ao atualizar o membro. Verifique os dados e tente novamente.')
-            return redirect('admin_panel:edit_member_view', id=id) 
+            return redirect('admin_panel:edit_member_view', id=id)
+        
+    else:
+        return redirect('admin_panel:members')
 
 @login_required
 def add_payment(request, id):
