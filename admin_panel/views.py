@@ -137,7 +137,7 @@ def delete_member(request, id):
     return redirect('admin_panel:members')
 
 @login_required
-def edit_member_update(request, id):
+def edit_member(request, id):
     member = get_object_or_404(Member, id=id)
     request.session['form_data_edit_member'] = request.POST
 
