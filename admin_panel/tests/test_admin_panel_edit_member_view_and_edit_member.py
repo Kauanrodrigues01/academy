@@ -47,20 +47,21 @@ class EditMemberViewAndEditMemberTests(TestCase):
         self.assertTrue(response.url.startswith(reverse('users:login_view')))
     
     def test_edit_member_view_renders_correct_template(self):
-        """Testa se a página de edição renderiza o template correto."""
+        """Tests if the correct template is rendered for the Edit Member page."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.edit_member_view_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "admin_panel/pages/member_edit.html")
 
     def test_edit_member_view_contains_form_and_member(self):
-        """Testa se o formulário e os dados do membro estão presentes no contexto."""
+        """Tests if the form and member data are present in the context."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.edit_member_view_url)
         self.assertIsInstance(response.context["form"], MemberEditForm)
         self.assertEqual(response.context["member"], self.member)
         
     def test_edit_member_view_renders_form_with_instance_member(self):
+        """Tests if the form contains the member instance data."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.edit_member_view_url)
         self.assertContains(response, self.member.email)
@@ -68,12 +69,13 @@ class EditMemberViewAndEditMemberTests(TestCase):
         self.assertContains(response, self.member.phone)
         
     def test_edit_member_view_return_404_status_code_if_not_exists_member_with_id(self):
+        """Ensures the view returns a 404 status code if the member ID does not exist."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(reverse("admin_panel:edit_member_view", kwargs={'id': 1000}))
         self.assertEqual(response.status_code, 404)
         
     def test_edit_member_view_loads_session_data(self):
-        """Testa se os dados da sessão são usados para pré-popular o formulário."""
+        """Tests if session data is used to pre-populate the form."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         session_data = {
             'email': 'session@example.com',
@@ -88,19 +90,27 @@ class EditMemberViewAndEditMemberTests(TestCase):
         response = self.client.get(self.edit_member_view_url)
         form = response.context['form']
 
-        # Verifica se o formulário foi preenchido com os dados da sessão
+        # Verifies if the form was populated with session data
         self.assertEqual(form.data['email'], session_data['email'])
         self.assertEqual(form.data['full_name'], session_data['full_name'])
         self.assertEqual(form.data['phone'], session_data['phone'])
         self.assertTrue(form.data['is_active'])
 
-    def test_edit_member_view_requires_authentication(self):
+    def test_edit_member_requires_authentication(self):
         """Ensures authentication is required to access the "Edit Member" view."""
         response = self.client.post(self.edit_member_url, data=self.valid_data)
+        self.assertEqual(response.status_code, 302)
         self.assertTrue(response.url.startswith(reverse('users:login_view')))
         
+    def test_redirects_to_members_on_get_request(self):
+        """Tests if the view redirects to the members list when accessed with a GET request instead of POST."""
+        self.client.login(cpf=self.user.cpf, password=self.password)
+        response = self.client.get(self.edit_member_url)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('admin_panel:members'))
+        
     def test_edit_member_successful_post(self):
-        """Testa se a edição de membro funciona com dados válidos."""
+        """Tests if editing a member works with valid data."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.post(self.edit_member_url, data=self.valid_data)
         
@@ -115,7 +125,7 @@ class EditMemberViewAndEditMemberTests(TestCase):
         self.assertEqual(messages[0].message, 'Membro atualizado com sucesso!')
 
     def test_edit_member_invalid_post(self):
-        """Testa se a submissão de dados inválidos retorna os erros corretamente."""
+        """Tests if submitting invalid data returns appropriate errors."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.post(self.edit_member_url, data=self.invalid_data)
         
@@ -129,13 +139,13 @@ class EditMemberViewAndEditMemberTests(TestCase):
         self.assertIn('phone', form_errors)
 
     def test_edit_member_404_for_nonexistent_member(self):
-        """Testa se acessar um membro inexistente retorna 404."""
+        """Tests if accessing a non-existent member returns 404."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(reverse('admin_panel:edit_member', args=[999]))
         self.assertEqual(response.status_code, 404)
 
     def test_edit_member_session_data_persisted(self):
-        """Testa se os dados do formulário inválido são armazenados na sessão."""
+        """Tests if invalid form data is stored in the session."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.post(self.edit_member_url, data=self.invalid_data)
         session_data = response.wsgi_request.session.get("form_data_edit_member")
@@ -145,7 +155,7 @@ class EditMemberViewAndEditMemberTests(TestCase):
         self.assertEqual(session_data["phone"], "")
 
     def test_edit_member_clears_session_on_success(self):
-        """Testa se os dados da sessão são removidos após uma submissão bem-sucedida."""
+        """Tests if session data is cleared after a successful submission."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         session = self.client.session
         session["form_data_edit_member"] = self.valid_data
