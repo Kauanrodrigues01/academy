@@ -177,3 +177,19 @@ class TestMembersView(TestCase):
         response = self.client.get(self.members_url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'form')
+        
+    def test_whether_the_register_payment_button_appears_when_a_student_is_inactive(self):
+        self.member1.delete()
+        self.client.login(cpf=self.user.cpf, password=self.password)
+        
+        response = self.client.get(self.members_url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, f'<a href="{reverse('admin_panel:add_payment_view', kwargs={'id': self.member2.id}) }" class="btn btn-add">Registrar pagamento</a>')
+    
+    def test_if_the_register_payment_button_does_not_appear_when_a_student_is_active(self):
+        self.member2.delete()
+        self.client.login(cpf=self.user.cpf, password=self.password)
+        
+        response = self.client.get(self.members_url)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotContains(response, f'<a href="{reverse('admin_panel:add_payment_view', kwargs={'id': self.member1.id}) }" class="btn btn-add">Registrar pagamento</a>')
