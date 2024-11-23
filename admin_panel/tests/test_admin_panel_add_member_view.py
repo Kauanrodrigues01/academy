@@ -10,7 +10,6 @@ class AddMemberViewTests(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        # Cria um usuário para autenticação
         cls.faker = Faker('pt_BR')
         
         cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
