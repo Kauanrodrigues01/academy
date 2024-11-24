@@ -163,10 +163,10 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha d
 DEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'
 
 # Celery settings
-CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Endereço do Redis
+CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis
 CELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON
 CELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'  # Backend para armazenar resultados
+CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados
 CELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)
 
 from celery.schedules import crontab
