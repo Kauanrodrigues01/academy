@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-lc%6^6&&8lysm!tgmya=y=5z1cy-$le+4x9lb4si!&(@78m5x2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost']
 
 
 # Application definition
