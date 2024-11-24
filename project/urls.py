@@ -10,7 +10,7 @@ urlpatterns = [
     # path('members/', include('members.urls')),
 ]
 
-urlpatterns += staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
 
 if settings.DEBUG:
     import debug_toolbar
