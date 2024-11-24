@@ -1,4 +1,85 @@
-# Academia - Projeto Django
+# **Aplicação de Gerenciamento de Alunos de uma academia**
+
+A aplicação foi desenvolvida para atender às necessidades de administração de academias, proporcionando controle eficiente sobre os dados dos alunos, pagamentos e relatórios. Sua arquitetura modular e escalável facilita a adição de novas funcionalidades e adaptações.
+
+---
+
+## **Funcionalidades Principais**
+
+### **1. CRUD de Alunos**
+- Criação, visualização, atualização e exclusão de alunos.
+- Dados detalhados como informações de contato e status de pagamento.
+
+### **2. Automatização de Tarefas**
+- **Celery** é utilizado para:
+  - Verificação diária de pagamentos atrasados (alunos com mais de um mês sem pagar).
+  - Geração de relatórios diários ao final do dia.
+- **Redis** atua como broker para filas de tarefas, garantindo alta performance.
+
+### **3. Gerenciamento Financeiro**
+- Geração de gráficos financeiros com **Pandas** e **Plotly**, detalhando:
+  - Dinheiro recebido por mês.
+  - Outras métricas importantes para a academia.
+
+### **4. Relatórios em PDF**
+- Utilização de **xhtml2pdf** e **reportlab** para criar relatórios estilizados.
+- Relatórios gerais e diários podem ser baixados pelo administrador.
+
+### **5. Paginação e Filtros**
+- Gerenciamento eficiente de grandes volumes de dados com paginação e filtros otimizados.
+
+---
+
+## **Tecnologias e Bibliotecas Utilizadas**
+
+### **Backend**
+- **Django** e **Django Rest Framework**: Estruturação da aplicação e lógica de negócios.
+
+### **Automação e Fila de Tarefas**
+- **Celery**: Processamento assíncrono de tarefas.
+- **Redis**: Armazenamento em cache e fila de mensagens.
+
+### **Análise e Visualização**
+- **Pandas**: Manipulação e análise de dados.
+- **Plotly**: Geração de gráficos interativos.
+
+### **Relatórios**
+- **xhtml2pdf**, **reportlab** e **pydyf**: Criação de relatórios em PDF.
+
+### **Segurança**
+- **cryptography** e **pyhanko**: Criptografia e assinaturas digitais.
+
+### **Testes e Cobertura**
+- **pytest** e **pytest-django**: Automação de testes.
+- **coverage**: Análise de cobertura de código.
+
+---
+
+## **Benefícios para a Academia**
+
+### **Gestão Simplificada**
+- Centraliza informações sobre alunos e pagamentos.
+- Automatiza tarefas repetitivas, reduzindo erros manuais.
+
+### **Tomada de Decisão Baseada em Dados**
+- Relatórios detalhados e gráficos ajudam no planejamento financeiro e operacional.
+
+### **Eficiência Administrativa**
+- Geração de relatórios diários e mensais sem necessidade de intervenção manual.
+
+### **Flexibilidade e Escalabilidade**
+- Paginação e automação permitem atender academias de diferentes portes.
+
+---
+
+## **Exemplo de Fluxo**
+1. Um aluno realiza um pagamento.
+2. A aplicação atualiza automaticamente o status do aluno.
+3. Diariamente, a aplicação verifica pagamentos atrasados e envia notificações.
+4. No final do dia:
+   - Gráficos financeiros são gerados.
+   - Relatórios em PDF ficam disponíveis para download pelo administrador.
+
 
 ## Passos para Rodar o Projeto
 
