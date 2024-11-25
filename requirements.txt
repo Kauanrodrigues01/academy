@@ -17,12 +17,14 @@ coverage==7.6.4
 cron-descriptor==1.4.5
 cryptography==43.0.3
 cssselect2==0.7.0
+dj-database-url==2.3.0
 Django==5.1.3
 django-celery-beat==2.7.0
 django-debug-toolbar==4.4.6
 django-extensions==3.2.3
 django-timezone-field==7.0
 Faker==30.8.2
+gunicorn==23.0.0
 html5lib==1.1
 idna==3.10
 iniconfig==2.0.0
@@ -69,5 +71,3 @@ vine==5.1.0
 wcwidth==0.2.13
 webencodings==0.5.1
 xhtml2pdf==0.2.16
-gunicorn>=20.0.4
-dj-database-url==2.3.0
