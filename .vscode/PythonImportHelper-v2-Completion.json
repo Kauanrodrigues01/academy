@@ -1,0 +1,3520 @@
+[
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localtime",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localtime",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localtime",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "localdate",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "members.models",
+        "description": "members.models",
+        "isExtraImport": true,
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "get_messages",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
+        "documentation": {}
+    },
+    {
+        "label": "get_messages",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
+        "documentation": {}
+    },
+    {
+        "label": "constants",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
+        "documentation": {}
+    },
+    {
+        "label": "get_messages",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
+        "documentation": {}
+    },
+    {
+        "label": "get_messages",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberEditForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberPaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberEditForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberPaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberEditForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberPaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberEditForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentForm",
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "isExtraImport": true,
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "ActivityLog",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "ActivityLog",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "DailyReport",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "DailyReport",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "DailyReport",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "ActivityLog",
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "isExtraImport": true,
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "parameterized",
+        "importPath": "parameterized",
+        "description": "parameterized",
+        "isExtraImport": true,
+        "detail": "parameterized",
+        "documentation": {}
+    },
+    {
+        "label": "parameterized",
+        "importPath": "parameterized",
+        "description": "parameterized",
+        "isExtraImport": true,
+        "detail": "parameterized",
+        "documentation": {}
+    },
+    {
+        "label": "TestBaseHomeView",
+        "importPath": "admin_panel.tests.base.test_base_home_view",
+        "description": "admin_panel.tests.base.test_base_home_view",
+        "isExtraImport": true,
+        "detail": "admin_panel.tests.base.test_base_home_view",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "save_daily_report",
+        "importPath": "admin_panel.tasks",
+        "description": "admin_panel.tasks",
+        "isExtraImport": true,
+        "detail": "admin_panel.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "apps",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Max",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Min",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Max",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "Celery",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "parse_date",
+        "importPath": "django.utils.dateparse",
+        "description": "django.utils.dateparse",
+        "isExtraImport": true,
+        "detail": "django.utils.dateparse",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_cpf",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_email",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_cpf",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_cpf",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_email",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_cpf",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination_range",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.express",
+        "description": "plotly.express",
+        "detail": "plotly.express",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "pisa",
+        "importPath": "xhtml2pdf",
+        "description": "xhtml2pdf",
+        "isExtraImport": true,
+        "detail": "xhtml2pdf",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpRequest",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "django.core.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MinLengthValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "validate_email",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "BaseTestCase",
+        "importPath": "members.tests.base.test_base_form",
+        "description": "members.tests.base.test_base_form",
+        "isExtraImport": true,
+        "detail": "members.tests.base.test_base_form",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "update_members_activity_status",
+        "importPath": "members.tasks",
+        "description": "members.tasks",
+        "isExtraImport": true,
+        "detail": "members.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_delete",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_migrate",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_migrate",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "absolute_import",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "unicode_literals",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "dj_database_url",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dj_database_url",
+        "description": "dj_database_url",
+        "detail": "dj_database_url",
+        "documentation": {}
+    },
+    {
+        "label": "crontab",
+        "importPath": "celery.schedules",
+        "description": "celery.schedules",
+        "isExtraImport": true,
+        "detail": "celery.schedules",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "staticfiles_urlpatterns",
+        "importPath": "django.contrib.staticfiles.urls",
+        "description": "django.contrib.staticfiles.urls",
+        "isExtraImport": true,
+        "detail": "django.contrib.staticfiles.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "isExtraImport": true,
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestForm",
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "isExtraImport": true,
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetForm",
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "isExtraImport": true,
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "TestBase",
+        "importPath": "users.tests.base.test_base",
+        "description": "users.tests.base.test_base",
+        "isExtraImport": true,
+        "detail": "users.tests.base.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestBase",
+        "importPath": "users.tests.base.test_base",
+        "description": "users.tests.base.test_base",
+        "isExtraImport": true,
+        "detail": "users.tests.base.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestBase",
+        "importPath": "users.tests.base.test_base",
+        "description": "users.tests.base.test_base",
+        "isExtraImport": true,
+        "detail": "users.tests.base.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_decode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetTokenGenerator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetTokenGenerator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "smart_bytes",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "smart_bytes",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "smart_str",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "create_superuser",
+        "importPath": "users.signals",
+        "description": "users.signals",
+        "isExtraImport": true,
+        "detail": "users.signals",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_site",
+        "importPath": "django.contrib.sites.shortcuts",
+        "description": "django.contrib.sites.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.contrib.sites.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "admin_panel.migrations.0001_initial",
+        "description": "admin_panel.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('members', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ActivityLog',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "admin_panel.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "admin_panel.migrations.0002_alter_activitylog_member",
+        "description": "admin_panel.migrations.0002_alter_activitylog_member",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admin_panel', '0001_initial'),\n        ('members', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='activitylog',\n            name='member',\n            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='members.member'),",
+        "detail": "admin_panel.migrations.0002_alter_activitylog_member",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "admin_panel.migrations.0003_dailyreport",
+        "description": "admin_panel.migrations.0003_dailyreport",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admin_panel', '0002_alter_activitylog_member'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='DailyReport',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('date', models.DateField(unique=True)),",
+        "detail": "admin_panel.migrations.0003_dailyreport",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "admin_panel.migrations.0004_dailyreport_payments",
+        "description": "admin_panel.migrations.0004_dailyreport_payments",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admin_panel', '0003_dailyreport'),\n        ('members', '0002_alter_member_start_date_alter_payment_payment_date'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='dailyreport',\n            name='payments',\n            field=models.ManyToManyField(to='members.payment'),",
+        "detail": "admin_panel.migrations.0004_dailyreport_payments",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "admin_panel.migrations.0005_alter_activitylog_created_at",
+        "description": "admin_panel.migrations.0005_alter_activitylog_created_at",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admin_panel', '0004_dailyreport_payments'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='activitylog',\n            name='created_at',\n            field=models.DateTimeField(default=datetime.datetime(2024, 11, 22, 1, 47, 42, 742997, tzinfo=datetime.timezone.utc), editable=False),\n        ),",
+        "detail": "admin_panel.migrations.0005_alter_activitylog_created_at",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "admin_panel.migrations.0006_alter_activitylog_created_at",
+        "description": "admin_panel.migrations.0006_alter_activitylog_created_at",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('admin_panel', '0005_alter_activitylog_created_at'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='activitylog',\n            name='created_at',\n            field=models.DateTimeField(default=django.utils.timezone.localtime, editable=False),\n        ),",
+        "detail": "admin_panel.migrations.0006_alter_activitylog_created_at",
+        "documentation": {}
+    },
+    {
+        "label": "TestBaseHomeView",
+        "kind": 6,
+        "importPath": "admin_panel.tests.base.test_base_home_view",
+        "description": "admin_panel.tests.base.test_base_home_view",
+        "peekOfCode": "class TestBaseHomeView(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password\n        )",
+        "detail": "admin_panel.tests.base.test_base_home_view",
+        "documentation": {}
+    },
+    {
+        "label": "AddMemberViewTests",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_add_member_view",
+        "description": "admin_panel.tests.test_admin_panel_add_member_view",
+        "peekOfCode": "class AddMemberViewTests(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password\n        )",
+        "detail": "admin_panel.tests.test_admin_panel_add_member_view",
+        "documentation": {}
+    },
+    {
+        "label": "AddPaymentTests",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_add_payment_view_and_add_payment",
+        "description": "admin_panel.tests.test_admin_panel_add_payment_view_and_add_payment",
+        "peekOfCode": "class AddPaymentTests(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        \"\"\"Setup the environment for the tests.\"\"\"\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password",
+        "detail": "admin_panel.tests.test_admin_panel_add_payment_view_and_add_payment",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteMemberViewTests",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_delete_member",
+        "description": "admin_panel.tests.test_admin_panel_delete_member",
+        "peekOfCode": "class DeleteMemberViewTests(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password\n        )",
+        "detail": "admin_panel.tests.test_admin_panel_delete_member",
+        "documentation": {}
+    },
+    {
+        "label": "EditMemberViewAndEditMemberTests",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_edit_member_view_and_edit_member",
+        "description": "admin_panel.tests.test_admin_panel_edit_member_view_and_edit_member",
+        "peekOfCode": "class EditMemberViewAndEditMemberTests(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password\n        )",
+        "detail": "admin_panel.tests.test_admin_panel_edit_member_view_and_edit_member",
+        "documentation": {}
+    },
+    {
+        "label": "FinanceViewTest",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_finance",
+        "description": "admin_panel.tests.test_admin_panel_finance",
+        "peekOfCode": "class FinanceViewTest(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password\n        )",
+        "detail": "admin_panel.tests.test_admin_panel_finance",
+        "documentation": {}
+    },
+    {
+        "label": "TestHomeView",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_home_view",
+        "description": "admin_panel.tests.test_admin_panel_home_view",
+        "peekOfCode": "class TestHomeView(TestBaseHomeView):\n    \"\"\"Test cases for the Home view.\"\"\"\n    def test_home_view_renders_the_correct_template(self):\n        \"\"\"Tests if the home view renders the correct template.\"\"\"\n        self.client.login(cpf=self.user.cpf, password=self.password)\n        response = self.client.get(self.home_url)\n        self.assertTemplateUsed(response, 'admin_panel/pages/home.html')\n    def test_home_view_requires_authentication(self):\n        \"\"\"Tests if authentication is required to access the home view.\"\"\"\n        response = self.client.get(self.home_url)",
+        "detail": "admin_panel.tests.test_admin_panel_home_view",
+        "documentation": {}
+    },
+    {
+        "label": "TestMembersView",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_members_view",
+        "description": "admin_panel.tests.test_admin_panel_members_view",
+        "peekOfCode": "class TestMembersView(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.faker = Faker('pt_BR')\n        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)\n        cls.user = User.objects.create_user(\n            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),\n            email=cls.faker.email(),\n            password=cls.password\n        )",
+        "detail": "admin_panel.tests.test_admin_panel_members_view",
+        "documentation": {}
+    },
+    {
+        "label": "TestActivityLog",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_models",
+        "description": "admin_panel.tests.test_admin_panel_models",
+        "peekOfCode": "class TestActivityLog(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.member = Member.objects.create(\n            email='test@member.com', full_name='Test Member', phone='1234567890', is_active=True\n        )\n        cls.activity_log = ActivityLog.objects.create(\n            member=cls.member,\n            event_type='created',\n            description='Test member created'",
+        "detail": "admin_panel.tests.test_admin_panel_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestDailyReport",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_models",
+        "description": "admin_panel.tests.test_admin_panel_models",
+        "peekOfCode": "class TestDailyReport(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.member_active = Member.objects.create(\n            email='active@member.com', full_name='Active Member', phone='1234567890', is_active=True\n        )\n        cls.member_inactive = Member.objects.create(\n            email='inactive@member.com', full_name='Inactive Member', phone='0987654321', is_active=False\n        )\n        cls.payment = Payment.objects.create(",
+        "detail": "admin_panel.tests.test_admin_panel_models",
+        "documentation": {}
+    },
+    {
+        "label": "SaveDailyReportTaskTests",
+        "kind": 6,
+        "importPath": "admin_panel.tests.test_admin_panel_tasks",
+        "description": "admin_panel.tests.test_admin_panel_tasks",
+        "peekOfCode": "class SaveDailyReportTaskTests(TestCase):\n    @patch('admin_panel.tasks.DailyReport.create_report')\n    def test_save_daily_report_called(self, mock_create_report):\n        \"\"\"Tests whether the save_daily_report task calls create_report correctly\"\"\"\n        save_daily_report.apply()\n        mock_create_report.assert_called_once()\n    def test_save_daily_report_creates_report(self):\n        \"\"\"Tests whether the create_report method actually creates a DailyReport\"\"\"\n        save_daily_report.apply()\n        self.assertEqual(DailyReport.objects.count(), 1)",
+        "detail": "admin_panel.tests.test_admin_panel_tasks",
+        "documentation": {}
+    },
+    {
+        "label": "AdminPanelConfig",
+        "kind": 6,
+        "importPath": "admin_panel.apps",
+        "description": "admin_panel.apps",
+        "peekOfCode": "class AdminPanelConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'admin_panel'",
+        "detail": "admin_panel.apps",
+        "documentation": {}
+    },
+    {
+        "label": "ActivityLog",
+        "kind": 6,
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "peekOfCode": "class ActivityLog(models.Model):\n    EVENT_TYPES = [\n        ('created', 'Created'),\n        ('updated', 'Updated'),\n        ('deleted', 'Deleted'),\n        ('payment', 'Payment'),\n        ('pending', 'Pending'),\n    ]\n    member = models.ForeignKey(Member, on_delete=models.SET_NULL, null=True, blank=True)\n    event_type = models.CharField(max_length=20, choices=EVENT_TYPES)",
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "DailyReport",
+        "kind": 6,
+        "importPath": "admin_panel.models",
+        "description": "admin_panel.models",
+        "peekOfCode": "class DailyReport(models.Model):\n    date = models.DateField(unique=True)\n    active_students = models.PositiveIntegerField(default=0)\n    pending_students = models.PositiveIntegerField(default=0)\n    new_students = models.PositiveIntegerField(default=0)\n    daily_profit = models.DecimalField(max_digits=6, decimal_places=2, default=0)\n    payments = models.ManyToManyField(Payment)\n    def __str__(self):\n        return f\"Daily Report for {self.date}\"\n    class Meta:",
+        "detail": "admin_panel.models",
+        "documentation": {}
+    },
+    {
+        "label": "save_daily_report",
+        "kind": 2,
+        "importPath": "admin_panel.tasks",
+        "description": "admin_panel.tasks",
+        "peekOfCode": "def save_daily_report():\n    DailyReport.create_report()",
+        "detail": "admin_panel.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "admin_panel.urls",
+        "description": "admin_panel.urls",
+        "peekOfCode": "app_name = 'admin_panel'\nurlpatterns = [\n    path('', views.home, name='home'),\n    path('members/', views.members, name='members'),\n    path('members/edit/<int:id>/', views.edit_member_view, name='edit_member_view'),\n    path('members/add-payment-view/<int:id>/', views.add_payment_view, name='add_payment_view'),\n    path('finance/', views.finance, name='finance'),\n    path('generate-general-report/', views.generate_pdf_general_report, name='generate_pdf_general_report'),\n    path('generate-current-day-report/', views.generate_pdf_report_of_current_day, name='generate_pdf_report_of_current_day'),\n    path('members/add/', views.add_member, name='add_member'),",
+        "detail": "admin_panel.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "admin_panel.urls",
+        "description": "admin_panel.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.home, name='home'),\n    path('members/', views.members, name='members'),\n    path('members/edit/<int:id>/', views.edit_member_view, name='edit_member_view'),\n    path('members/add-payment-view/<int:id>/', views.add_payment_view, name='add_payment_view'),\n    path('finance/', views.finance, name='finance'),\n    path('generate-general-report/', views.generate_pdf_general_report, name='generate_pdf_general_report'),\n    path('generate-current-day-report/', views.generate_pdf_report_of_current_day, name='generate_pdf_report_of_current_day'),\n    path('members/add/', views.add_member, name='add_member'),\n    path('members/delete/<int:id>/', views.delete_member, name='delete_member'),",
+        "detail": "admin_panel.urls",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def home(request):\n    current_month = localdate().month\n    current_year = localdate().year\n    count_new_members_in_month = Member.objects.filter( created_at__month=current_month, created_at__year=current_year).count()\n    profit_total_month = Payment.get_current_month_profit()\n    recent_activities = ActivityLog.objects.all().order_by('-id').select_related('member')[:20]\n    context = {\n        'count_members_actives': Member.objects.filter(is_active=True).count(),\n        'count_members_inactives': Member.objects.filter(is_active=False).count(),\n        'count_new_members_in_month': count_new_members_in_month,",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "members",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def members(request):\n    search_query = request.GET.get('q', '').strip()\n    status = request.GET.get('status', '')\n    date = request.GET.get('last_payment', '')\n    # Dealing with filters\n    filters = {}\n    if search_query:\n        filters['full_name__icontains'] = search_query\n    if status == 'active':\n        filters['is_active'] = True",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "edit_member_view",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def edit_member_view(request, id):\n    member = get_object_or_404(Member, id=id)\n    form_data_edit_member = request.session.pop('form_data_edit_member', None)  # Use pop para remover depois de usar\n    if form_data_edit_member:\n        form = MemberEditForm(form_data_edit_member, instance=member)\n    else:\n        form = MemberEditForm(instance=member)\n    return render(request, 'admin_panel/pages/member_edit.html', {'form': form, 'member': member})\n@login_required\ndef add_payment_view(request, id):",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_payment_view",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def add_payment_view(request, id):\n    member = get_object_or_404(Member, id=id)\n    form_data_add_payment = request.session.get('form_data_add_payment')\n    if form_data_add_payment:\n        form = PaymentForm(form_data_add_payment)\n    else:\n        form = PaymentForm()\n    context = {\n        'form': form,\n        'member': member",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_member",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def add_member(request):\n    if request.method == 'POST':\n        form = MemberPaymentForm(request.POST)\n        if form.is_valid():\n            form.save()\n            messages.success(request, 'Membro adicionado com sucesso!')\n            if 'form_data_add_member' in request.session: # pragma: no cover\n                del request.session['form_data_add_member']\n            return redirect('admin_panel:members')\n        else:",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_member",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def delete_member(request, id):\n    member = get_object_or_404(Member, id=id)\n    member.delete()\n    messages.success(request, 'Membro deletado com sucesso!')\n    return redirect('admin_panel:members')\n@login_required\ndef edit_member(request, id):\n    member = get_object_or_404(Member, id=id)\n    request.session['form_data_edit_member'] = request.POST\n    if request.method == 'POST':",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "edit_member",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def edit_member(request, id):\n    member = get_object_or_404(Member, id=id)\n    request.session['form_data_edit_member'] = request.POST\n    if request.method == 'POST':\n        form = MemberEditForm(request.POST, instance=member)\n        if form.is_valid():\n            email = form.cleaned_data['email']\n            phone = form.cleaned_data['phone']\n            full_name = form.cleaned_data['full_name']\n            is_active = form.cleaned_data['is_active'] ",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_payment",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def add_payment(request, id):\n    member = get_object_or_404(Member, id=id)\n    request.session['form_data_add_payment'] = request.POST\n    if request.method == 'POST':\n        form = PaymentForm(request.POST)\n        if form.is_valid():\n            form.save(member=member)\n            messages.success(request, 'Pagamento adicionado com sucesso!')\n            del request.session['form_data_add_payment']\n            return redirect('admin_panel:members')",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "finance",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def finance(request):\n    current_year_profit = Payment.get_current_year_profit()\n    current_month_profit = Payment.get_current_month_profit()\n    months_profit = {\n        'Janeiro': Payment.get_monthly_profit(1),\n        'Fevereiro': Payment.get_monthly_profit(2),\n        'Março': Payment.get_monthly_profit(3),\n        'Abril': Payment.get_monthly_profit(4),\n        'Maio': Payment.get_monthly_profit(5),\n        'Junho': Payment.get_monthly_profit(6),",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "generate_pdf_general_report",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def generate_pdf_general_report(request):\n    active_members = Member.objects.filter(is_active=True).count()\n    inactive_members =Member.objects.filter(is_active=False).count()\n    total_revenue = Payment.objects.aggregate(total=Sum('amount'))['total'] or 0.00\n    payments = Payment.objects.select_related('member').all()\n    context = {\n        'date': localtime().strftime('%Y-%m-%d %H:%M'),\n        'active_members': active_members,\n        'inactive_members': inactive_members,\n        'total_revenue': total_revenue,",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "generate_pdf_report_of_current_day",
+        "kind": 2,
+        "importPath": "admin_panel.views",
+        "description": "admin_panel.views",
+        "peekOfCode": "def generate_pdf_report_of_current_day(request):\n    report = DailyReport.objects.filter(date=localdate()).first()\n    if not report:\n        report = DailyReport.create_report()\n    context = {\n        'date': localtime().strftime('%Y-%m-%d %H:%M'),\n        'active_members': report.active_students,\n        'inactive_members': report.pending_students,\n        'total_revenue': report.daily_profit,\n        'payments': report.payments",
+        "detail": "admin_panel.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "members.migrations.0001_initial",
+        "description": "members.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Member',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('email', models.EmailField(max_length=254, unique=True)),",
+        "detail": "members.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "members.migrations.0002_alter_member_start_date_alter_payment_payment_date",
+        "description": "members.migrations.0002_alter_member_start_date_alter_payment_payment_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('members', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='member',\n            name='start_date',\n            field=models.DateField(default=django.utils.timezone.localdate),\n        ),",
+        "detail": "members.migrations.0002_alter_member_start_date_alter_payment_payment_date",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "members.migrations.0003_alter_member_full_name",
+        "description": "members.migrations.0003_alter_member_full_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('members', '0002_alter_member_start_date_alter_payment_payment_date'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='member',\n            name='full_name',\n            field=models.CharField(max_length=50, validators=[django.core.validators.MinLengthValidator(3)]),\n        ),",
+        "detail": "members.migrations.0003_alter_member_full_name",
+        "documentation": {}
+    },
+    {
+        "label": "BaseTestCase",
+        "kind": 6,
+        "importPath": "members.tests.base.test_base_form",
+        "description": "members.tests.base.test_base_form",
+        "peekOfCode": "class BaseTestCase(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        # Instância do Faker adicionada ao setup\n        cls.fake = Faker('pt_BR')\n        # Dados compartilhados entre os testes\n        cls.member_data = {\n            'email': cls.fake.email(),\n            'full_name': cls.fake.name(),\n            'phone': '5585966667979',",
+        "detail": "members.tests.base.test_base_form",
+        "documentation": {}
+    },
+    {
+        "label": "MemberPaymentFormTests",
+        "kind": 6,
+        "importPath": "members.tests.test_members_forms",
+        "description": "members.tests.test_members_forms",
+        "peekOfCode": "class MemberPaymentFormTests(BaseTestCase):\n    def test_valid_form(self):\n        \"\"\"Tests if the form is valid with correct data.\"\"\"\n        form = MemberPaymentForm(data=self.member_data)\n        self.assertTrue(form.is_valid())\n    def test_invalid_email_duplicate(self):\n        \"\"\"Tests if the form detects and rejects duplicate email addresses.\"\"\"\n        Member.objects.create(email=self.member_data['email'], full_name=self.member_data['full_name'], phone=self.member_data['phone'])\n        form = MemberPaymentForm(data=self.member_data)\n        self.assertFalse(form.is_valid())",
+        "detail": "members.tests.test_members_forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberEditFormTests",
+        "kind": 6,
+        "importPath": "members.tests.test_members_forms",
+        "description": "members.tests.test_members_forms",
+        "peekOfCode": "class MemberEditFormTests(BaseTestCase):\n    def test_valid_form(self):\n        \"\"\"Tests if the form is valid with correct data.\"\"\"\n        data = {\n            'full_name': 'New Name',\n            'email': self.member.email,\n            'phone': self.member.phone,\n            'is_active': False\n        }\n        form = MemberEditForm(data=data, instance=self.member)",
+        "detail": "members.tests.test_members_forms",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentFormTests",
+        "kind": 6,
+        "importPath": "members.tests.test_members_forms",
+        "description": "members.tests.test_members_forms",
+        "peekOfCode": "class PaymentFormTests(BaseTestCase):\n    def test_valid_form(self):\n        \"\"\"Tests if the form is valid with correct data.\"\"\"\n        form = PaymentForm(data=self.payment_data)\n        self.assertTrue(form.is_valid())\n    def test_payment_date_in_future(self):\n        \"\"\"Tests if the form returns an error for a payment date in the future.\"\"\"\n        data = self.payment_data.copy()\n        data['payment_date'] = localdate() + timedelta(days=1)\n        form = PaymentForm(data=data)",
+        "detail": "members.tests.test_members_forms",
+        "documentation": {}
+    },
+    {
+        "label": "TestBase",
+        "kind": 6,
+        "importPath": "members.tests.test_members_models",
+        "description": "members.tests.test_members_models",
+        "peekOfCode": "class TestBase(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        \"\"\"Initial test setup.\"\"\"\n        cls.member = Member.objects.create(\n            email=\"test@example.com\",\n            full_name=\"Test User\",\n            phone=\"123456789\"\n        )\nclass MemberModelTestCase(TestBase):",
+        "detail": "members.tests.test_members_models",
+        "documentation": {}
+    },
+    {
+        "label": "MemberModelTestCase",
+        "kind": 6,
+        "importPath": "members.tests.test_members_models",
+        "description": "members.tests.test_members_models",
+        "peekOfCode": "class MemberModelTestCase(TestBase):\n    def test_member_creation(self):\n        \"\"\"Tests member creation.\"\"\"\n        self.assertEqual(self.member.email, \"test@example.com\")\n        self.assertEqual(self.member.full_name, \"Test User\")\n        self.assertFalse(self.member.is_active)\n    def test_member_str(self):\n        \"\"\"Tests the __str__ method of the Member model.\"\"\"\n        self.assertEqual(str(self.member), self.member.full_name)\n    def test_last_payment_date_none(self):",
+        "detail": "members.tests.test_members_models",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentModelTestCase",
+        "kind": 6,
+        "importPath": "members.tests.test_members_models",
+        "description": "members.tests.test_members_models",
+        "peekOfCode": "class PaymentModelTestCase(TestBase):\n    def test_payment_creation(self):\n        \"\"\"Tests payment creation.\"\"\"\n        payment = Payment.objects.create(member=self.member, amount=150.00)\n        self.assertEqual(payment.member, self.member)\n        self.assertEqual(payment.amount, 150.00)\n        self.assertEqual(payment.payment_date, localdate())\n    @parameterized.expand([\n        (localdate(), True),  # Recent payment, member must be active\n        (localdate() - timedelta(days=31), False),  # Payment older than 30 days, member must be inactive",
+        "detail": "members.tests.test_members_models",
+        "documentation": {}
+    },
+    {
+        "label": "MemberSignalsTest",
+        "kind": 6,
+        "importPath": "members.tests.test_members_signals",
+        "description": "members.tests.test_members_signals",
+        "peekOfCode": "class MemberSignalsTest(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.member_data = {\n            'email': 'teste@teste.com',\n            'full_name': 'Aluno Teste',\n            'phone': '5585966667843',\n            'is_active': True\n        }\n    @patch('admin_panel.models.ActivityLog.objects.create')",
+        "detail": "members.tests.test_members_signals",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentSignalsTest",
+        "kind": 6,
+        "importPath": "members.tests.test_members_signals",
+        "description": "members.tests.test_members_signals",
+        "peekOfCode": "class PaymentSignalsTest(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        cls.member = Member.objects.create(\n            email='teste@teste.com',\n            full_name='Aluno Teste',\n            phone='5585966667843',\n            is_active=True\n        )\n        cls.payment_data = {",
+        "detail": "members.tests.test_members_signals",
+        "documentation": {}
+    },
+    {
+        "label": "CeleryTasksTest",
+        "kind": 6,
+        "importPath": "members.tests.test_members_tasks",
+        "description": "members.tests.test_members_tasks",
+        "peekOfCode": "class CeleryTasksTest(TestCase):\n    @patch('members.models.Member.update_activity_status')\n    def test_update_members_activity_status_task(self, mock_update_status):\n        \"\"\"Testa a task de atualização de status dos membros.\"\"\"\n        # Cria membros com status 'is_active=True'\n        member1 = Member.objects.create(full_name=\"Membro 1\", email=\"membro1@example.com\", is_active=True)\n        member2 = Member.objects.create(full_name=\"Membro 2\", email=\"membro2@example.com\", is_active=True)\n        # Executa a task\n        update_members_activity_status()\n        # Verifica se o método update_activity_status foi chamado para os dois membros",
+        "detail": "members.tests.test_members_tasks",
+        "documentation": {}
+    },
+    {
+        "label": "MembersConfig",
+        "kind": 6,
+        "importPath": "members.apps",
+        "description": "members.apps",
+        "peekOfCode": "class MembersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'members'\n    def ready(self):\n        from . import signals",
+        "detail": "members.apps",
+        "documentation": {}
+    },
+    {
+        "label": "MemberPaymentForm",
+        "kind": 6,
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "peekOfCode": "class MemberPaymentForm(forms.Form):\n    email = forms.EmailField(\n        label='E-mail',\n        widget=forms.EmailInput(\n            attrs={\n               'id': 'student-email',\n                'class': 'form-control',\n                'required': True ,\n                'placeholder': 'Digite o email do aluno'\n            }",
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "MemberEditForm",
+        "kind": 6,
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "peekOfCode": "class MemberEditForm(forms.ModelForm):\n    class Meta:\n        model = Member\n        fields = ['full_name', 'email', 'phone', 'is_active']\n        widgets = {\n            'full_name': forms.TextInput(attrs={\n                'id': 'student-name',\n                'class': 'form-control',\n                'required': True,\n            }),",
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentForm",
+        "kind": 6,
+        "importPath": "members.forms",
+        "description": "members.forms",
+        "peekOfCode": "class PaymentForm(forms.ModelForm):\n    class Meta:\n        model = Payment\n        fields = ['payment_date', 'amount']\n        widgets = {\n            'payment_date': forms.DateInput(\n                attrs={\n                    'id': 'payment-date',\n                    'class': 'form-control',\n                    'type': 'date',",
+        "detail": "members.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "kind": 6,
+        "importPath": "members.models",
+        "description": "members.models",
+        "peekOfCode": "class Member(models.Model):\n    email = models.EmailField(unique=True)\n    full_name = models.CharField(max_length=50, validators=[MinLengthValidator(3)])\n    phone = models.CharField(max_length=15)\n    start_date = models.DateField(default=localdate)\n    is_active = models.BooleanField(default=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    def __str__(self):\n        return f'{self.full_name}'",
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "kind": 6,
+        "importPath": "members.models",
+        "description": "members.models",
+        "peekOfCode": "class Payment(models.Model):\n    member = models.ForeignKey(Member, on_delete=models.SET_NULL, null=True, related_name='payments')\n    payment_date = models.DateField(default=localdate)\n    amount = models.DecimalField(max_digits=5, decimal_places=2, default=100.00)\n    def __str__(self):\n        if self.member:\n            return f'{self.member.full_name} | {self.payment_date} | R$ {self.amount}'\n        else:\n            return f'Pagamento sem aluno associado | {self.payment_date} | R$ {self.amount}'\n    @classmethod",
+        "detail": "members.models",
+        "documentation": {}
+    },
+    {
+        "label": "log_member_activity",
+        "kind": 2,
+        "importPath": "members.signals",
+        "description": "members.signals",
+        "peekOfCode": "def log_member_activity(sender, instance, created, **kwargs):\n    if created:\n        ActivityLog.objects.create(\n            member=instance,\n            event_type='created',\n            description=f\"Aluno {instance.full_name} foi cadastrado.\"\n        )\n    else:\n        ActivityLog.objects.create(\n            member=instance,",
+        "detail": "members.signals",
+        "documentation": {}
+    },
+    {
+        "label": "log_member_deleted_activity",
+        "kind": 2,
+        "importPath": "members.signals",
+        "description": "members.signals",
+        "peekOfCode": "def log_member_deleted_activity(sender, instance, **kwargs):\n    ActivityLog.objects.create(\n        event_type='deleted',\n        description=f\"Aluno {instance.full_name} foi excluído.\"\n    )\n@receiver(post_save, sender=Payment)\ndef log_payment_activity(sender, instance, created, **kwargs):\n    if created:\n        ActivityLog.objects.create(\n            member=instance.member,",
+        "detail": "members.signals",
+        "documentation": {}
+    },
+    {
+        "label": "log_payment_activity",
+        "kind": 2,
+        "importPath": "members.signals",
+        "description": "members.signals",
+        "peekOfCode": "def log_payment_activity(sender, instance, created, **kwargs):\n    if created:\n        ActivityLog.objects.create(\n            member=instance.member,\n            event_type='payment',\n            description=f\"{f'Aluno {instance.member.full_name}' if instance.member else 'Pagamento sem aluno associado |'} realizou um pagamento de R$ {instance.amount}.\"\n        )",
+        "detail": "members.signals",
+        "documentation": {}
+    },
+    {
+        "label": "update_members_activity_status",
+        "kind": 2,
+        "importPath": "members.tasks",
+        "description": "members.tasks",
+        "peekOfCode": "def update_members_activity_status():\n    \"\"\"Verifica se o pagamento do membro foi feito há mais de 1 mês e atualiza o status.\"\"\"\n    members = Member.objects.filter(is_active=True)\n    print('FOI CHAMADO A TASK DE ATUALIZAR MEMBROS')\n    for member in members:\n        member.update_activity_status()",
+        "detail": "members.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "project.asgi",
+        "description": "project.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "project.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "project.celery",
+        "description": "project.celery",
+        "peekOfCode": "app = Celery('project')\n# Usando a configuração do Django para Celery (vai buscar as configurações em settings.py)\napp.config_from_object('django.conf:settings', namespace='CELERY')\n# Carregar todas as tasks registrados em todos os arquivos tasks.py dos apps\napp.autodiscover_tasks()",
+        "detail": "project.celery",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY', cast=str)\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost', '127.0.0.1']\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', cast=str)\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost', '127.0.0.1']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost', '127.0.0.1']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "ALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost', '127.0.0.1']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'users',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'users',\n    'members',\n    'admin_panel',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n]",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "ROOT_URLCONF = 'project.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            BASE_DIR / 'base_templates'\n            ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            BASE_DIR / 'base_templates'\n            ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'project.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': dj_database_url.config(\n        default=config('DATABASE_URL')\n    )\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "DATABASES = {\n    'default': dj_database_url.config(\n        default=config('DATABASE_URL')\n    )\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_TZ = True\nUSE_I18N = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'base_static',\n]",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_TZ = True\nUSE_I18N = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'base_static',\n]\nSTATIC_ROOT = BASE_DIR / 'static'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "USE_TZ = True\nUSE_I18N = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'base_static',\n]\nSTATIC_ROOT = BASE_DIR / 'static'\n# Default primary key field type",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "USE_I18N = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'base_static',\n]\nSTATIC_ROOT = BASE_DIR / 'static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'base_static',\n]\nSTATIC_ROOT = BASE_DIR / 'static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.User'\nLOGIN_URL = 'users:login_view'",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / 'base_static',\n]\nSTATIC_ROOT = BASE_DIR / 'static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.User'\nLOGIN_URL = 'users:login_view'\n# MESSAGES",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.User'\nLOGIN_URL = 'users:login_view'\n# MESSAGES\nfrom django.contrib.messages import constants\nMESSAGE_TAGS = {\n    constants.DEBUG: 'message-debug',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.User'\nLOGIN_URL = 'users:login_view'\n# MESSAGES\nfrom django.contrib.messages import constants\nMESSAGE_TAGS = {\n    constants.DEBUG: 'message-debug',\n    constants.ERROR: 'message-error',\n    constants.SUCCESS: 'message-success',\n    constants.INFO: 'message-info',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'users.User'\nLOGIN_URL = 'users:login_view'\n# MESSAGES\nfrom django.contrib.messages import constants\nMESSAGE_TAGS = {\n    constants.DEBUG: 'message-debug',\n    constants.ERROR: 'message-error',\n    constants.SUCCESS: 'message-success',\n    constants.INFO: 'message-info',\n    constants.WARNING: 'message-warning',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "LOGIN_URL = 'users:login_view'\n# MESSAGES\nfrom django.contrib.messages import constants\nMESSAGE_TAGS = {\n    constants.DEBUG: 'message-debug',\n    constants.ERROR: 'message-error',\n    constants.SUCCESS: 'message-success',\n    constants.INFO: 'message-info',\n    constants.WARNING: 'message-warning',\n}",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MESSAGE_TAGS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "MESSAGE_TAGS = {\n    constants.DEBUG: 'message-debug',\n    constants.ERROR: 'message-error',\n    constants.SUCCESS: 'message-success',\n    constants.INFO: 'message-info',\n    constants.WARNING: 'message-warning',\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'testandoemail1100@gmail.com'\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada\nDEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'testandoemail1100@gmail.com'\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada\nDEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'testandoemail1100@gmail.com'\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada\nDEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'testandoemail1100@gmail.com'\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada\nDEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_HOST_USER = 'testandoemail1100@gmail.com'\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada\nDEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)  # Use uma senha de app se a autenticação de dois fatores estiver ativada\nDEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = 'testandoemail1100@gmail.com'\n# Celery settings\nCELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_URL",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), ",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_ACCEPT_CONTENT",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "CELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_SERIALIZER",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "CELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_BACKEND",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TIMEZONE",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "CELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',\n        'schedule': crontab(minute=0, hour=23, )",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BEAT_SCHEDULE",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "CELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',\n        'schedule': crontab(minute=0, hour=23, )\n    }\n}",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INTERNAL_IPS",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "INTERNAL_IPS = [\n    '127.0.0.1',  # IP do localhost\n]\nimport sys\n# Verifica se o pytest está sendo executado\nimport pytest\nTESTING = 'pytest' in sys.modules\nDEBUG_TOOLBAR_CONFIG = {\n    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG and not TESTING,  # Ativa somente quando DEBUG=True e não em testes\n    'INTERCEPT_REDIRECTS': False,",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TESTING",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "TESTING = 'pytest' in sys.modules\nDEBUG_TOOLBAR_CONFIG = {\n    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG and not TESTING,  # Ativa somente quando DEBUG=True e não em testes\n    'INTERCEPT_REDIRECTS': False,\n    'DISABLE_PANELS': {'debug_toolbar.panels.redirects.RedirectsPanel'},\n    'RESULTS_CACHE_SIZE': 50,\n    'ENABLE_STACKTRACES': True,\n}",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG_TOOLBAR_CONFIG",
+        "kind": 5,
+        "importPath": "project.settings",
+        "description": "project.settings",
+        "peekOfCode": "DEBUG_TOOLBAR_CONFIG = {\n    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG and not TESTING,  # Ativa somente quando DEBUG=True e não em testes\n    'INTERCEPT_REDIRECTS': False,\n    'DISABLE_PANELS': {'debug_toolbar.panels.redirects.RedirectsPanel'},\n    'RESULTS_CACHE_SIZE': 50,\n    'ENABLE_STACKTRACES': True,\n}",
+        "detail": "project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "project.urls",
+        "description": "project.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('admin_panel.urls')),\n    path('users/', include('users.urls')),\n    # path('members/', include('members.urls')),\n]\nurlpatterns += staticfiles_urlpatterns()\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns += [",
+        "detail": "project.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "project.wsgi",
+        "description": "project.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "project.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "generate_fake_member_name",
+        "kind": 2,
+        "importPath": "scripts.populate_members",
+        "description": "scripts.populate_members",
+        "peekOfCode": "def generate_fake_member_name(index):\n    return f'Aluno {index}'\ndef run():\n    # Adicionando 20 membros\n    for i in range(21, 100):\n        email = f'Aluno{i}@exemplo.com'\n        # Tenta obter ou criar o membro com o email único\n        member, created = Member.objects.get_or_create(\n            email=email,\n            defaults={",
+        "detail": "scripts.populate_members",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "scripts.populate_members",
+        "description": "scripts.populate_members",
+        "peekOfCode": "def run():\n    # Adicionando 20 membros\n    for i in range(21, 100):\n        email = f'Aluno{i}@exemplo.com'\n        # Tenta obter ou criar o membro com o email único\n        member, created = Member.objects.get_or_create(\n            email=email,\n            defaults={\n                'full_name': generate_fake_member_name(i),\n                'phone': f'99999{i:04d}',",
+        "detail": "scripts.populate_members",
+        "documentation": {}
+    },
+    {
+        "label": "faker",
+        "kind": 5,
+        "importPath": "scripts.teste",
+        "description": "scripts.teste",
+        "peekOfCode": "faker = Faker('pt_BR')\nprint(faker.phone_number())",
+        "detail": "scripts.teste",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "users.migrations.0001_initial",
+        "description": "users.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "users.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "users.migrations.0002_alter_user_email_alter_user_full_name_and_more",
+        "description": "users.migrations.0002_alter_user_email_alter_user_full_name_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='email',\n            field=models.EmailField(max_length=254, unique=True, verbose_name='Email'),\n        ),",
+        "detail": "users.migrations.0002_alter_user_email_alter_user_full_name_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "TestBase",
+        "kind": 6,
+        "importPath": "users.tests.base.test_base",
+        "description": "users.tests.base.test_base",
+        "peekOfCode": "class TestBase(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        # Configuração do Faker\n        cls.faker = Faker('pt_BR')\n        # Dados de CPF\n        cls.valid_cpf = cls.faker.cpf().replace('.', '').replace('-', '')\n        cls.invalid_cpf = '12345678901'\n        # Dados do usuário\n        cls.email = cls.faker.email()",
+        "detail": "users.tests.base.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "LoginFormTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_forms",
+        "description": "users.tests.test_users_forms",
+        "peekOfCode": "class LoginFormTests(TestBase):\n    def test_valid_form(self):\n        \"\"\"Tests if the form is valid when the CPF and password are correct\"\"\"\n        faker = Faker('pt_BR')\n        form_data = {'cpf': self.valid_cpf, 'password': self.password}\n        form = LoginForm(data=form_data)\n        self.assertTrue(form.is_valid())\n    def test_invalid_cpf_format(self):\n        \"\"\"Tests if the CPF is in the correct format\"\"\"\n        form_data = {'cpf': self.invalid_cpf, 'password': self.password}",
+        "detail": "users.tests.test_users_forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestFormTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_forms",
+        "description": "users.tests.test_users_forms",
+        "peekOfCode": "class PasswordResetRequestFormTests(TestBase):\n    def test_valid_email(self):\n        \"\"\"Tests if the form accepts a valid email\"\"\"\n        form_data = {'email': self.email}\n        form = PasswordResetRequestForm(data=form_data)\n        self.assertTrue(form.is_valid())\n    def test_invalid_email(self):\n        \"\"\"Tests if the form rejects invalid emails with the correct error message.\"\"\"\n        form_data = {'email': 'invalid-email'}\n        form = PasswordResetRequestForm(data=form_data)",
+        "detail": "users.tests.test_users_forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetFormTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_forms",
+        "description": "users.tests.test_users_forms",
+        "peekOfCode": "class PasswordResetFormTests(TestCase):\n    def test_valid_password(self):\n        \"\"\"Tests if the form accepts a valid password\"\"\"\n        form_data = {'password': 'NewPassword123', 'password_confirm': 'NewPassword123'}\n        form = PasswordResetForm(data=form_data)\n        self.assertTrue(form.is_valid())\n    def test_passwords_do_not_match(self):\n        \"\"\"Tests if the form rejects passwords that do not match\"\"\"\n        form_data = {'password': 'NewPassword123', 'password_confirm': 'DifferentPassword123'}\n        form = PasswordResetForm(data=form_data)",
+        "detail": "users.tests.test_users_forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginViewTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_login_and_logout_view",
+        "description": "users.tests.test_users_login_and_logout_view",
+        "peekOfCode": "class LoginViewTests(TestBase):\n    def test_login_view_get(self):\n        \"\"\"Testa se o formulário de login é exibido corretamente.\"\"\"\n        response = self.client.get(self.login_view_url)\n        self.assertEqual(response.status_code, 200)\n        self.assertContains(response, 'Login')\n        self.assertContains(response, '<input type=\"text\" name=\"cpf\"')\n        self.assertContains(response, '<input type=\"password\" name=\"password\"')\n    def test_login_view_redirect_if_authenticated(self):\n        \"\"\"Testa se o login redireciona para a página de administração se o usuário já estiver autenticado.\"\"\"",
+        "detail": "users.tests.test_users_login_and_logout_view",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutViewTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_login_and_logout_view",
+        "description": "users.tests.test_users_login_and_logout_view",
+        "peekOfCode": "class LogoutViewTests(TestBase):\n    def test_logout_view(self):\n        \"\"\"Testa se o logout funciona corretamente.\"\"\"\n        self.client.login(cpf=self.user.cpf, password=self.password)\n        response = self.client.get(self.logout_url)\n        self.assertRedirects(response, self.login_view_url)\n        messages = list(get_messages(response.wsgi_request))\n        self.assertEqual(str(messages[0]), 'Logout bem-sucedido!')\n    def test_logout_view_redirect_if_not_authenticated(self):\n        \"\"\"Testa se o logout redireciona corretamente se o usuário não estiver autenticado.\"\"\"",
+        "detail": "users.tests.test_users_login_and_logout_view",
+        "documentation": {}
+    },
+    {
+        "label": "UserModelTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_models",
+        "description": "users.tests.test_users_models",
+        "peekOfCode": "class UserModelTests(TestBase):\n    def test_create_user_with_valid_data(self):\n        \"\"\"Testa a criação de um usuário com dados válidos.\"\"\"\n        user = User.objects.create_user(**self.user_data)\n        self.assertEqual(user.cpf, self.valid_cpf)\n        self.assertEqual(user.email, self.user_data['email'])\n        self.assertEqual(user.full_name, self.user_data['full_name'])\n        self.assertTrue(user.check_password(self.user_data['password']))\n    def test_create_user_with_valid_cpf_does_not_raise_error(self):\n        \"\"\"Testa se a criação de um usuário com CPF válido não gera erro de validação.\"\"\"",
+        "detail": "users.tests.test_users_models",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetViewTests",
+        "kind": 6,
+        "importPath": "users.tests.test_users_reset_password_view",
+        "description": "users.tests.test_users_reset_password_view",
+        "peekOfCode": "class PasswordResetViewTests(TestCase):\n    @classmethod\n    def setUpTestData(cls):\n        \"\"\"Configura o usuário e URLs para os testes de redefinição de senha\"\"\"\n        cls.password = 'password123'\n        cls.user = get_user_model().objects.create_user(\n            cpf='12345678901',\n            email='user@example.com',\n            password=cls.password\n        )",
+        "detail": "users.tests.test_users_reset_password_view",
+        "documentation": {}
+    },
+    {
+        "label": "CreateSuperuserSignalTest",
+        "kind": 6,
+        "importPath": "users.tests.test_users_signals",
+        "description": "users.tests.test_users_signals",
+        "peekOfCode": "class CreateSuperuserSignalTest(TestCase):\n    def test_create_superuser_signal(self):\n        \"\"\"\n        Testa se o superusuário é criado corretamente pelo signal `create_superuser`\n        após o comando de migração.\n        \"\"\"\n        cpf = config('DJANGO_SUPERUSER_CPF', default='12345678901')\n        User.objects.all().delete()\n        self.assertFalse(User.objects.filter(cpf=cpf).exists())\n        # Recupera o app_config do app onde o modelo está",
+        "detail": "users.tests.test_users_signals",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "kind": 6,
+        "importPath": "users.admin",
+        "description": "users.admin",
+        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    list_display = ('cpf', 'email', 'full_name', 'is_staff', 'is_active')\n    search_fields = ('cpf', 'email', 'full_name')\n    ordering = ('cpf',)\n    fieldsets = (\n        (None, {'fields': ('cpf', 'email', 'password')}),\n        ('Personal Info', {'fields': ('full_name',)}),\n        ('Permissions', {'fields': ('is_staff', 'is_active', 'is_superuser', 'groups', 'user_permissions')}),\n    )\nadmin.site.register(User, UserAdmin)",
+        "detail": "users.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UsersConfig",
+        "kind": 6,
+        "importPath": "users.apps",
+        "description": "users.apps",
+        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'users'\n    def ready(self):\n        from . import signals",
+        "detail": "users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "peekOfCode": "class LoginForm(forms.Form):\n    cpf = forms.CharField(\n        max_length=11, \n        widget=forms.TextInput(attrs={'placeholder': 'CPF'}),\n    )\n    password = forms.CharField(\n        widget=forms.PasswordInput(attrs={'placeholder': 'Digite sua senha'})\n    )\n    def clean_cpf(self):\n        cpf = self.cleaned_data.get('cpf', '')",
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestForm",
+        "kind": 6,
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "peekOfCode": "class PasswordResetRequestForm(forms.Form):\n    email = forms.EmailField(\n        required=True,\n        widget=forms.EmailInput(attrs={'placeholder': 'Confirme seu e-mail'}),\n        error_messages={\n            'required': 'Este campo é obrigatório.',\n            'invalid': 'O e-mail fornecido não é válido.'\n        }\n    )\n    def clean_email(self):",
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetForm",
+        "kind": 6,
+        "importPath": "users.forms",
+        "description": "users.forms",
+        "peekOfCode": "class PasswordResetForm(forms.Form):\n    password = forms.CharField(\n        widget=forms.PasswordInput(attrs={'placeholder': 'Nova Senha'}),\n        error_messages={'required': 'Este campo é obrigatório.'}\n    )\n    password_confirm = forms.CharField(\n        widget=forms.PasswordInput(attrs={'placeholder': 'Confirme a Senha'}),\n        error_messages={'required': 'Este campo é obrigatório.'}\n    )\n    def clean_password_confirm(self):",
+        "detail": "users.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserManager",
+        "kind": 6,
+        "importPath": "users.models",
+        "description": "users.models",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    def create_user(self, cpf=None, email=None, full_name=None, password=None, **extra_fields):\n        if not cpf:\n            raise ValueError(\"O CPF é obrigatório.\")\n        if not email:\n            raise ValueError(\"O email é obrigatório.\")\n        email = self.normalize_email(email)\n        user = self.model(cpf=cpf, email=email, full_name=full_name, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)",
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "users.models",
+        "description": "users.models",
+        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    cpf = models.CharField(\"CPF\", max_length=11, unique=True)\n    email = models.EmailField(\"Email\", unique=True)\n    full_name = models.CharField(\"Nome completo\", max_length=255, blank=True, null=True)\n    is_active = models.BooleanField(\"Ativo\", default=True)\n    is_staff = models.BooleanField(\"Membro da equipe\", default=False)\n    USERNAME_FIELD = 'cpf'\n    REQUIRED_FIELDS = ['email']\n    objects = UserManager()\n    def __str__(self):",
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_superuser",
+        "kind": 2,
+        "importPath": "users.signals",
+        "description": "users.signals",
+        "peekOfCode": "def create_superuser(sender, **kwargs):\n    cpf = config('DJANGO_SUPERUSER_CPF', default='12345678901')  \n    email = config('DJANGO_SUPERUSER_EMAIL', default='admin@example.com')\n    password = config('DJANGO_SUPERUSER_PASSWORD', default='admin123')\n    if not User.objects.filter(cpf=cpf).exists():\n        User.objects.create_superuser(cpf=cpf, email=email, password=password)\n        print(f\"Superuser with CPF '{cpf}' created.\")",
+        "detail": "users.signals",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "users.urls",
+        "description": "users.urls",
+        "peekOfCode": "app_name = 'users'\nurlpatterns = [\n    path('login/', views.login_view, name='login_view'),\n    path('login/submit/', views.login_submit, name='login_submit'),\n    path('logout/', views.logout_view , name='logout_view'),\n    path('password/reset/', views.password_reset, name='password_reset'),\n    path('password/reset/send/', views.password_reset_send, name='password_reset_send'),\n    path('password/reset/confirm/<uidb64>/<token>/', views.password_reset_confirm, name='password_reset_confirm'),\n    path('password/reset/complete/', views.password_reset_complete, name='password_reset_complete'), \n]",
+        "detail": "users.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "users.urls",
+        "description": "users.urls",
+        "peekOfCode": "urlpatterns = [\n    path('login/', views.login_view, name='login_view'),\n    path('login/submit/', views.login_submit, name='login_submit'),\n    path('logout/', views.logout_view , name='logout_view'),\n    path('password/reset/', views.password_reset, name='password_reset'),\n    path('password/reset/send/', views.password_reset_send, name='password_reset_send'),\n    path('password/reset/confirm/<uidb64>/<token>/', views.password_reset_confirm, name='password_reset_confirm'),\n    path('password/reset/complete/', views.password_reset_complete, name='password_reset_complete'), \n]",
+        "detail": "users.urls",
+        "documentation": {}
+    },
+    {
+        "label": "login_view",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def login_view(request):\n    if request.user.is_authenticated:\n        return redirect('admin_panel:home')\n    login_form_data = request.session.get('login_form_data', {})\n    form = LoginForm(login_form_data)\n    context = {\n        'form': form\n    }\n    return render(request, 'users/pages/login.html', context)\ndef login_submit(request):",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_submit",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def login_submit(request):\n    if request.user.is_authenticated:\n        return redirect('admin_panel:home')\n    if not request.POST:\n        return redirect('users:login_view')\n    POST = request.POST\n    request.session['login_form_data'] = POST \n    form = LoginForm(POST)\n    if form.is_valid():\n        cpf = form.cleaned_data['cpf']",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "logout_view",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def logout_view(request):\n    logout(request)\n    messages.success(request, \"Logout bem-sucedido!\")\n    return redirect('users:login_view')\ndef password_reset(request):\n    \"\"\"Carrega o formulário de redefinição de senha, com o campo de e-mail.\"\"\"\n    if request.user.is_authenticated:\n        return redirect('admin_panel:home')\n    form_data = request.session.get('reset_password_form_data', {})\n    form = PasswordResetRequestForm(form_data)",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "password_reset",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def password_reset(request):\n    \"\"\"Carrega o formulário de redefinição de senha, com o campo de e-mail.\"\"\"\n    if request.user.is_authenticated:\n        return redirect('admin_panel:home')\n    form_data = request.session.get('reset_password_form_data', {})\n    form = PasswordResetRequestForm(form_data)\n    context = {\n        'form': form\n    }\n    return render(request, 'users/pages/password_reset_email_form.html', context)",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "password_reset_send",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def password_reset_send(request):\n    \"\"\" Recebe o formulario de redefinição com o email para redefinição de senha e envia um e-mail com o link para redefinir a senha.\"\"\"\n    if request.method != 'POST':\n        return redirect('users:password_reset')\n    form = PasswordResetRequestForm(request.POST)\n    # Salva os dados do formulário na sessão\n    request.session['reset_password_form_data'] = request.POST\n    if form.is_valid():\n        email = form.cleaned_data['email']\n        user = get_object_or_404(User, email=email)",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "password_reset_confirm",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def password_reset_confirm(request, uidb64, token):\n    \"\"\"Carrega o formulário de redefinição de senha, com os campos de nova senha e confirmação de senha.\"\"\"\n    if request.user.is_authenticated:\n        return redirect('admin_panel:home')\n    request.session['reset_password_data'] = {\n        'uidb64': uidb64,\n        'token': token\n    }\n    try:\n        user_id = smart_str(urlsafe_base64_decode(uidb64))",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "password_reset_complete",
+        "kind": 2,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "def password_reset_complete(request):\n    \"\"\"Recebe o formulário de redefinição de senha e redefini a senha do usuário.\"\"\"\n    if request.method != 'POST':\n        return redirect('users:password_reset') \n    reset_password_data = request.session.get('reset_password_data')\n    if not reset_password_data:\n        messages.error(request, 'O link de redefinição expirou ou não foi encontrado.')\n        return redirect('users:password_reset')\n    uidb64 = reset_password_data['uidb64']\n    token = reset_password_data['token']",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    },
+    {
+        "label": "UtilsTestCase",
+        "kind": 6,
+        "importPath": "test_utils",
+        "description": "test_utils",
+        "peekOfCode": "class UtilsTestCase(TestCase):\n    def test_verify_email_valid(self):\n        self.assertTrue(verify_email('test@example.com'))\n    def test_verify_email_invalid(self):\n        self.assertFalse(verify_email('invalid-email'))\n    def test_is_valid_cpf_valid(self):\n        self.assertTrue(is_valid_cpf(faker.cpf().replace('.', '').replace('-', '')))\n    def test_is_valid_cpf_invalid_first_digit(self):\n        self.assertFalse(is_valid_cpf('12345678919')) \n    def test_is_valid_cpf_invalid(self):",
+        "detail": "test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "faker",
+        "kind": 5,
+        "importPath": "test_utils",
+        "description": "test_utils",
+        "peekOfCode": "faker = Faker('pt_BR')\nclass UtilsTestCase(TestCase):\n    def test_verify_email_valid(self):\n        self.assertTrue(verify_email('test@example.com'))\n    def test_verify_email_invalid(self):\n        self.assertFalse(verify_email('invalid-email'))\n    def test_is_valid_cpf_valid(self):\n        self.assertTrue(is_valid_cpf(faker.cpf().replace('.', '').replace('-', '')))\n    def test_is_valid_cpf_invalid_first_digit(self):\n        self.assertFalse(is_valid_cpf('12345678919')) ",
+        "detail": "test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "kind": 2,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "def send_email(subject, message, to_email):\n    email = EmailMessage(\n        subject=subject,\n        body=message,\n        to=[to_email]\n    )\n    email.send()\ndef verify_email(email):\n    try:\n        validate_email(email)",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_email",
+        "kind": 2,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "def verify_email(email):\n    try:\n        validate_email(email)\n        return True\n    except ValidationError:\n        return False\ndef is_valid_cpf(cpf):\n    \"\"\"Valida o CPF usando o algoritmo dos dígitos verificadores.\"\"\"\n    cpf = [int(digit) for digit in cpf]\n    sum_1 = sum(cpf[i] * (10 - i) for i in range(9))",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_cpf",
+        "kind": 2,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "def is_valid_cpf(cpf):\n    \"\"\"Valida o CPF usando o algoritmo dos dígitos verificadores.\"\"\"\n    cpf = [int(digit) for digit in cpf]\n    sum_1 = sum(cpf[i] * (10 - i) for i in range(9))\n    digit_1 = (sum_1 * 10 % 11) % 10\n    if digit_1 != cpf[9]:\n        # COVERAGE ESTÁ DIZENDO QUE NÃO TESTEI ESSA POSSIBILIDADE\n        return False\n    sum_2 = sum(cpf[i] * (11 - i) for i in range(10))\n    digit_2 = (sum_2 * 10 % 11) % 10",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination_range",
+        "kind": 2,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "def make_pagination_range(\n    page_range,\n    qty_pages,\n    current_page,\n):\n    middle_range = math.ceil(qty_pages / 2)\n    start_range = current_page - middle_range\n    stop_range = current_page + middle_range\n    total_pages = len(page_range)\n    start_range_offset = abs(start_range) if start_range < 0 else 0",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "make_pagination",
+        "kind": 2,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "def make_pagination(request, queryset, per_page, qty_pages=4):\n    try:\n        current_page = int(request.GET.get('page', 1))\n    except ValueError:\n        current_page = 1\n    paginator = Paginator(queryset, per_page)\n    page_obj = paginator.get_page(current_page)\n    pagination_range = make_pagination_range(\n        paginator.page_range,\n        qty_pages,",
+        "detail": "utils",
+        "documentation": {}
+    }
+]

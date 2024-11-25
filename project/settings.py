@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lc%6^6&&8lysm!tgmya=y=5z1cy-$le+4x9lb4si!&(@78m5x2'
+SECRET_KEY = config('SECRET_KEY', cast=str)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['gym-management-system-9dgj.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')  # Obtém a URL do banco de dados da variável de ambiente
+        default=config('DATABASE_URL')
     )
 }
 
@@ -174,7 +174,7 @@ from celery.schedules import crontab
 CELERY_BEAT_SCHEDULE = {
     'update-members-status-every-midnight': {
         'task': 'members.tasks.update_members_activity_status',
-        'schedule': crontab(minute=40, hour=0, ), 
+        'schedule': crontab(minute=40, hour=1, ), 
     },
     'save-daily-report': {
         'task': 'admin_panel.tasks.save_daily_report',
