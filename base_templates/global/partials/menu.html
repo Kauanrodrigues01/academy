@@ -31,9 +31,11 @@
           <a class="authors-logout-link" href="{% url 'users:logout_view' %}">SAIR</a>
         </span>
       {% else %}
-        <a href="{% url 'users:login_view' %}">Login</a>
-        {% comment %} <a href="">Register</a> {% endcomment %}
-    {% endif %}
+        <span class="menu-link-container">
+          <img src="{% static 'global/img/login-icon.png' %}" alt="Icone de Logout">
+          <a href="{% url 'users:login_view' %}">LOGIN</a>
+        </span>
+      {% endif %}
     </nav>
   </div>
 </div>

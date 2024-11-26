@@ -38,7 +38,7 @@ body {
   background-color: var(--color-white);
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   transition: all 0.3s ease;
 }
 
@@ -59,7 +59,7 @@ body {
 .card {
   background-color: var(--color-primary-light);
   border-radius: 8px;
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -99,7 +99,7 @@ body {
 .recent-activities {
   margin-top: 3rem;
   background-color: var(--color-gray-0);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   border-radius: 8px;
 }
 
@@ -135,7 +135,7 @@ body {
 .students-panel {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   background-color: var(--color-white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -544,7 +544,7 @@ body {
 
 .modal-container {
   background-color: var(--color-white);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   border-radius: 10px;
   max-width: 500px;
   width: 100%;
@@ -566,7 +566,7 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   background-color: var(--color-white);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -585,7 +585,7 @@ body {
   max-width: 600px;
   margin: 2rem auto;
   background-color: var(--color-white);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -642,7 +642,7 @@ body {
   background-color: var(--color-white);
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   transition: all 0.3s ease;
 }
 
@@ -663,7 +663,7 @@ body {
 .card {
   background-color: var(--color-primary-light);
   border-radius: 8px;
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -710,7 +710,7 @@ body {
 .monthly-profit,
 .transaction-list {
   background-color: var(--color-gray-0);
-  padding: 2rem;
+  padding: var(--spacing-gutter-small);
   border-radius: 8px;
 }
 
@@ -801,10 +801,19 @@ body {
   margin-bottom: var(--spacing-gutter-medium);
 }
 
+.download-report-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* Estilo dos botões de download */
 .download-report .btn-download {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 285px;
   padding: 12px 24px;
   margin: 10px 5px;
   font-size: 16px;
@@ -866,5 +875,27 @@ body {
 
   .input-search {
     padding-right: 2.5rem;
+  }
+
+  .container{
+    padding: var(--spacing-gutter-small);
+  }
+
+  .finance-panel{
+    padding: var(--spacing-gutter-xsmall);
+  }
+}
+
+@media (max-width: 416px) {
+  .download-report .btn-download {
+    width: 220px;
+    padding: 6px 12px;
+    font-size: 1.3rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: var(--font-primary);
   }
 }

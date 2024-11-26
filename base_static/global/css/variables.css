@@ -59,6 +59,8 @@
   --font-headings: 'Roboto Slab', serif;
 
   /* Espaçamentos */
+  --spacing-gutter-xsmall: 1rem;
+  --spacing-gutter-small: 2rem;
   --spacing-gutter-medium: 3rem;
   --spacing-gutter-large: 4rem;
 }
