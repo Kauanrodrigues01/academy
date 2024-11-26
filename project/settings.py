@@ -174,7 +174,7 @@ from celery.schedules import crontab
 CELERY_BEAT_SCHEDULE = {
     'update-members-status-every-midnight': {
         'task': 'members.tasks.update_members_activity_status',
-        'schedule': crontab(minute=2, hour=0, ), 
+        'schedule': crontab(minute=30, hour=0, ), 
     },
     'save-daily-report': {
         'task': 'admin_panel.tasks.save_daily_report',
@@ -192,8 +192,6 @@ INTERNAL_IPS = [
 import sys
 
 # Verifica se o pytest está sendo executado
-import pytest
-
 TESTING = 'pytest' in sys.modules
 
 DEBUG_TOOLBAR_CONFIG = {
