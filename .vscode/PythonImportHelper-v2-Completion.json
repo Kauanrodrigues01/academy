@@ -3072,7 +3072,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), ",
+        "peekOfCode": "CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')  # Endereço do Redis\nCELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=2, hour=0, ), ",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -3081,7 +3081,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "CELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },",
+        "peekOfCode": "CELERY_ACCEPT_CONTENT = ['json']  # Aceitar apenas mensagens em JSON\nCELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=2, hour=0, ), \n    },",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -3090,7 +3090,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "CELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {",
+        "peekOfCode": "CELERY_TASK_SERIALIZER = 'json'  # Serializar as tarefas em formato JSON\nCELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=2, hour=0, ), \n    },\n    'save-daily-report': {",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -3099,7 +3099,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',",
+        "peekOfCode": "CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')  # Backend para armazenar resultados\nCELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=2, hour=0, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -3108,7 +3108,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "CELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',\n        'schedule': crontab(minute=0, hour=23, )",
+        "peekOfCode": "CELERY_TIMEZONE = 'America/Sao_Paulo'  # Definir o fuso horário (se necessário)\nfrom celery.schedules import crontab\nCELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=2, hour=0, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',\n        'schedule': crontab(minute=0, hour=23, )",
         "detail": "project.settings",
         "documentation": {}
     },
@@ -3117,7 +3117,7 @@
         "kind": 5,
         "importPath": "project.settings",
         "description": "project.settings",
-        "peekOfCode": "CELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=40, hour=1, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',\n        'schedule': crontab(minute=0, hour=23, )\n    }\n}",
+        "peekOfCode": "CELERY_BEAT_SCHEDULE = {\n    'update-members-status-every-midnight': {\n        'task': 'members.tasks.update_members_activity_status',\n        'schedule': crontab(minute=2, hour=0, ), \n    },\n    'save-daily-report': {\n        'task': 'admin_panel.tasks.save_daily_report',\n        'schedule': crontab(minute=0, hour=23, )\n    }\n}",
         "detail": "project.settings",
         "documentation": {}
     },
