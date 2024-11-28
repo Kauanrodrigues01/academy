@@ -124,18 +124,18 @@ class FinanceViewTest(TestCase):
         self.assertIn(reverse('admin_panel:generate_pdf_report_of_current_day'), html)
 
     @parameterized.expand([
-        ('January', 50),
-        ('February', 100),
-        ('March', 150),
-        ('April', 200),
-        ('May', 250),
-        ('June', 300),
-        ('July', 350),
-        ('August', 400),
-        ('September', 450),
-        ('October', 500),
-        ('November', 550),
-        ('December', 600),
+        ('January', '50,00'),
+        ('February','100,00'),
+        ('March', '150,00'),
+        ('April', '200,00'),
+        ('May', '250,00'),
+        ('June', '300,00'),
+        ('July', '350,00'),
+        ('August', '400,00'),
+        ('September', '450,00'),
+        ('October', '500,00'),
+        ('November', '550,00'),
+        ('December', '600,00'),
     ])
     def test_monthly_profit_list_contains_correct_data(self, month, profit):
         """

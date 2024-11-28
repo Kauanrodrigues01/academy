@@ -86,7 +86,7 @@ class MemberEditFormTests(BaseTestCase):
         other_member = Member.objects.create(
             email=self.fake.email(),
             full_name=self.fake.name(),
-            phone=self.fake.phone_number(),
+            phone='85977777777',
             is_active=True
         )
         data = {

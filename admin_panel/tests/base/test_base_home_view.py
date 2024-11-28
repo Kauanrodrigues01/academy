@@ -27,13 +27,13 @@ class TestBaseHomeView(TestCase):
         cls.active_member = Member.objects.create(
             email=cls.faker.email(),
             full_name=cls.faker.name(),
-            phone=cls.faker.phone_number().replace(' ', '').replace('-', ''),
+            phone='85988888888',
             is_active=True
         )
         cls.inactive_member = Member.objects.create(
             email=cls.faker.email(),
             full_name=cls.faker.name(),
-            phone=cls.faker.phone_number().replace(' ', '').replace('-', ''),
+            phone='85966666666',
             is_active=False
         )
         

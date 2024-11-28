@@ -94,7 +94,7 @@ class TestHomeView(TestBaseHomeView):
         """Tests if the total profit for the current month is rendered correctly."""
         self.client.login(cpf=self.user.cpf, password=self.password)
         response = self.client.get(self.home_url)
-        self.assertContains(response, f"<p class=\"count\">R$ {response.context['profit_total_month']}</p>")
+        self.assertContains(response, f"<p class=\"count\">R$ {str(response.context['profit_total_month']).replace('.', ',')}</p>")
         
     def test_renders_count_new_members_in_month(self):
         """Tests if the count of new members in the current month is rendered correctly."""
