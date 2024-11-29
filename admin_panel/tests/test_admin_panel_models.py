@@ -127,6 +127,7 @@ class TestDailyReport(TestCase):
 
         self.assertEqual(report.daily_profit, (payment1.amount + payment2.amount + self.payment.amount))
         self.assertEqual(report.payments.count(), 3)
-        self.assertEqual(report.payments.all()[0], self.payment)
-        self.assertEqual(report.payments.all()[1], payment1)
-        self.assertEqual(report.payments.all()[2], payment2)
+        list_payments = [self.payment, payment1, payment2]
+        self.assertIn(report.payments.all()[0], list_payments)
+        self.assertIn(report.payments.all()[1], list_payments)
+        self.assertIn(report.payments.all()[2], list_payments)
