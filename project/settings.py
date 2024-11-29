@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'members',
     'admin_panel',
     'django_celery_beat',
-    'debug_toolbar',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -191,20 +188,23 @@ CELERY_BEAT_SCHEDULE = {
 
 
 # CONFIG OF DEBUG TOOLBAR
-
-INTERNAL_IPS = [
-    '127.0.0.1',  # IP do localhost
-]
-
 import sys
 
 # Verifica se o pytest está sendo executado
 TESTING = 'pytest' in sys.modules
 
-DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG and not TESTING,  # Ativa somente quando DEBUG=True e não em testes
-    'INTERCEPT_REDIRECTS': False,
-    'DISABLE_PANELS': {'debug_toolbar.panels.redirects.RedirectsPanel'},
-    'RESULTS_CACHE_SIZE': 50,
-    'ENABLE_STACKTRACES': True,
-}
+if DEBUG:  # Ativar somente em DEBUG
+    INSTALLED_APPS += ['debug_toolbar', 'django_extensions',]
+    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
+
+    INTERNAL_IPS = [
+        '127.0.0.1',  # IP do localhost
+    ]
+
+    DEBUG_TOOLBAR_CONFIG = {
+        'SHOW_TOOLBAR_CALLBACK': lambda request: DEBUG and not TESTING,  # Ativa somente quando DEBUG=True e não em testes
+        'INTERCEPT_REDIRECTS': False,
+        'DISABLE_PANELS': {'debug_toolbar.panels.redirects.RedirectsPanel'},
+        'RESULTS_CACHE_SIZE': 50,
+        'ENABLE_STACKTRACES': True,
+    }
