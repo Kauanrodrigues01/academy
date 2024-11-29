@@ -9,6 +9,6 @@ def create_superuser(sender, **kwargs):
     email = config('DJANGO_SUPERUSER_EMAIL', default='admin@example.com')
     password = config('DJANGO_SUPERUSER_PASSWORD', default='admin123')
 
-    if not User.objects.filter(cpf=cpf).exists():
+    if not User.objects.filter(cpf=cpf).exists() and not User.objects.filter(email=email):
         User.objects.create_superuser(cpf=cpf, email=email, password=password)
         print(f"Superuser with CPF '{cpf}' created.")
