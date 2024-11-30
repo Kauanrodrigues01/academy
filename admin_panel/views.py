@@ -237,8 +237,10 @@ from django.db.models import Sum
 from django.template.loader import render_to_string
 from xhtml2pdf import pisa
 from django.http import HttpResponse
+from django.views.decorators.http import require_GET
 
 @login_required
+@require_GET
 def generate_pdf_general_report(request):
     active_members = Member.objects.filter(is_active=True).count()
     inactive_members =Member.objects.filter(is_active=False).count()
@@ -263,7 +265,8 @@ def generate_pdf_general_report(request):
     pisa_status = pisa.CreatePDF(html_string, dest=response)
     
     if pisa_status.err:
-        return HttpResponse('Erro ao gerar o PDF', status=500)
+        messages.error(request, 'Erro ao gerar o PDF.')
+        return redirect('admin_panel:finance')
     
     
     return response
