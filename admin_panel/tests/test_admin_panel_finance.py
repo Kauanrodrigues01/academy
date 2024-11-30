@@ -1,27 +1,16 @@
-from django.test import TestCase
 from django.urls import reverse
-from users.models import User
 from admin_panel.models import Payment, Member
 from django.utils.timezone import localdate
-from datetime import timedelta
-from faker import Faker
 from parameterized import parameterized
+from .base.test_base import TestBase
 
-class FinanceViewTest(TestCase):
+class FinanceViewTest(TestBase):
     
     @classmethod
     def setUpTestData(cls):
-        cls.faker = Faker('pt_BR')
-
-        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
-
-        cls.user = User.objects.create_user(
-            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),
-            email=cls.faker.email(),
-            password=cls.password
-        )
-
-        # Criação de um membro
+        super().setUpTestData()
+        
+        # Create a member
         cls.member = Member.objects.create(
             email="member@example.com",
             full_name="John Doe",
@@ -30,12 +19,11 @@ class FinanceViewTest(TestCase):
             is_active=True
         )
 
-        # Criação de pagamentos para todos os meses
         today = localdate()
         payments = []
         for month in range(1, 13):
             payment_date = today.replace(month=month, day=1)
-            amount = month * 50  # Pagamento em incrementos de 50
+            amount = month * 50  # 50, 100, 150, ..., 600
             payments.append(Payment(member=cls.member, payment_date=payment_date, amount=amount))
 
         Payment.objects.bulk_create(payments)

@@ -1,24 +1,14 @@
-from django.test import TestCase
 from django.urls import reverse
-from users.models import User
 from django.contrib.messages import get_messages
 from members.models import Member
-from faker import Faker
 from django.utils.timezone import localdate
+from .base.test_base import TestBase
 
-class AddMemberViewTests(TestCase):
+class AddMemberViewTests(TestBase):
 
     @classmethod
     def setUpTestData(cls):
-        cls.faker = Faker('pt_BR')
-        
-        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
-        
-        cls.user = User.objects.create_user(
-            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),
-            email=cls.faker.email(),
-            password=cls.password
-        )
+        super().setUpTestData()
         
         cls.form_data = {
             'email': 'testmember@example.com',

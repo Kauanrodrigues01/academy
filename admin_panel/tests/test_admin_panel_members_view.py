@@ -1,24 +1,13 @@
-from django.test import TestCase
 from django.urls import reverse
-from users.models import User
 from django.utils.timezone import localdate
 from members.models import Member, Payment
 from datetime import timedelta
-from faker import Faker
+from .base.test_base import TestBase
 
-
-class TestMembersView(TestCase):
+class TestMembersView(TestBase):
     @classmethod
     def setUpTestData(cls):
-        cls.faker = Faker('pt_BR')
-        
-        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
-        
-        cls.user = User.objects.create_user(
-            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),
-            email=cls.faker.email(),
-            password=cls.password
-        )
+        super().setUpTestData()
         
         # Criar alguns membros para os testes
         cls.member1 = Member.objects.create(

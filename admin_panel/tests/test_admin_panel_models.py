@@ -1,5 +1,4 @@
 from django.test import TestCase
-from datetime import date
 from django.utils.timezone import localdate
 from members.models import Member, Payment
 from admin_panel.models import ActivityLog, DailyReport
