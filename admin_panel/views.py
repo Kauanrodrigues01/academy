@@ -273,6 +273,8 @@ def generate_pdf_general_report(request):
 
 from admin_panel.models import DailyReport
 
+@login_required
+@require_GET
 def generate_pdf_report_of_current_day(request):
     report = DailyReport.objects.filter(date=localdate()).first()
     
