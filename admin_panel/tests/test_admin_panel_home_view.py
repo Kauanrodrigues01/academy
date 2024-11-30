@@ -1,7 +1,7 @@
 from django.utils.timezone import localdate
 from django.utils.timezone import localtime
 from admin_panel.models import ActivityLog
-from admin_panel.tests.base.test_base_home_view import TestBaseHomeView
+from .base.test_base_home_view import TestBaseHomeView
 
 
 class TestHomeView(TestBaseHomeView):

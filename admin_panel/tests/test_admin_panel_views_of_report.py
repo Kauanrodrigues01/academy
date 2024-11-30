@@ -2,7 +2,7 @@ from django.utils.timezone import localdate
 from admin_panel.models import DailyReport
 from members.models import Member, Payment
 from unittest.mock import patch
-from admin_panel.tests.base.test_base_report_views import TestBaseReportViews
+from .base.test_base_report_views import TestBaseReportViews
 
 class GeneratePDFGeneralReportTestCase(TestBaseReportViews):
     

@@ -1,24 +1,13 @@
-from django.test import TestCase
-from users.models import User
 from members.models import Member, Payment
 from django.utils.timezone import localdate
 from django.urls import reverse
-from faker import Faker
+from .test_base import TestBase
 
-
-class TestBaseHomeView(TestCase):
+class TestBaseHomeView(TestBase):
     
     @classmethod
     def setUpTestData(cls):
-        cls.faker = Faker('pt_BR')
-        
-        cls.password = cls.faker.password(length=12, upper_case=True, special_chars=True, digits=True)
-        
-        cls.user = User.objects.create_user(
-            cpf=cls.faker.cpf().replace('.', '').replace('-', ''),
-            email=cls.faker.email(),
-            password=cls.password
-        )
+        super().setUpTestData()
         
         cls.home_url = reverse('admin_panel:home')
         cls.login_url = reverse('users:login_view')
