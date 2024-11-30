@@ -286,7 +286,7 @@ def generate_pdf_report_of_current_day(request):
         'active_members': report.active_students,
         'inactive_members': report.pending_students,
         'total_revenue': report.daily_profit,
-        'payments': report.payments
+        'payments': report.payments.all()
     }
     
     html_string = render_to_string('reports/gym_current_day_report.html', context)
@@ -298,7 +298,8 @@ def generate_pdf_report_of_current_day(request):
     pisa_status = pisa.CreatePDF(html_string, dest=response)
     
     if pisa_status.err:
-        return HttpResponse('Erro ao gerar o PDF', status=500)
+        messages.error(request, 'Erro ao gerar o PDF.')
+        return redirect('admin_panel:finance')
     
     
     return response
