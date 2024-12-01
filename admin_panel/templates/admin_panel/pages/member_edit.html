@@ -1,5 +1,11 @@
 {% extends 'global/pages/base_painel_adm.html' %}
 
+{% load static %}
+
+{% block additional_tags %}
+<script src="{% static 'admin_panel/js/formatter-phone.js' %}" defer></script>
+{% endblock additional_tags %}
+
 {% block title %}Editar Aluno{% endblock %}
 
 {% block content %}

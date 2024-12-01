@@ -5,7 +5,7 @@ import re
 
 class LoginForm(forms.Form):
     cpf = forms.CharField(
-        max_length=11, 
+        max_length=14, 
         widget=forms.TextInput(attrs={'placeholder': 'CPF'}),
     )
     password = forms.CharField(
@@ -13,7 +13,7 @@ class LoginForm(forms.Form):
     )
 
     def clean_cpf(self):
-        cpf = self.cleaned_data.get('cpf', '')
+        cpf = self.cleaned_data.get('cpf', '').replace('.', '').replace('-', '')
 
         if not cpf.isdigit() or len(cpf) != 11:
             raise forms.ValidationError('O CPF fornecido é inválido.')

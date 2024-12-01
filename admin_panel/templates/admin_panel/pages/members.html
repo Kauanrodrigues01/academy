@@ -1,9 +1,15 @@
 {% extends 'global/pages/base_painel_adm.html' %}
 
+{% load static %}
+
+{% block additional_tags %}
+<script src="{% static 'admin_panel/js/filter_member_toogle.js' %}" defer></script>
+<script src="{% static 'admin_panel/js/formatter-phone.js' %}" defer></script>
+{% endblock additional_tags %}
+
 {% block title %}Página de Alunos{% endblock title %}
 
 {% block content %}
-{% load static %}
 <main class="students-panel container">
     <h1 class="title-page-alunos">Gestão de Alunos</h1>
     
@@ -97,17 +103,5 @@
             </form>
         </div>
     </div>
-    
 </main>
-<script>
-    const filterToggleButton = document.querySelector('.btn-filter-toggle');
-    const filterSection = document.getElementById('filter-section');
-
-    filterToggleButton.addEventListener('click', () => {
-        filterSection.classList.toggle('visible');
-    });
-</script>
-
-
-
 {% endblock content %}

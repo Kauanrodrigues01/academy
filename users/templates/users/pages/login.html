@@ -1,6 +1,12 @@
 {% extends 'global/pages/base_page_form.html' %}
-{% block title %}Login{% endblock title %}
+
 {% load static %}
+
+{% block additional_tags %}
+<script src="{% static 'users/js/formatter-cpf.js' %}" defer></script>
+{% endblock additional_tags %}
+
+{% block title %}Login{% endblock title %}
     
 {% block content %} 
 <main class="container-form">
