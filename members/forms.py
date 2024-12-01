@@ -162,7 +162,7 @@ class MemberEditForm(forms.ModelForm):
         return email
 
     def clean_phone(self):
-        phone = self.cleaned_data['phone']
+        phone = self.cleaned_data.get('phone').replace('(', '').replace(')', '').replace('-', '').replace(' ', '')
         if not re.match(r'^\d{10,15}$', phone):
             raise forms.ValidationError('O telefone deve conter apenas números e ter entre 10 e 15 dígitos.')
         return phone
