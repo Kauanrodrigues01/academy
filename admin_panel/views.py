@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404
 from django.utils.timezone import localdate, localtime
 from django.db.models import Q, Max
 from django.utils.dateparse import parse_date
-from utils import make_pagination
+from utils.utils import make_pagination
 from django.contrib import messages
 
 # Create your views here.

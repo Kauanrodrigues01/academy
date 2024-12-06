@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from django.core.exceptions import ValidationError
-from utils import is_valid_cpf
+from utils.utils import is_valid_cpf
 
 class UserManager(BaseUserManager):
     def create_user(self, cpf=None, email=None, full_name=None, password=None, **extra_fields):

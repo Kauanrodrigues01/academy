@@ -1,7 +1,7 @@
 from django.test import TestCase
 from users.forms import LoginForm, PasswordResetRequestForm, PasswordResetForm
 from django.contrib.auth import get_user_model
-from utils import is_valid_cpf
+from utils.utils import is_valid_cpf
 from faker import Faker
 from users.tests.base.test_base import TestBase
 

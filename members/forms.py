@@ -45,13 +45,14 @@ class MemberPaymentForm(forms.Form):
             'required': True
         })
     )
-    is_active = forms.BooleanField(
+    is_active = forms.ChoiceField(
         label='Status',
         required=True,
+        choices=[(True, 'Ativo'), (False, 'Pendente')],
         widget=forms.Select(attrs={
             'id': 'student-status',
-            'class': 'form-check-input',
-        }, choices=[(True, 'Ativo'), (False, 'Pendente')])
+            'class': 'form-select',
+        }),
     )
     
     payment_date = forms.DateField(

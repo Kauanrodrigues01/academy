@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.core.exceptions import ValidationError
 from django.http import HttpRequest
-from utils import verify_email, is_valid_cpf, make_pagination, make_pagination_range
+from utils.utils import verify_email, is_valid_cpf, make_pagination, make_pagination_range
 from django.core.paginator import Paginator
 from faker import Faker
 

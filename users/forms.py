@@ -1,5 +1,5 @@
 from django import forms
-from utils import verify_email, is_valid_cpf
+from utils.utils import verify_email, is_valid_cpf
 from .models import User
 import re
 
