@@ -102,3 +102,13 @@ class Payment(models.Model):
 
         if self.member:
             self.member.update_activity_status()
+            
+
+class BillingMessage(models.Model):
+    member = models.ForeignKey('Member', on_delete=models.CASCADE, related_name='billing_messages')
+    created_at = models.DateField(default=localdate)  # Data local em que a mensagem foi salva
+    scheduled_date = models.DateField()  # Data local para envio da mensagem
+    is_sent = models.BooleanField(default=False)  # Flag para saber se já foi enviada
+
+    def __str__(self):
+        return f"BillingMessage for {self.member.full_name} - Sent: {self.is_sent}"
