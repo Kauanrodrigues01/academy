@@ -5,6 +5,7 @@ from django.db.models import Sum, Min, Max, Count
 from django.core.exceptions import ValidationError
 from datetime import datetime
 from django.core.validators import MinLengthValidator
+from utils.ultramsg import UltraMsgAPI
 
 class Member(models.Model):
     email = models.EmailField(unique=True)
@@ -32,6 +33,10 @@ class Member(models.Model):
 
         if self.last_payment_date and self.last_payment_date < now - timedelta(days=30):
             self.is_active = False
+            BillingMessage.objects.get_or_create(
+                member=self,
+                is_sent=False,
+            )
         else:
             self.is_active = True
             
@@ -111,3 +116,15 @@ class BillingMessage(models.Model):
 
     def __str__(self):
         return f"BillingMessage for {self.member.full_name} - Sent: {self.is_sent}"
+    
+    def send_message(self):
+        ultramsg = UltraMsgAPI()
+        
+        message = f"Olá, {self.member.full_name}! Seu pagamento está atrasado. Por favor, regularize sua situação."
+        response = ultramsg.send_message(to=f'55{self.member.phone}', message=message)
+        
+        if response.status_code == 200 and 'true' in response.text:
+            self.is_sent = True
+            self.save()
+        else:
+            print(f"Error sending message to {self.member.full_name}: {response.text}")
